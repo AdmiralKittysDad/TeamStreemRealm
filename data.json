@@ -1,0 +1,42 @@
+{
+  "stats": {
+    "blocksPlaced": 0,
+    "blocksTotal": 9747,
+    "overallPercent": 0,
+    "daysToReveal": 60
+  },
+  "zones": [
+    { "name": "Zone Alpha", "codename": "Operation Deep", "emoji": "🔮", "percent": 0, "status": "locked", "color": "#6366f1" },
+    { "name": "Zone Beta", "codename": "Operation Rise", "emoji": "💫", "percent": 0, "status": "locked", "color": "#8b5cf6" },
+    { "name": "Zone Gamma", "codename": "Operation Arrival", "emoji": "⭐", "percent": 0, "status": "locked", "color": "#06b6d4" },
+    { "name": "Zone Delta", "codename": "Operation Twin Stars", "emoji": "🌟", "percent": 0, "status": "locked", "color": "#f59e0b" },
+    { "name": "Zone Omega", "codename": "Operation Heart", "emoji": "💝", "percent": 0, "status": "locked", "color": "#ec4899" }
+  ],
+  "materials": [
+    { "emoji": "🌊", "percent": 0, "color": "#5b9ea6" },
+    { "emoji": "🌑", "percent": 0, "color": "#3b5b5b" },
+    { "emoji": "⬛", "percent": 0, "color": "#2a2a3a" },
+    { "emoji": "💡", "percent": 0, "color": "#e8f4f4" },
+    { "emoji": "🔲", "percent": 0, "color": "#c4e1e1" },
+    { "emoji": "🧊", "percent": 0, "color": "#74b4e8" },
+    { "emoji": "✨", "percent": 0, "color": "#ffcc00" },
+    { "emoji": "💜", "percent": 0, "color": "#9933ff" },
+    { "emoji": "🔘", "percent": 0, "color": "#d4d4d4" },
+    { "emoji": "🕯️", "percent": 0, "color": "#f4e8d4" },
+    { "emoji": "🏮", "percent": 0, "color": "#f4a444" },
+    { "emoji": "🪸", "percent": 0, "color": "#e87080" }
+  ],
+  "milestones": [
+    { "name": "First Thousand!", "status": "locked" },
+    { "name": "Five Thousand!", "status": "locked" },
+    { "name": "Halfway!", "status": "locked" },
+    { "name": "Zone Alpha!", "status": "locked" },
+    { "name": "Zone Beta!", "status": "locked" },
+    { "name": "THE REVEAL!", "status": "locked" }
+  ],
+  "lastUpdate": {
+    "date": "Not started yet",
+    "mood": "🎯",
+    "blocks": 0
+  }
+}

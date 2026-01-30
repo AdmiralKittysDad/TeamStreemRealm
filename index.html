@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Team Streem">
+    <title>Team Streem - Adventure Tracker</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-dark: #0a0a12;
+            --bg-card: #12121f;
+            --bg-card-light: #1a1a2e;
+            --text-primary: #ffffff;
+            --text-muted: #8888aa;
+            --accent-purple: #6366f1;
+            --accent-violet: #8b5cf6;
+            --accent-cyan: #06b6d4;
+            --accent-amber: #f59e0b;
+            --accent-pink: #ec4899;
+            --accent-green: #22c55e;
+            --accent-red: #ef4444;
+            --glow-purple: rgba(99, 102, 241, 0.4);
+            --glow-cyan: rgba(6, 182, 212, 0.4);
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 70%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            padding-bottom: 40px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0 30px;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.5));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .tagline span {
+            color: var(--accent-cyan);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 20px 15px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+        }
+
+        .stat-card.amber::before {
+            background: linear-gradient(90deg, var(--accent-amber), var(--accent-pink));
+        }
+
+        .stat-card.green::before {
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, #fff 0%, #ddd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card.amber .stat-value {
+            background: linear-gradient(135deg, var(--accent-amber) 0%, var(--accent-pink) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .stat-card.green .stat-value {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .overall-progress {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .progress-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .progress-percent {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--accent-cyan);
+        }
+
+        .progress-bar-container {
+            background: var(--bg-dark);
+            border-radius: 15px;
+            height: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 15px;
+            background: linear-gradient(90deg, var(--accent-purple), var(--accent-violet), var(--accent-pink));
+            transition: width 1s ease-out;
+            position: relative;
+            min-width: 30px;
+        }
+
+        .progress-bar-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .section-header {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .zones-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .zone-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 18px;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 15px;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .zone-card:active {
+            transform: scale(0.98);
+        }
+
+        .zone-card.active {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 20px var(--glow-cyan);
+        }
+
+        .zone-emoji {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-dark);
+            border-radius: 12px;
+        }
+
+        .zone-info {
+            min-width: 0;
+        }
+
+        .zone-name {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+
+        .zone-codename {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .zone-progress-bar {
+            background: var(--bg-dark);
+            border-radius: 8px;
+            height: 12px;
+            overflow: hidden;
+        }
+
+        .zone-progress-fill {
+            height: 100%;
+            border-radius: 8px;
+            transition: width 0.8s ease-out;
+        }
+
+        .zone-status {
+            text-align: right;
+        }
+
+        .zone-percent {
+            font-size: 1.3rem;
+            font-weight: 900;
+        }
+
+        .zone-badge {
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: var(--bg-dark);
+            display: inline-block;
+            margin-top: 5px;
+            white-space: nowrap;
+        }
+
+        .zone-badge.building {
+            background: rgba(6, 182, 212, 0.2);
+            color: var(--accent-cyan);
+        }
+
+        .zone-badge.complete {
+            background: rgba(34, 197, 94, 0.2);
+            color: var(--accent-green);
+        }
+
+        .zone-badge.locked {
+            background: rgba(136, 136, 170, 0.2);
+            color: var(--text-muted);
+        }
+
+        .blocko-meter {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .blocks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+            gap: 10px;
+        }
+
+        .block-item {
+            background: var(--bg-dark);
+            border-radius: 12px;
+            padding: 12px 8px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .block-emoji {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .block-percent {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            position: relative;
+            z-index: 1;
+        }
+
+        .block-fill {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition: height 0.8s ease-out;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .achievement-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 15px 10px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.2s;
+        }
+
+        .achievement-card:active {
+            transform: scale(0.95);
+        }
+
+        .achievement-card.locked {
+            opacity: 0.5;
+        }
+
+        .achievement-card.achieved {
+            border-color: var(--accent-amber);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .achievement-name {
+            font-size: 0.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .achievement-card.locked .achievement-name {
+            color: var(--text-muted);
+        }
+
+        .countdown-section {
+            margin-bottom: 25px;
+        }
+
+        .countdown-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-light) 100%);
+            border-radius: 20px;
+            padding: 30px 25px;
+            text-align: center;
+            border: 2px solid var(--accent-pink);
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-card::before {
+            content: '✨';
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.1;
+            top: 10px;
+            left: 20px;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .countdown-card::after {
+            content: '✨';
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.1;
+            bottom: 10px;
+            right: 20px;
+            animation: sparkle 2s ease-in-out infinite 1s;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.1); }
+        }
+
+        .countdown-label {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .countdown-value {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-amber) 0%, var(--accent-pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .countdown-subtitle {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--accent-pink);
+        }
+
+        .last-update {
+            text-align: center;
+            padding: 15px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .last-update-mood {
+            font-size: 1.5rem;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--bg-card-light);
+            border-top-color: var(--accent-purple);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        .pull-hint {
+            text-align: center;
+            padding: 10px;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 600px) {
+            .hero-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            
+            .stat-value {
+                font-size: 1.8rem;
+            }
+            
+            .stat-icon {
+                font-size: 1.5rem;
+            }
+            
+            .stat-label {
+                font-size: 0.65rem;
+            }
+
+            .achievements-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            
+            .achievement-card {
+                padding: 12px 8px;
+            }
+            
+            .achievement-icon {
+                font-size: 1.5rem;
+            }
+            
+            .achievement-name {
+                font-size: 0.7rem;
+            }
+            
+            .countdown-value {
+                font-size: 3rem;
+            }
+            
+            .zone-emoji {
+                font-size: 2rem;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .zone-name {
+                font-size: 1rem;
+            }
+            
+            .blocks-grid {
+                grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <div class="container">
+        <header class="header">
+            <img src="assets/logo.png" alt="Team Streem" class="logo">
+            <p class="tagline">Something <span>AMAZING</span> is being built...</p>
+        </header>
+
+        <main id="app">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading adventure data...</p>
+            </div>
+        </main>
+
+        <div class="pull-hint">↓ Pull down to refresh ↓</div>
+    </div>
+
+    <div class="confetti-container" id="confetti"></div>
+
+    <script>
+        // ============================================================
+        // CONFIGURATION
+        // ============================================================
+        
+        const CONFIG = {
+            // Data source: 'json' for local file, 'airtable' for direct API
+            dataSource: 'json',
+            jsonUrl: 'data.json',
+            
+            // For Airtable direct connection (if you want to skip Make.com)
+            // dataSource: 'airtable',
+            // airtableApiKey: 'pat_YOUR_READ_ONLY_TOKEN',
+            // airtableBaseId: 'appYOUR_BASE_ID',
+            
+            // Auto-refresh every 60 seconds (set to 0 to disable)
+            refreshInterval: 60000,
+        };
+
+        // ============================================================
+        // DATA LOADING
+        // ============================================================
+
+        async function loadData() {
+            try {
+                if (CONFIG.dataSource === 'json') {
+                    const response = await fetch(CONFIG.jsonUrl + '?t=' + Date.now());
+                    if (!response.ok) throw new Error('Data not found');
+                    return await response.json();
+                }
+            } catch (error) {
+                console.log('Using sample data:', error.message);
+                return getSampleData();
+            }
+        }
+
+        function getSampleData() {
+            return {
+                stats: {
+                    blocksPlaced: 4287,
+                    blocksTotal: 9747,
+                    overallPercent: 44,
+                    daysToReveal: 23
+                },
+                zones: [
+                    { name: "Zone Alpha", codename: "Operation Deep", emoji: "🔮", percent: 78, status: "building", color: "#6366f1" },
+                    { name: "Zone Beta", codename: "Operation Rise", emoji: "💫", percent: 45, status: "building", color: "#8b5cf6" },
+                    { name: "Zone Gamma", codename: "Operation Arrival", emoji: "⭐", percent: 12, status: "locked", color: "#06b6d4" },
+                    { name: "Zone Delta", codename: "Operation Twin Stars", emoji: "🌟", percent: 0, status: "locked", color: "#f59e0b" },
+                    { name: "Zone Omega", codename: "Operation Heart", emoji: "💝", percent: 0, status: "locked", color: "#ec4899" }
+                ],
+                materials: [
+                    { emoji: "🌊", percent: 73, color: "#5b9ea6" },
+                    { emoji: "🌑", percent: 65, color: "#3b5b5b" },
+                    { emoji: "⬛", percent: 89, color: "#1a1a1a" },
+                    { emoji: "💡", percent: 42, color: "#e8f4f4" },
+                    { emoji: "🔲", percent: 31, color: "#c4e1e1" },
+                    { emoji: "🧊", percent: 55, color: "#74b4e8" },
+                    { emoji: "✨", percent: 28, color: "#ffcc00" },
+                    { emoji: "💜", percent: 67, color: "#9933ff" },
+                    { emoji: "🔘", percent: 94, color: "#d4d4d4" },
+                    { emoji: "🕯️", percent: 15, color: "#f4e8d4" },
+                    { emoji: "🏮", percent: 38, color: "#f4a444" },
+                    { emoji: "🪸", percent: 0, color: "#e87080" }
+                ],
+                milestones: [
+                    { name: "First Thousand!", status: "achieved" },
+                    { name: "Five Thousand!", status: "progress" },
+                    { name: "Halfway!", status: "locked" },
+                    { name: "Zone Alpha!", status: "progress" },
+                    { name: "Zone Beta!", status: "locked" },
+                    { name: "THE REVEAL!", status: "locked" }
+                ],
+                lastUpdate: {
+                    date: "January 29, 2025",
+                    mood: "🔥",
+                    blocks: 347
+                }
+            };
+        }
+
+        // ============================================================
+        // RENDERING
+        // ============================================================
+
+        function render(data) {
+            const app = document.getElementById('app');
+            
+            app.innerHTML = `
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">🧱</div>
+                        <div class="stat-value counter" data-target="${data.stats.blocksPlaced}">${formatNumber(data.stats.blocksPlaced)}</div>
+                        <div class="stat-label">Blocks</div>
+                    </div>
+                    <div class="stat-card amber">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-value">${data.stats.overallPercent}%</div>
+                        <div class="stat-label">Done</div>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-value">${data.stats.daysToReveal}</div>
+                        <div class="stat-label">Days Left</div>
+                    </div>
+                </div>
+
+                <div class="overall-progress">
+                    <div class="progress-header">
+                        <div class="progress-title"><span>⚡</span> OVERALL PROGRESS</div>
+                        <div class="progress-percent">${data.stats.overallPercent}%</div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: ${Math.max(data.stats.overallPercent, 3)}%"></div>
+                    </div>
+                </div>
+
+                <div class="section-header">🗺️ ZONE PROGRESS</div>
+                <div class="zones-grid">
+                    ${data.zones.map(zone => `
+                        <div class="zone-card ${zone.status === 'building' ? 'active' : ''}">
+                            <div class="zone-emoji">${zone.emoji}</div>
+                            <div class="zone-info">
+                                <div class="zone-name">${zone.name}</div>
+                                <div class="zone-codename">${zone.codename}</div>
+                                <div class="zone-progress-bar">
+                                    <div class="zone-progress-fill" style="width: ${zone.percent}%; background: ${zone.color}"></div>
+                                </div>
+                            </div>
+                            <div class="zone-status">
+                                <div class="zone-percent" style="color: ${zone.color}">${zone.percent}%</div>
+                                <div class="zone-badge ${zone.status}">${getBadgeText(zone.status)}</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="blocko-meter">
+                    <div class="section-header">🧱 BLOCK-O-METER</div>
+                    <div class="blocks-grid">
+                        ${data.materials.map(mat => `
+                            <div class="block-item">
+                                <div class="block-fill" style="height: ${mat.percent}%; background: linear-gradient(to top, ${mat.color}88, ${mat.color}22);"></div>
+                                <div class="block-emoji">${mat.emoji}</div>
+                                <div class="block-percent">${mat.percent}%</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="section-header">🏆 ACHIEVEMENTS</div>
+                <div class="achievements-grid">
+                    ${data.milestones.map(m => `
+                        <div class="achievement-card ${m.status}">
+                            <div class="achievement-icon">${getAchievementIcon(m.status)}</div>
+                            <div class="achievement-name">${m.status === 'locked' ? '???' : m.name}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="countdown-section">
+                    <div class="section-header">⏰ THE BIG REVEAL</div>
+                    <div class="countdown-card">
+                        <div class="countdown-label">COUNTDOWN</div>
+                        <div class="countdown-value">${data.stats.daysToReveal}</div>
+                        <div class="countdown-subtitle">DAYS TO GO!</div>
+                    </div>
+                </div>
+
+                <div class="last-update">
+                    <span class="last-update-mood">${data.lastUpdate.mood}</span>
+                    Last update: ${data.lastUpdate.date} • +${data.lastUpdate.blocks} blocks!
+                </div>
+            `;
+
+            animateCounters();
+        }
+
+        function getBadgeText(status) {
+            return {
+                'building': '⚡ BUILDING',
+                'complete': '✅ DONE',
+                'locked': '🔒 LOCKED'
+            }[status] || status;
+        }
+
+        function getAchievementIcon(status) {
+            return {
+                'achieved': '🎉',
+                'progress': '🎯',
+                'locked': '🔒'
+            }[status] || '❓';
+        }
+
+        // ============================================================
+        // UTILITIES
+        // ============================================================
+
+        function formatNumber(num) {
+            return num.toLocaleString();
+        }
+
+        function animateCounters() {
+            document.querySelectorAll('.counter').forEach(counter => {
+                const target = parseInt(counter.dataset.target);
+                const duration = 1500;
+                const startTime = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    counter.textContent = formatNumber(Math.floor(target * eased));
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        function launchConfetti() {
+            const container = document.getElementById('confetti');
+            const colors = ['#6366f1', '#8b5cf6', '#ec4899', '#f59e0b', '#22c55e', '#06b6d4'];
+            
+            for (let i = 0; i < 60; i++) {
+                const confetti = document.createElement('div');
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.cssText = `
+                    position: absolute;
+                    width: ${8 + Math.random() * 8}px;
+                    height: ${8 + Math.random() * 8}px;
+                    background: ${color};
+                    left: ${Math.random() * 100}%;
+                    top: -20px;
+                    border-radius: ${Math.random() > 0.5 ? '50%' : '2px'};
+                    transform: rotate(${Math.random() * 360}deg);
+                `;
+                container.appendChild(confetti);
+                
+                const duration = 2000 + Math.random() * 2000;
+                const rotation = Math.random() * 720 - 360;
+                
+                confetti.animate([
+                    { transform: `translateY(0) rotate(0deg)`, opacity: 1 },
+                    { transform: `translateY(${window.innerHeight + 100}px) rotate(${rotation}deg)`, opacity: 0 }
+                ], { duration, easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' });
+                
+                setTimeout(() => confetti.remove(), duration);
+            }
+        }
+
+        // ============================================================
+        // INITIALIZATION
+        // ============================================================
+
+        async function init() {
+            const data = await loadData();
+            render(data);
+            
+            if (CONFIG.refreshInterval > 0) {
+                setInterval(async () => {
+                    const newData = await loadData();
+                    render(newData);
+                }, CONFIG.refreshInterval);
+            }
+        }
+
+        // Pull to refresh
+        let touchStart = 0;
+        let isPulling = false;
+        
+        document.addEventListener('touchstart', e => {
+            if (window.scrollY === 0) {
+                touchStart = e.touches[0].clientY;
+                isPulling = true;
+            }
+        });
+
+        document.addEventListener('touchmove', e => {
+            if (!isPulling) return;
+            const touchY = e.touches[0].clientY;
+            if (touchY - touchStart > 80) {
+                document.querySelector('.pull-hint').textContent = '↑ Release to refresh ↑';
+            }
+        });
+
+        document.addEventListener('touchend', async e => {
+            if (!isPulling) return;
+            isPulling = false;
+            const touchEnd = e.changedTouches[0].clientY;
+            document.querySelector('.pull-hint').textContent = '↓ Pull down to refresh ↓';
+            
+            if (touchEnd - touchStart > 80 && window.scrollY === 0) {
+                const data = await loadData();
+                render(data);
+                launchConfetti(); // Fun feedback on refresh
+            }
+        });
+
+        // Double-tap for confetti (Easter egg for kids)
+        let lastTap = 0;
+        document.addEventListener('touchend', e => {
+            const now = Date.now();
+            if (now - lastTap < 300) {
+                launchConfetti();
+            }
+            lastTap = now;
+        });
+
+        init();
+    </script>
+</body>
+</html>
