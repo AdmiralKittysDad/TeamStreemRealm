@@ -17,64 +17,8 @@ class MegaBuildTracker {
   async init() {
     this.setupTabNavigation();
     this.startFunFactRotation();
-
-    // Check for API key
-    if (!CONFIG.AIRTABLE_API_KEY) {
-      this.showSetupPrompt();
-      return;
-    }
-
     await this.loadAllData();
     this.setupAutoRefresh();
-  }
-
-  showSetupPrompt() {
-    const content = document.querySelector('.content');
-    content.innerHTML = `
-      <div class="setup-prompt">
-        <div class="setup-icon">🔑</div>
-        <h2>Welcome to Team Streem!</h2>
-        <p>Ask a parent to set up the dashboard with the special link.</p>
-        <div class="setup-hint">
-          <small>Parents: Add <code>?key=YOUR_API_KEY</code> to the URL</small>
-        </div>
-      </div>
-    `;
-
-    // Add styles for setup prompt
-    const style = document.createElement('style');
-    style.textContent = `
-      .setup-prompt {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        text-align: center;
-        padding: 2rem;
-      }
-      .setup-icon { font-size: 4rem; margin-bottom: 1rem; }
-      .setup-prompt h2 {
-        background: linear-gradient(135deg, var(--emerald), var(--diamond));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 0.5rem;
-      }
-      .setup-prompt p { color: var(--text-secondary); margin-bottom: 1.5rem; }
-      .setup-hint {
-        background: var(--bg-card);
-        padding: 1rem;
-        border-radius: var(--radius-md);
-        color: var(--text-muted);
-      }
-      .setup-hint code {
-        background: var(--bg-dark);
-        padding: 0.2rem 0.5rem;
-        border-radius: 4px;
-        font-family: monospace;
-      }
-    `;
-    document.head.appendChild(style);
   }
 
   // ============================================

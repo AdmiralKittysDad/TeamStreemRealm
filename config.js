@@ -2,27 +2,9 @@
 // MEGA BUILD TRACKER - Configuration
 // ============================================
 
-// API Key is loaded from URL parameter or localStorage
-// Usage: Add ?key=YOUR_KEY to URL, or it will prompt once and save
-function getApiKey() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const keyFromUrl = urlParams.get('key');
-
-  if (keyFromUrl) {
-    localStorage.setItem('airtable_key', keyFromUrl);
-    // Clean URL without reloading
-    window.history.replaceState({}, document.title, window.location.pathname);
-    return keyFromUrl;
-  }
-
-  return localStorage.getItem('airtable_key');
-}
-
 const CONFIG = {
-  // Airtable Configuration - key loaded dynamically
-  get AIRTABLE_API_KEY() {
-    return getApiKey();
-  },
+  // Airtable Configuration
+  AIRTABLE_API_KEY: 'patmH6KZTNDCGNbhX.7fcdbf3b4042c83f98eed229566b5735279e6e33db0473ba7a98eadd8283a667',
   AIRTABLE_BASE_ID: 'appmul5QQ7fC0RlfB',
 
   // Table Names
