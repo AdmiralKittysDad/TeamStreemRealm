@@ -16,8 +16,8 @@ const CONFIG = {
     MATERIALS: 'Materials'
   },
 
-  // Refresh interval (in milliseconds) - 5 minutes
-  REFRESH_INTERVAL: 5 * 60 * 1000,
+  // Refresh interval (in milliseconds) - 30 seconds
+  REFRESH_INTERVAL: 30 * 1000,
 
   // Fun facts to cycle through
   FUN_FACTS: [
