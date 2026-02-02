@@ -1,0 +1,601 @@
+================================================================================
+                    THE OCEANIC SPAWN PLATFORM - ZONE 3
+                         SURFACE PLATFORM (Y:63-68)
+                           The Aethelgard Nexus
+================================================================================
+
+ZONE SPECIFICATIONS:
+├── Elevation Range: Y:63 to Y:68 (6 layers)
+├── Main Platform: 31×31 blocks
+├── Extended Piers: 4 piers × (5×15 blocks each)
+├── Total Footprint: 61×61 blocks (with piers)
+├── Spawn Point: X:0, Y:64, Z:0 (Lodestone)
+└── Water Surface: Y:63
+
+================================================================================
+                              MATERIAL KEY
+================================================================================
+
+STRUCTURAL:
+  s = Smooth Stone               k = Polished Blackstone
+  K = Blackstone                 b = Polished Blackstone Bricks
+  S = Smooth Stone Slab          w = Polished Blackstone Wall
+  
+ACCENT:
+  O = Crying Obsidian            g = Gilded Blackstone
+  @ = Lodestone (SPAWN)          I = Blue Ice
+  
+LIGHTING:
+  L = Sea Lantern                l = Lantern (on post)
+  
+OTHER:
+  G = Glass                      C = Chest
+  W = Water                      _ = Air
+  ↑ = Soul Sand (bubble up)      ↓ = Magma (bubble down)
+  [ = Stair (facing direction)   H = Hopper
+  
+PIER MARKERS:
+  N = North Pier Direction       S = South Pier Direction
+  E = East Pier Direction        W = West Pier Direction
+
+================================================================================
+                         LAYER Y:63 - WATER SURFACE
+                    (Foundation layer - partially submerged)
+================================================================================
+
+This layer is AT water level. Structure emerges from water here.
+The central 15×15 core continues from Zone 2 below.
+Piers begin extending outward.
+
+COORDINATE GRID: X: -17 to +17, Z: -17 to +17 (35×35 shown for pier starts)
+
+                              NORTH (-Z)
+                                 ↑
+    
+         -17      -12       -7    -2  0  +2    +7       +12      +17
+    Z    ╔═══════════════════════════════════════════════════════════╗
+   -17   ║                         IIIII                             ║
+         ║                         IkkkI                             ║
+   -15   ║                         IkLkI                             ║
+         ║                         IkkkI       ← NORTH PIER START    ║
+         ║                         IkkkI                             ║
+   -12   ║·························kkkkk·························║
+         ║·······················kkkkkkkkk·······················║
+         ║·····················kkkkkkkkkkkkk·····················║
+    -9   ║···················kkkkkkkkkkkkkkkkk···················║
+         ║·················kkkkkkkkkkkkkkkkkkkk·················║
+         ║···············kkkkkkkkkkkkkkkkkkkkkkkk···············║
+    -6   ║·············kkkkkkkkkkkkkkkkkkkkkkkkkkk·············║
+         ║···········kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk···········║
+         ║·········kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk·········║
+    -3   ║·······kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk·······║
+         ║·····kkkkkkkkkkkkkkkkkkLkkkkkLkkkkkkkkkkkkkkkk·····║
+         ║···kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk···║
+     0   ║IIIkkkkkkkkkkkkkkkkkkkkk@kkkkkkkkkkkkkkkkkkkkkIII║ ← E/W
+         ║IkIkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkIkI║   PIERS
+         ║ILIkkkkkkkkkkkkkkkkkkLkkkkkLkkkkkkkkkkkkkkkkILI║
+    +3   ║IkIkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkIkI║
+         ║IkIkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkIkI║
+         ║···kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk···║
+    +6   ║·····kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk·····║
+         ║·······kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk·······║
+         ║·········kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk·········║
+    +9   ║···········kkkkkkkkkkkkkkkkkkkkkkkkkkk···········║
+         ║·············kkkkkkkkkkkkkkkkkkkkkk·············║
+         ║···············kkkkkkkkkkkkkkkkkk···············║
+   +12   ║·························kkkkk·························║
+         ║                         IkkkI                             ║
+         ║                         IkkkI       ← SOUTH PIER START    ║
+   +15   ║                         IkLkI                             ║
+         ║                         IkkkI                             ║
+   +17   ║                         IIIII                             ║
+         ╚═══════════════════════════════════════════════════════════╝
+
+LEGEND FOR Y:63:
+  · = Water (ocean surface)
+  @ = Center point (will become lodestone at Y:64)
+  I = Blue Ice (pier floor)
+  k = Polished Blackstone (platform base)
+  L = Sea Lantern (underwater lighting visible through)
+
+NOTE: The platform at Y:63 is the structural base. Actual walking surface is Y:64.
+      Sea lanterns at Y:63 create "glow from below" effect through glass at Y:64.
+
+================================================================================
+                         LAYER Y:64 - MAIN PLATFORM
+                      (Primary walking surface & SPAWN)
+================================================================================
+
+★★★ THIS IS THE SPAWN LAYER - LODESTONE AT EXACT CENTER ★★★
+
+The 31×31 platform with detailed spawn circle and all four piers extending.
+
+FULL GRID: X: -30 to +30, Z: -30 to +30 (showing full pier extensions)
+
+                              NORTH (-Z)
+                                 ↑
+
+NORTH PIER (extends from Z:-15 to Z:-30):
+         -2   0  +2
+    Z    ┌─────────┐
+   -30   │ I I I I │  ← Pier end (boat dock)
+   -29   │GwwwwwwwG│     G = Glass roof supports
+   -28   │GIIIIIIIG│     I = Blue Ice (3-wide path)
+   -27   │GIIIIIIIG│     w = Blackstone walls
+   -26   │GIIIIIIIG│
+   -25   │GwLwwwLwG│     L = Lantern posts
+   -24   │GIIIIIIIG│
+   -23   │GIIIIIIIG│
+   -22   │GIIIIIIIG│
+   -21   │GwwwwwwwG│
+   -20   │GIIIIIIIG│
+   -19   │GIIIIIIIG│
+   -18   │GIIIIIIIG│
+   -17   │GwLwwwLwG│
+   -16   │GIIIIIIIG│
+   -15   └─────────┘  ← Connects to main platform
+
+MAIN PLATFORM (31×31): X: -15 to +15, Z: -15 to +15
+
+         -15 -12  -9  -6  -3   0  +3  +6  +9 +12 +15
+    Z    ╔═══════════════════════════════════════════╗
+   -15   ║kwwwwIIIIIwwwwwwwwwwwwwwwwwwwwwwwwwwwwwk║
+         ║wGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGw║
+   -12   ║wGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkGw║
+         ║wGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkGw║
+         ║wGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkGw║
+    -9   ║wGkkkkkkkkkkkkkLkkkkkLkkkkkkkkkkkkkkkGw║
+         ║wGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkGw║
+         ║wGkkkkkkkkkkggggggggggggkkkkkkkkkkkkkkGw║
+    -6   ║wGkkkkkkkkkgOOOOOOOOOOOgkkkkkkkkkkkkkGw║
+         ║wGkkkkkkkkgOOOOOOOOOOOOOgkkkkkkkkkkkkGw║
+         ║wGkkkkkkkgOOOOOOOOOOOOOOOgkkkkkkkkkkkGw║
+    -3   ║wGkkkkkkgOOOOOgggggOOOOOOgkkkkkkkkkkGw║
+         ║wGkkkkkgOOOOOgLLLLLgOOOOOOgkkkkkkkkkGw║
+         ║wGkkkkgOOOOOgL@@@LgOOOOOOgkkkkkkkkGw║
+  W  0   ║IIIIIgOOOOOgL@@@LgOOOOOOgIIIII║ ← E
+         ║wGkkkkgOOOOOgL@@@LgOOOOOOgkkkkkkkkGw║
+         ║wGkkkkkgOOOOOgLLLLLgOOOOOOgkkkkkkkkkGw║
+    +3   ║wGkkkkkkgOOOOOgggggOOOOOOgkkkkkkkkkkGw║
+         ║wGkkkkkkkgOOOOOOOOOOOOOOOgkkkkkkkkkkkGw║
+         ║wGkkkkkkkkgOOOOOOOOOOOOOgkkkkkkkkkkkkGw║
+    +6   ║wGkkkkkkkkkgOOOOOOOOOOOgkkkkkkkkkkkkkGw║
+         ║wGkkkkkkkkkkggggggggggggkkkkkkkkkkkkkkGw║
+         ║wGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkGw║
+    +9   ║wGkkkkkkkkkkkkkLkkkkkLkkkkkkkkkkkkkkkGw║
+         ║wGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkGw║
+         ║wGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkGw║
+   +12   ║wGkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkGw║
+         ║wGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGw║
+   +15   ║kwwwwwwwwwwwwwwwwIIIIIwwwwwwwwwwwwwwwwk║
+         ╚═══════════════════════════════════════════╝
+                                 ↓
+                            SOUTH PIER
+
+
+================================================================================
+                    SPAWN CIRCLE DETAIL (9×9 at center)
+================================================================================
+
+The sacred spawn circle - where players first enter the world.
+
+         -4  -3  -2  -1   0  +1  +2  +3  +4
+    Z    ┌─────────────────────────────────┐
+    -4   │  ·   g   g   g   g   g   g   ·  │
+    -3   │  g   O   O   O   O   O   O   g  │
+    -2   │  g   O   O   O   O   O   O   g  │
+    -1   │  g   O   O   L   L   L   O   g  │
+     0   │  g   O   O   L  [@]  L   O   g  │  ← EXACT SPAWN: X:0, Y:64, Z:0
+    +1   │  g   O   O   L   L   L   O   g  │
+    +2   │  g   O   O   O   O   O   O   g  │
+    +3   │  g   O   O   O   O   O   O   g  │
+    +4   │  ·   g   g   g   g   g   g   ·  │
+         └─────────────────────────────────┘
+
+SPAWN CIRCLE MATERIALS:
+  [@] = Lodestone (EXACT SPAWN POINT at X:0, Y:64, Z:0)
+  L  = Sea Lantern (3×3 inner glow)
+  O  = Crying Obsidian (purple glow ring)
+  g  = Gilded Blackstone (outer golden border)
+  ·  = Corner cutoff (polished blackstone floor)
+
+SYMBOLISM:
+- Lodestone at center = The compass of their journey, always pointing home
+- Sea lanterns = Light guiding them
+- Crying obsidian = The depths they've risen from
+- Gilded blackstone = The treasures that await
+
+================================================================================
+                         LAYER Y:65 - SAFETY WALLS
+                    (1-block walls preventing water falls)
+================================================================================
+
+Low walls around platform edge and pier edges for safety.
+
+         -15 -12  -9  -6  -3   0  +3  +6  +9 +12 +15
+    Z    ╔═══════════════════════════════════════════╗
+   -15   ║wwwww_____wwwwwwwwwwwwwwwwwwwwwwwwwwwwww║
+         ║w___________________________________w║
+   -12   ║w___________________________________w║
+         ║w___________________________________w║
+         ║w___________________________________w║
+    -9   ║w___________________________________w║
+         ║w___________________________________w║
+         ║w___________________________________w║
+    -6   ║w___________________________________w║
+         ║w___________________________________w║
+         ║w___________________________________w║
+    -3   ║w___________________________________w║
+         ║w___________________________________w║
+         ║w___________________________________w║
+     0   ║_____________________________________║ ← Open for pier access
+         ║w___________________________________w║
+         ║w___________________________________w║
+    +3   ║w___________________________________w║
+         ║w___________________________________w║
+         ║w___________________________________w║
+    +6   ║w___________________________________w║
+         ║w___________________________________w║
+         ║w___________________________________w║
+    +9   ║w___________________________________w║
+         ║w___________________________________w║
+         ║w___________________________________w║
+   +12   ║w___________________________________w║
+         ║w___________________________________w║
+   +15   ║wwwwwwwwwwwwwwwww_____wwwwwwwwwwwwwwwww║
+         ╚═══════════════════════════════════════════╝
+
+WALL MATERIAL: w = Polished Blackstone Wall
+OPENINGS: At cardinal directions for pier access (5 blocks wide)
+
+================================================================================
+                      LAYER Y:66 - LANTERN POST BASES
+================================================================================
+
+Posts for lanterns placed strategically around platform.
+
+         -15 -12  -9  -6  -3   0  +3  +6  +9 +12 +15
+    Z    ╔═══════════════════════════════════════════╗
+   -15   ║K___K___________K___K___________K___K║
+         ║_____________________________________║
+   -12   ║_____________________________________║
+         ║_____________________________________║
+         ║_____________________________________║
+    -9   ║K_______________K___K_______________K║
+         ║_____________________________________║
+         ║_____________________________________║
+    -6   ║_____________________________________║
+         ║_____________________________________║
+         ║_____________________________________║
+    -3   ║K_______________K___K_______________K║
+         ║_____________________________________║
+         ║_____________________________________║
+     0   ║_____________________________________║
+         ║_____________________________________║
+         ║_____________________________________║
+    +3   ║K_______________K___K_______________K║
+         ║_____________________________________║
+         ║_____________________________________║
+    +6   ║_____________________________________║
+         ║_____________________________________║
+         ║_____________________________________║
+    +9   ║K_______________K___K_______________K║
+         ║_____________________________________║
+   +12   ║_____________________________________║
+         ║_____________________________________║
+   +15   ║K___K___________K___K___________K___K║
+         ╚═══════════════════════════════════════════╝
+
+K = Blackstone (lantern post base)
+Each post rises from Y:66 to Y:68, topped with lantern
+
+================================================================================
+                      LAYER Y:67 - LANTERN POST MID
+================================================================================
+
+(Same pattern as Y:66 - posts continue upward)
+
+K = Blackstone (lantern post middle section)
+
+================================================================================
+                      LAYER Y:68 - LANTERN POST TOPS
+================================================================================
+
+         -15 -12  -9  -6  -3   0  +3  +6  +9 +12 +15
+    Z    ╔═══════════════════════════════════════════╗
+   -15   ║l___l___________l___l___________l___l║
+         ║_____________________________________║
+   -12   ║_____________________________________║
+         ║_____________________________________║
+         ║_____________________________________║
+    -9   ║l_______________l___l_______________l║
+         ║_____________________________________║
+         ║_____________________________________║
+    -6   ║_____________________________________║
+         ║_____________________________________║
+         ║_____________________________________║
+    -3   ║l_______________l___l_______________l║
+         ║_____________________________________║
+         ║_____________________________________║
+     0   ║_____________________________________║
+         ║_____________________________________║
+         ║_____________________________________║
+    +3   ║l_______________l___l_______________l║
+         ║_____________________________________║
+         ║_____________________________________║
+    +6   ║_____________________________________║
+         ║_____________________________________║
+         ║_____________________________________║
+    +9   ║l_______________l___l_______________l║
+         ║_____________________________________║
+   +12   ║_____________________________________║
+         ║_____________________________________║
+   +15   ║l___l___________l___l___________l___l║
+         ╚═══════════════════════════════════════════╝
+
+l = Lantern (hanging from post or sitting on top)
+Total lanterns on main platform: 24
+
+================================================================================
+                    PIER DETAIL - NORTH PIER (Z: -15 to -30)
+================================================================================
+
+Side view (looking from West):
+
+Y:68  ·  G G G G G G G G G G G G G G G  ·   ← Glass roof
+Y:67  ·  w · · · · · · · · · · · · · w  ·   ← Walls
+Y:66  ·  w · · · · · · · · · · · · · w  ·
+Y:65  ·  w · · · · · · · · · · · · · w  ·
+Y:64  ·  k I I I I I I I I I I I I I k  ·   ← Blue ice path
+Y:63  ·  k k k k k k k k k k k k k k k  ·   ← Support floor
+      Z:-30                          Z:-15
+              ← Toward open ocean    Platform →
+
+Top view of pier at Y:64:
+
+         X: -2  -1   0  +1  +2
+    Z    ┌─────────────────────┐
+   -30   │ C   I   I   I   C │  ← Boat dock (C = Chest)
+   -29   │ w   I   I   I   w │
+   -28   │ w   I   I   I   w │
+   -27   │ w   I   I   I   w │
+   -26   │ w   I   I   I   w │
+   -25   │ l   I   I   I   l │  ← Lantern posts
+   -24   │ w   I   I   I   w │
+   -23   │ w   I   I   I   w │
+   -22   │ w   I   I   I   w │
+   -21   │ w   I   I   I   w │
+   -20   │ l   I   I   I   l │  ← Lantern posts
+   -19   │ w   I   I   I   w │
+   -18   │ w   I   I   I   w │
+   -17   │ w   I   I   I   w │
+   -16   │ w   I   I   I   w │
+   -15   │ ·   ·   ·   ·   · │  ← Connects to platform
+         └─────────────────────┘
+
+PIER SPECIFICATIONS:
+- Width: 5 blocks
+- Length: 15 blocks (from platform edge to dock)
+- Blue Ice path: 3 blocks wide (center)
+- Walls: Polished blackstone walls on sides
+- Roof: Glass blocks for protection while maintaining visibility
+- Chests: 2 per pier at dock end (storage + boat storage)
+- Lanterns: 4 per pier (2 pairs)
+
+================================================================================
+                    PIER DETAIL - DOCK END (ALL PIERS)
+================================================================================
+
+Each pier ends with a boat dock station:
+
+Top view at Y:64 (dock end):
+
+         X: -2  -1   0  +1  +2
+    Z    ┌─────────────────────┐
+   -30   │ C   I   I   I   C │  C = Chest (supplies)
+   -31   │ s   W   W   W   s │  W = Water (boat launch)
+   -32   │ s   W   W   W   s │  s = Slab (step into water)
+         └─────────────────────┘
+
+DOCK FEATURES:
+- 2 chests per dock (boats, food, supplies)
+- Water pocket for boat launching (3×2)
+- Slab steps for easy water entry
+- Each dock faces the cardinal realm it connects to
+
+================================================================================
+                         TOWER FOUNDATION AREAS
+================================================================================
+
+At Y:68, the beacon tower foundations begin. These are positioned at:
+
+NORTH TOWER (for Child 1 - Cyan Beacon):
+- Center: X:0, Z:-10
+- Footprint: 7×7 (X:-3 to +3, Z:-13 to -7)
+- Foundation starts at Y:68, tower rises Y:69-90
+
+SOUTH TOWER (for Child 2 - Magenta Beacon):
+- Center: X:0, Z:+10
+- Footprint: 7×7 (X:-3 to +3, Z:+7 to +13)
+- Foundation starts at Y:68, tower rises Y:69-90
+
+Tower foundation overlay on Y:68:
+
+         -15      -10       -5   0   +5       +10      +15
+    Z    ╔═══════════════════════════════════════════════════╗
+   -15   ║·················································║
+   -13   ║·········╔═══════╗·······························║
+         ║·········║TOWER 1║·······························║
+   -10   ║·········║ NORTH ║·······························║
+         ║·········║ (7×7) ║·······························║
+    -7   ║·········╚═══════╝·······························║
+         ║·················································║
+     0   ║·················································║
+         ║·················································║
+    +7   ║·········╔═══════╗·······························║
+         ║·········║TOWER 2║·······························║
+   +10   ║·········║ SOUTH ║·······························║
+         ║·········║ (7×7) ║·······························║
+   +13   ║·········╚═══════╝·······························║
+   +15   ║·················································║
+         ╚═══════════════════════════════════════════════════╝
+
+================================================================================
+                    ACCESS POINTS TO/FROM ZONE 3
+================================================================================
+
+FROM UNDERWATER (Zone 1-2):
+┌────────────────────────────────────────────────────────────────────────────┐
+│ 1. BUBBLE COLUMN ACCESS (Soul Sand - Rapid Ascent)                        │
+│    - Location: X:-7, Z:-7 (NW corner of chamber)                          │
+│    - Location: X:+7, Z:-7 (NE corner of chamber)                          │
+│    - Location: X:-7, Z:+7 (SW corner of chamber)                          │
+│    - Location: X:+7, Z:+7 (SE corner of chamber)                          │
+│    - Emerges at platform level through 1×1 openings                       │
+│                                                                            │
+│ 2. INTERNAL STAIRCASE                                                      │
+│    - Located inside each anchor pillar                                     │
+│    - Spiral design from Y:40 to Y:64                                      │
+│    - Access doors at Y:64 level                                           │
+│                                                                            │
+│ 3. MAGMA BLOCK DESCENT (controlled fall)                                   │
+│    - Adjacent to each bubble column                                        │
+│    - For returning to underwater chamber                                   │
+└────────────────────────────────────────────────────────────────────────────┘
+
+TO TOWERS (Zone 4):
+┌────────────────────────────────────────────────────────────────────────────┐
+│ 1. TOWER STAIRCASE ENTRANCES                                               │
+│    - North tower entrance: X:0, Y:64, Z:-10 (door in tower base)          │
+│    - South tower entrance: X:0, Y:64, Z:+10 (door in tower base)          │
+│    - Each leads to internal spiral staircase                               │
+│                                                                            │
+│ 2. LADDER ACCESS (backup)                                                  │
+│    - External ladders on tower backs                                       │
+│    - From Y:64 to observation decks                                        │
+└────────────────────────────────────────────────────────────────────────────┘
+
+TO CARDINAL REALMS (via Piers):
+┌────────────────────────────────────────────────────────────────────────────┐
+│ NORTH PIER → Northern Realm Highway                                        │
+│ - Blue ice path with boat                                                  │
+│ - Exit at Z:-30, connects to main ice highway                             │
+│                                                                            │
+│ SOUTH PIER → Southern Realm Highway                                        │
+│ - Blue ice path with boat                                                  │
+│ - Exit at Z:+30, connects to main ice highway                             │
+│                                                                            │
+│ EAST PIER → Eastern Realm Highway                                          │
+│ - Blue ice path with boat                                                  │
+│ - Exit at X:+30, connects to main ice highway                             │
+│                                                                            │
+│ WEST PIER → Western Realm Highway                                          │
+│ - Blue ice path with boat                                                  │
+│ - Exit at X:-30, connects to main ice highway                             │
+└────────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                         MATERIAL COUNT - ZONE 3
+================================================================================
+
+MAIN PLATFORM (31×31, Y:63-68):
+├── Polished Blackstone ............... 961 blocks (Y:64 floor)
+├── Polished Blackstone (Y:63 base) ... 576 blocks
+├── Polished Blackstone Walls ......... 124 walls (Y:65 perimeter)
+├── Blackstone (lantern posts) ........ 72 blocks (24 posts × 3 high)
+├── Sea Lanterns (floor) .............. 45 blocks (under glass sections)
+├── Lanterns (on posts) ............... 24 lanterns
+├── Glass (floor sections) ............ 89 blocks
+└── PLATFORM SUBTOTAL ................. 1,891 pieces
+
+SPAWN CIRCLE (9×9):
+├── Lodestone ......................... 1 block (THE spawn point)
+├── Sea Lanterns ...................... 8 blocks (3×3 minus center)
+├── Crying Obsidian ................... 48 blocks
+├── Gilded Blackstone ................. 24 blocks
+└── SPAWN CIRCLE SUBTOTAL ............. 81 pieces
+
+PIERS (4 piers × 5×15 each):
+├── Blue Ice .......................... 180 blocks (3×15×4 piers)
+├── Polished Blackstone ............... 120 blocks (side floors)
+├── Polished Blackstone Walls ......... 120 walls (sides)
+├── Glass (roofs) ..................... 240 blocks (5×12×4 piers)
+├── Chests ............................ 8 chests (2 per pier)
+├── Lanterns .......................... 16 lanterns (4 per pier)
+├── Slabs (dock steps) ................ 24 slabs
+└── PIERS SUBTOTAL .................... 708 pieces
+
+ZONE 3 TOTAL .......................... 2,680 pieces
+
+================================================================================
+                         CONSTRUCTION SEQUENCE
+================================================================================
+
+PHASE 1: Clear water surface area (if needed)
+├── Use sponges to remove water in construction zone
+├── Work outward from center
+└── Temporary walls to hold back water
+
+PHASE 2: Build Y:63 foundation layer
+├── Start at center, work outward
+├── Place sea lanterns in planned positions
+├── Leave openings for bubble columns
+└── Establish pier starting points
+
+PHASE 3: Build Y:64 main platform
+├── Complete 31×31 walking surface
+├── Create spawn circle pattern
+├── Place lodestone at EXACT center (X:0, Y:64, Z:0)
+├── Install glass floor sections over sea lanterns
+└── Create pier access openings
+
+PHASE 4: Build safety walls (Y:65)
+├── Polished blackstone walls around perimeter
+├── Leave 5-block openings for piers
+└── Ensure all edges are protected
+
+PHASE 5: Install lantern posts (Y:66-68)
+├── Build 24 posts around platform
+├── 3 blocks high each
+├── Place lanterns on top
+└── Verify even light distribution
+
+PHASE 6: Extend piers (all four directions)
+├── Build pier floors (Y:63-64)
+├── Install blue ice paths (3 wide)
+├── Build side walls
+├── Add glass roofs
+├── Create dock ends with chests
+└── Install pier lanterns
+
+PHASE 7: Final connections
+├── Verify bubble column access points
+├── Test all access routes
+├── Place any remaining lighting
+├── Flood test (ensure no leaks)
+└── Verify spawn point works correctly
+
+================================================================================
+                              SPAWN POINT NOTE
+================================================================================
+
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+                    THE LODESTONE AT X:0, Y:64, Z:0
+                    
+         This single block is the heart of the entire world.
+         
+         When your children first enter this realm, they will
+         stand here - on this exact spot - and look up at the
+         twin towers that represent them, look down at the
+         glowing depths below, and know they are HOME.
+         
+         The lodestone points nowhere but here. Every compass
+         attuned to it will guide them back to this moment,
+         this place, this beginning of their adventure.
+
+★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+================================================================================
+                    END OF ZONE 3 BLUEPRINTS - FILE 5 OF 15
+================================================================================

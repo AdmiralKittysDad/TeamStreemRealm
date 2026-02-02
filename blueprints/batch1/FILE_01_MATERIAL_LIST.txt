@@ -1,0 +1,295 @@
+================================================================================
+                    THE AETHELGARD NEXUS - OCEANIC SPAWN PLATFORM
+                              COMPLETE MATERIAL LIST
+================================================================================
+
+Structure: Oceanic Spawn Platform
+Dimensions: 31×31 base (with 4 extending piers of 5×15 each)
+Vertical Range: Y:40 to Y:90 (50 blocks height)
+Center: X:0, Y:63, Z:0
+
+================================================================================
+                              MATERIAL QUANTITIES
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         ZONE 1: ABYSSAL FOUNDATION                          │
+│                              (Y:40 to Y:55)                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PRISMARINE FAMILY:
+  Prismarine ............................ 1,847 blocks
+  Dark Prismarine ....................... 1,234 blocks
+  Prismarine Bricks ..................... 892 blocks
+  Sea Lanterns .......................... 312 blocks
+
+STRUCTURAL:
+  Glass ................................. 624 blocks
+  Magma Blocks .......................... 48 blocks
+  Soul Sand ............................. 16 blocks
+
+SPECIAL:
+  Conduit ............................... 1 block
+  Prismarine (for conduit frame) ........ 42 blocks (included in total above)
+
+DECORATIVE:
+  Kelp .................................. 180 plants
+  Coral Blocks (assorted) ............... 64 blocks
+  Coral Fans (assorted) ................. 48 items
+  Jack-o'-Lanterns ...................... 24 blocks
+
+                                           ZONE 1 SUBTOTAL: ~5,342 blocks
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         ZONE 2: SUBMERGED SPIRE                             │
+│                              (Y:56 to Y:62)                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PRISMARINE FAMILY:
+  Prismarine ............................ 423 blocks
+  Dark Prismarine ....................... 318 blocks
+  Sea Lanterns .......................... 156 blocks
+
+TRANSITION MATERIALS:
+  Blackstone ............................ 287 blocks
+  Crying Obsidian ....................... 94 blocks
+
+STRUCTURAL:
+  Glass ................................. 186 blocks
+
+                                           ZONE 2 SUBTOTAL: ~1,464 blocks
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        ZONE 3: SURFACE PLATFORM                             │
+│                              (Y:63 to Y:68)                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PRIMARY STRUCTURE:
+  Smooth Stone .......................... 2,847 blocks
+  Polished Blackstone ................... 1,423 blocks
+  Blackstone ............................ 687 blocks
+
+ACCENT MATERIALS:
+  Crying Obsidian ....................... 234 blocks
+  Gilded Blackstone ..................... 156 blocks
+  Sea Lanterns .......................... 248 blocks
+  Glass ................................. 312 blocks
+
+SPECIAL BLOCKS:
+  Lodestone ............................. 1 block (SPAWN POINT)
+  Blue Ice .............................. 372 blocks (highway starters)
+
+PIER MATERIALS (4 piers × 5×15):
+  Smooth Stone .......................... 1,200 blocks (included above)
+  Polished Blackstone ................... 600 blocks (included above)
+
+SAFETY/DECORATIVE:
+  Stone Brick Walls ..................... 248 blocks
+  Lanterns .............................. 64 items
+  Chests ................................ 8 chests (2 per pier)
+  Boats ................................. 8 boats
+
+                                           ZONE 3 SUBTOTAL: ~6,600 blocks
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       ZONE 4: TWIN BEACON TOWERS                            │
+│                              (Y:69 to Y:90)                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PRIMARY STRUCTURE (per tower × 2):
+  Blackstone ............................ 1,124 blocks × 2 = 2,248 blocks
+  Polished Blackstone ................... 687 blocks × 2 = 1,374 blocks
+
+ACCENT MATERIALS:
+  Crying Obsidian ....................... 234 blocks
+  Gilded Blackstone ..................... 156 blocks
+
+WINDOWS/LIGHTING:
+  Glass ................................. 186 blocks
+  Tinted Glass .......................... 94 blocks
+  Sea Lanterns .......................... 128 blocks
+  Lanterns .............................. 48 items
+
+BEACON PYRAMIDS (2 complete):
+  Iron Blocks ........................... 164 blocks (or substitute)
+  Gold Blocks ........................... 0 blocks (optional upgrade)
+  
+BEACONS:
+  Beacons ............................... 2 beacons
+  
+INTERNAL:
+  Polished Blackstone Stairs ............ 176 blocks
+  Ladders ............................... 44 ladders
+
+BRIDGE (Y:75, connecting towers):
+  Blackstone ............................ 87 blocks
+  Polished Blackstone Slabs ............. 45 slabs
+  Chain ................................. 24 chains
+  Lanterns .............................. 8 items
+
+                                           ZONE 4 SUBTOTAL: ~4,998 blocks
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        ZONE 5: CENTRAL MONUMENT                             │
+│                              (Y:69 to Y:78)                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+BASE PLATFORM:
+  Polished Blackstone ................... 121 blocks (11×11)
+  Gilded Blackstone ..................... 48 blocks
+
+MONUMENT (Compass Rose Design):
+  Blackstone ............................ 156 blocks
+  Crying Obsidian ....................... 87 blocks
+  Gilded Blackstone ..................... 64 blocks
+  End Rods .............................. 32 rods
+  Lodestone ............................. 1 block (floating center)
+
+DECORATIVE:
+  Armor Stands .......................... 8 stands
+  Item Frames ........................... 4 frames
+  Maps (custom) ......................... 4 maps
+  Sea Lanterns .......................... 24 blocks
+
+                                           ZONE 5 SUBTOTAL: ~545 blocks
+
+================================================================================
+                            GRAND TOTAL SUMMARY
+================================================================================
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          COMPLETE MATERIAL LIST                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+PRISMARINE FAMILY:
+  ├─ Prismarine ......................... 2,270 blocks
+  ├─ Dark Prismarine .................... 1,552 blocks
+  ├─ Prismarine Bricks .................. 892 blocks
+  └─ Sea Lanterns ....................... 868 blocks
+                                           SUBTOTAL: 5,582 blocks
+
+BLACKSTONE FAMILY:
+  ├─ Blackstone ......................... 3,222 blocks
+  ├─ Polished Blackstone ................ 3,605 blocks
+  ├─ Polished Blackstone Stairs ......... 176 blocks
+  ├─ Crying Obsidian .................... 649 blocks
+  └─ Gilded Blackstone .................. 424 blocks
+                                           SUBTOTAL: 8,076 blocks
+
+STONE FAMILY:
+  ├─ Smooth Stone ....................... 2,847 blocks
+  └─ Stone Brick Walls .................. 248 blocks
+                                           SUBTOTAL: 3,095 blocks
+
+GLASS:
+  ├─ Glass .............................. 1,308 blocks
+  └─ Tinted Glass ....................... 94 blocks
+                                           SUBTOTAL: 1,402 blocks
+
+SPECIAL BLOCKS:
+  ├─ Blue Ice ........................... 372 blocks
+  ├─ Magma Blocks ....................... 48 blocks
+  ├─ Soul Sand .......................... 16 blocks
+  ├─ Lodestone .......................... 2 blocks
+  ├─ Conduit ............................ 1 block
+  ├─ Beacons ............................ 2 blocks
+  ├─ Iron Blocks ........................ 164 blocks
+  └─ End Rods ........................... 32 rods
+                                           SUBTOTAL: 637 blocks
+
+LIGHTING (non-sea lantern):
+  ├─ Lanterns ........................... 120 items
+  └─ Jack-o'-Lanterns ................... 24 blocks
+                                           SUBTOTAL: 144 items
+
+DECORATIVE/FUNCTIONAL:
+  ├─ Kelp ............................... 180 plants
+  ├─ Coral Blocks ....................... 64 blocks
+  ├─ Coral Fans ......................... 48 items
+  ├─ Chain .............................. 24 chains
+  ├─ Ladders ............................ 44 ladders
+  ├─ Chests ............................. 8 chests
+  ├─ Boats .............................. 8 boats
+  ├─ Armor Stands ....................... 8 stands
+  ├─ Item Frames ........................ 4 frames
+  └─ Maps (custom) ...................... 4 maps
+                                           SUBTOTAL: 392 items
+
+================================================================================
+                              GRAND TOTAL
+================================================================================
+
+  TOTAL BLOCKS: ......................... ~18,949 blocks
+  TOTAL ITEMS/ENTITIES: ................. ~536 items
+
+================================================================================
+                           MATERIAL SOURCING NOTES
+================================================================================
+
+HIGH PRIORITY (large quantities needed):
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ 1. PRISMARINE FAMILY (5,582 blocks)                                         │
+│    Source: Ocean Monuments (Guardian farms recommended)                     │
+│    Alternative: Craft from prismarine shards                                │
+│                                                                             │
+│ 2. BLACKSTONE FAMILY (8,076 blocks)                                         │
+│    Source: Basalt Deltas (Nether)                                          │
+│    Tip: Bring Silk Touch for gilded blackstone                             │
+│                                                                             │
+│ 3. SMOOTH STONE (2,847 blocks)                                             │
+│    Source: Smelt cobblestone twice                                         │
+│    Tip: Super smelter recommended                                          │
+│                                                                             │
+│ 4. GLASS (1,402 blocks)                                                    │
+│    Source: Smelt sand                                                      │
+│    Tip: Desert biome + super smelter                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+SPECIAL ITEMS:
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ CONDUIT (1):                                                               │
+│   - 8 Nautilus Shells (fishing, drowned, wandering trader)                 │
+│   - 1 Heart of the Sea (buried treasure only)                              │
+│                                                                             │
+│ BEACONS (2):                                                               │
+│   - 6 Nether Stars total (3 per beacon... wait, 1 per beacon)             │
+│   - 2 Wither fights required                                               │
+│   - 10 Obsidian, 10 Glass total                                           │
+│                                                                             │
+│ LODESTONES (2):                                                            │
+│   - 2 Netherite Ingots                                                     │
+│   - 16 Chiseled Stone Bricks                                               │
+│                                                                             │
+│ CRYING OBSIDIAN (649 blocks):                                              │
+│   - Ruined Portals                                                         │
+│   - Piglin bartering (gold ingots)                                         │
+│   - Bastion Remnants                                                       │
+│                                                                             │
+│ BLUE ICE (372 blocks):                                                     │
+│   - Icebergs (Frozen Ocean biome)                                          │
+│   - Craft: 9 packed ice = 1 blue ice                                       │
+│   - Wandering Trader (expensive)                                           │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                         ESTIMATED GATHERING TIME
+================================================================================
+
+Assuming mid-game resources and basic farms:
+
+  Prismarine gathering: ................ 8-12 hours (with ocean monument raids)
+  Blackstone mining: ................... 6-8 hours (Nether expedition)
+  Stone processing: .................... 2-3 hours (with super smelter)
+  Glass production: .................... 1-2 hours (with super smelter)
+  Blue ice collection: ................. 3-4 hours (iceberg hunting)
+  Crying obsidian: ..................... 4-6 hours (piglin bartering)
+  Special items (conduit, beacons): .... 4-8 hours (boss fights, treasure)
+
+  TOTAL ESTIMATED GATHERING: ........... 28-43 hours
+
+With established farms (guardian farm, gold farm, etc.):
+  TOTAL ESTIMATED GATHERING: ........... 8-12 hours
+
+================================================================================
+                              FILE 01 COMPLETE
+================================================================================

@@ -1,0 +1,649 @@
+================================================================================
+                    THE OCEANIC SPAWN PLATFORM - ZONE 5
+                       CENTRAL MONUMENT (Y:69-78)
+                           The Aethelgard Nexus
+================================================================================
+
+ZONE SPECIFICATIONS:
+├── Elevation Range: Y:69 to Y:78 (10 layers)
+├── Position: Between the two beacon towers
+├── Footprint: 11×11 central area (X:-5 to +5, Z:-5 to +5)
+├── Purpose: Symbolic heart of the structure
+└── Center: X:0, Z:0 (directly above spawn point)
+
+================================================================================
+                         MONUMENT DESIGN OPTIONS
+================================================================================
+
+Four design options are provided. Choose the one that best represents
+your children and their bond:
+
+  OPTION A: "THE UNITY RINGS" - Interlocked rings symbolizing eternal bond
+  OPTION B: "THE BOOK OF ADVENTURES" - Open book on pedestal (stories/learning)
+  OPTION C: "THE DOUBLE HELIX" - Twin spirals reaching upward (growth/DNA)
+  OPTION D: "THE COMPASS ROSE" - Navigation star with floating lodestone
+
+Each option is fully detailed below with layer-by-layer blueprints.
+
+================================================================================
+                              MATERIAL KEY
+================================================================================
+
+STRUCTURAL:
+  K = Blackstone                 k = Polished Blackstone
+  b = Polished Blackstone Bricks w = Polished Blackstone Wall
+  S = Polished Blackstone Slab   B = Polished Blackstone Stairs
+  
+ACCENT:
+  O = Crying Obsidian            g = Gilded Blackstone
+  
+SPECIAL:
+  E = End Rod                    L = Sea Lantern
+  Q = Quartz (smooth)            C = Chain
+  A = Armor Stand Position       F = Item Frame
+  _ = Air                        @ = Lodestone
+
+================================================================================
+                    ★★★ OPTION A: THE UNITY RINGS ★★★
+          (RECOMMENDED - Best represents sibling bond)
+================================================================================
+
+Two interlocked rings made of contrasting materials, symbolizing the
+eternal connection between the two children.
+
+DESIGN CONCEPT:
+- Two vertical rings, perpendicular to each other
+- One ring: Crying obsidian (purple glow)
+- Other ring: Gilded blackstone (golden shimmer)
+- Rings interlock at center
+- End rods create "light beams" at intersection
+
+--------------------------------------------------------------------------------
+                         OPTION A: LAYER Y:69
+                        (Monument Base Platform)
+--------------------------------------------------------------------------------
+
+         -5  -4  -3  -2  -1   0  +1  +2  +3  +4  +5
+    Z    ┌─────────────────────────────────────────┐
+    -5   │  k   k   k   k   k   k   k   k   k   k  │
+    -4   │  k   b   b   b   b   b   b   b   b   k  │
+    -3   │  k   b   L   ·   ·   ·   ·   L   b   k  │
+    -2   │  k   b   ·   ·   ·   ·   ·   ·   b   k  │
+    -1   │  k   b   ·   ·   ·   ·   ·   ·   b   k  │
+     0   │  k   b   ·   ·   ·   ·   ·   ·   b   k  │ ← 11×11 platform
+    +1   │  k   b   ·   ·   ·   ·   ·   ·   b   k  │
+    +2   │  k   b   ·   ·   ·   ·   ·   ·   b   k  │
+    +3   │  k   b   L   ·   ·   ·   ·   L   b   k  │
+    +4   │  k   b   b   b   b   b   b   b   b   k  │
+    +5   │  k   k   k   k   k   k   k   k   k   k  │
+         └─────────────────────────────────────────┘
+
+· = Air (interior space)
+L = Sea Lantern (corner uplighting)
+
+--------------------------------------------------------------------------------
+                         OPTION A: LAYER Y:70
+                        (Pedestal Start)
+--------------------------------------------------------------------------------
+
+         -5  -4  -3  -2  -1   0  +1  +2  +3  +4  +5
+    Z    ┌─────────────────────────────────────────┐
+    -5   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    -4   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    -3   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    -2   │  ·   ·   ·   k   k   k   k   ·   ·   ·  │
+    -1   │  ·   ·   ·   k   k   k   k   ·   ·   ·  │
+     0   │  ·   ·   ·   k   k   k   k   ·   ·   ·  │ ← 4×4 pedestal
+    +1   │  ·   ·   ·   k   k   k   k   ·   ·   ·  │
+    +2   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    +3   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    +4   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    +5   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+         └─────────────────────────────────────────┘
+
+--------------------------------------------------------------------------------
+                         OPTION A: LAYER Y:71
+                        (Pedestal Step)
+--------------------------------------------------------------------------------
+
+         -5  -4  -3  -2  -1   0  +1  +2  +3  +4  +5
+    Z    ┌─────────────────────────────────────────┐
+    -5   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    -4   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    -3   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    -2   │  ·   ·   ·   ·   g   g   ·   ·   ·   ·  │
+    -1   │  ·   ·   ·   g   ·   ·   g   ·   ·   ·  │
+     0   │  ·   ·   ·   g   ·   ·   g   ·   ·   ·  │ ← 4×4 with hollow center
+    +1   │  ·   ·   ·   ·   g   g   ·   ·   ·   ·  │
+    +2   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    +3   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    +4   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+    +5   │  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·  │
+         └─────────────────────────────────────────┘
+
+--------------------------------------------------------------------------------
+                      OPTION A: LAYERS Y:72-76
+                     (Ring Construction)
+--------------------------------------------------------------------------------
+
+RING 1 (Crying Obsidian) - Oriented North-South (in XY plane):
+
+Side View (looking from East):
+
+Y:76        O   O   O
+Y:75      O           O
+Y:74    O               O
+Y:73    O      [*]      O    ← [*] = Ring intersection
+Y:72    O               O
+Y:71      O           O
+Y:70        O   O   O
+
+RING 2 (Gilded Blackstone) - Oriented East-West (in ZY plane):
+
+Side View (looking from North):
+
+Y:76        g   g   g
+Y:75      g           g
+Y:74    g               g
+Y:73    g      [*]      g    ← [*] = Ring intersection
+Y:72    g               g
+Y:71      g           g
+Y:70        g   g   g
+
+COMBINED TOP VIEW at Y:73 (intersection layer):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+    -3   │  ·   ·   O   O   O   ·  │
+    -2   │  ·   O   ·   ·   ·   O  │
+    -1   │  g   ·   ·   E   ·   ·  │ ← E = End Rod at center
+     0   │  g   ·   E  [E]  E   ·  │ ← [E] = Central end rod cluster
+    +1   │  g   ·   ·   E   ·   ·  │
+    +2   │  ·   O   ·   ·   ·   O  │
+    +3   │  ·   ·   O   O   O   ·  │
+         └─────────────────────────┘
+
+O = Crying Obsidian (Ring 1)
+g = Gilded Blackstone (Ring 2)
+E = End Rod (light effect at intersection)
+
+--------------------------------------------------------------------------------
+                      OPTION A: LAYERS Y:77-78
+                     (Ring Top + Crown)
+--------------------------------------------------------------------------------
+
+Y:77 (Ring tops meeting):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+    -3   │  ·   ·   ·   O   ·   ·  │
+    -2   │  ·   ·   O   O   O   ·  │
+    -1   │  ·   g   g   E   g   g  │
+     0   │  O   O   E  [L]  E   O  │ ← [L] = Sea Lantern crown
+    +1   │  ·   g   g   E   g   g  │
+    +2   │  ·   ·   O   O   O   ·  │
+    +3   │  ·   ·   ·   O   ·   ·  │
+         └─────────────────────────┘
+
+Y:78 (Peak - single end rod pointing up):
+
+         -1   0  +1
+    Z    ┌───────────┐
+    -1   │  ·   ·   · │
+     0   │  ·   E   · │  ← Single End Rod pointing to sky
+    +1   │  ·   ·   · │
+         └───────────┘
+
+OPTION A MATERIAL COUNT:
+├── Polished Blackstone ............... 67 blocks
+├── Polished Blackstone Bricks ........ 32 blocks
+├── Crying Obsidian ................... 28 blocks (Ring 1)
+├── Gilded Blackstone ................. 28 blocks (Ring 2)
+├── Sea Lanterns ...................... 5 blocks
+├── End Rods .......................... 13 rods
+└── OPTION A TOTAL .................... 173 pieces
+
+================================================================================
+                    ★★ OPTION B: THE BOOK OF ADVENTURES ★★
+================================================================================
+
+An open book on a grand pedestal, symbolizing the stories and
+knowledge awaiting your children.
+
+DESIGN CONCEPT:
+- Quartz lectern/book stand
+- "Book" made of white wool pages with item frames
+- Written books placed in frames tell the story
+- Glowing effect beneath
+
+--------------------------------------------------------------------------------
+                      OPTION B: LAYERS Y:69-72
+                     (Stepped Pedestal)
+--------------------------------------------------------------------------------
+
+Y:69 (Large base):
+
+         -5  -4  -3  -2  -1   0  +1  +2  +3  +4  +5
+    Z    ┌─────────────────────────────────────────┐
+    -5   │  k   k   k   k   k   k   k   k   k   k  │
+    -4   │  k   L   b   b   b   b   b   b   L   k  │
+    -3   │  k   b   b   b   b   b   b   b   b   k  │
+    -2   │  k   b   b   ·   ·   ·   ·   b   b   k  │
+    -1   │  k   b   b   ·   ·   ·   ·   b   b   k  │
+     0   │  k   b   b   ·   ·   ·   ·   b   b   k  │
+    +1   │  k   b   b   ·   ·   ·   ·   b   b   k  │
+    +2   │  k   b   b   ·   ·   ·   ·   b   b   k  │
+    +3   │  k   b   b   b   b   b   b   b   b   k  │
+    +4   │  k   L   b   b   b   b   b   b   L   k  │
+    +5   │  k   k   k   k   k   k   k   k   k   k  │
+         └─────────────────────────────────────────┘
+
+Y:70-71 (Narrowing steps - 7×7, then 5×5)
+Y:72 (3×3 pillar with sea lantern center)
+
+--------------------------------------------------------------------------------
+                      OPTION B: LAYERS Y:73-75
+                     (Book Lectern)
+--------------------------------------------------------------------------------
+
+Y:73 (Lectern base):
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+    -2   │  ·   Q   Q   Q  │  Q = Quartz block
+    -1   │  Q   Q   Q   Q  │
+     0   │  Q   Q   L   Q  │  L = Sea lantern (glow)
+    +1   │  Q   Q   Q   Q  │
+    +2   │  ·   Q   Q   Q  │
+         └─────────────────┘
+
+Y:74-75 (Angled book holder using stairs):
+
+Y:74:
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+    -2   │  ·   ·   ·   ·  │
+    -1   │  ·   >   >   >  │  > = Quartz stairs (angled up)
+     0   │  ·   >   >   >  │
+    +1   │  ·   >   >   >  │
+    +2   │  ·   ·   ·   ·  │
+         └─────────────────┘
+
+--------------------------------------------------------------------------------
+                      OPTION B: LAYERS Y:76-78
+                     (The Book Itself)
+--------------------------------------------------------------------------------
+
+Y:76-78 (Open book made of wool/concrete):
+
+Side view:
+         ╱─────╲   ╱─────╲
+        ╱ LEFT  ╲ ╱ RIGHT ╲
+       ╱  PAGE   ╳   PAGE  ╲
+      ───────────────────────
+
+Top view at Y:76:
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+    -3   │  ·   W   W   ·   W   W  │  W = White wool (pages)
+    -2   │  W   W   W   k   W   W  │  k = Blackstone (spine)
+    -1   │  W   W   W   k   W   W  │
+     0   │  W   W   W   k   W   W  │  ← Spine runs through center
+    +1   │  W   W   W   k   W   W  │
+    +2   │  W   W   W   k   W   W  │
+    +3   │  ·   W   W   ·   W   W  │
+         └─────────────────────────┘
+
+ITEM FRAMES: Place on book pages with:
+- Written books containing your children's story
+- Maps with custom images
+- Special items (compass pointing home, etc.)
+
+OPTION B MATERIAL COUNT:
+├── Polished Blackstone ............... 89 blocks
+├── Polished Blackstone Bricks ........ 48 blocks
+├── Quartz Blocks ..................... 32 blocks
+├── Quartz Stairs ..................... 9 stairs
+├── White Wool ........................ 24 blocks
+├── Sea Lanterns ...................... 6 blocks
+├── Item Frames ....................... 8 frames
+├── Written Books ..................... 8 books
+└── OPTION B TOTAL .................... 224 pieces
+
+================================================================================
+                    ★★ OPTION C: THE DOUBLE HELIX ★★
+================================================================================
+
+Two intertwining spirals reaching toward the sky, representing
+growth, connection, and the bond between siblings (like DNA).
+
+DESIGN CONCEPT:
+- Two helixes spiraling around each other
+- One helix: Cyan concrete
+- Other helix: Magenta concrete (matching beacons)
+- End rods connect the spirals
+- Rises 10 blocks in elegant twist
+
+--------------------------------------------------------------------------------
+                    OPTION C: HELIX CONSTRUCTION
+--------------------------------------------------------------------------------
+
+The helix spirals around a 5×5 central area.
+Each strand makes roughly 1.5 rotations over 10 blocks of height.
+
+POSITION MAPPING (looking down from above, showing where each 
+strand appears at each Y level):
+
+Y:69  │ Cyan at (-2,-2)  │ Magenta at (+2,+2)
+Y:70  │ Cyan at (-2, 0)  │ Magenta at (+2, 0)
+Y:71  │ Cyan at (-2,+2)  │ Magenta at (+2,-2)
+Y:72  │ Cyan at ( 0,+2)  │ Magenta at ( 0,-2)
+Y:73  │ Cyan at (+2,+2)  │ Magenta at (-2,-2)  ← Strands cross
+Y:74  │ Cyan at (+2, 0)  │ Magenta at (-2, 0)
+Y:75  │ Cyan at (+2,-2)  │ Magenta at (-2,+2)
+Y:76  │ Cyan at ( 0,-2)  │ Magenta at ( 0,+2)
+Y:77  │ Cyan at (-2,-2)  │ Magenta at (+2,+2)  ← Full rotation
+Y:78  │ Meet at center (0,0) with end rods
+
+LAYER EXAMPLE at Y:73 (strands crossing):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+    -3   │  ·   ·   ·   ·   ·   ·  │
+    -2   │  ·   m   ·   ·   ·   ·  │  m = Magenta concrete
+    -1   │  ·   ·   ·   E   ·   ·  │  E = End rod (connection)
+     0   │  ·   ·   E   L   E   ·  │  L = Sea lantern (center light)
+    +1   │  ·   ·   ·   E   ·   ·  │
+    +2   │  ·   ·   ·   ·   ·   c  │  c = Cyan concrete
+    +3   │  ·   ·   ·   ·   ·   ·  │
+         └─────────────────────────┘
+
+PEAK at Y:78 (strands meet):
+
+         -1   0  +1
+    Z    ┌───────────┐
+    -1   │  c   E   m │
+     0   │  E   E   E │  ← End rods radiating
+    +1   │  m   E   c │
+         └───────────┘
+
+OPTION C MATERIAL COUNT:
+├── Polished Blackstone (base) ........ 67 blocks
+├── Cyan Concrete ..................... 20 blocks
+├── Magenta Concrete .................. 20 blocks
+├── Sea Lanterns ...................... 10 blocks
+├── End Rods .......................... 24 rods
+└── OPTION C TOTAL .................... 141 pieces
+
+================================================================================
+                    ★★ OPTION D: THE COMPASS ROSE ★★
+================================================================================
+
+A grand compass design with floating lodestone center, pointing
+to the four cardinal realms.
+
+DESIGN CONCEPT:
+- 8-pointed compass star on floor
+- Central pillar with floating lodestone
+- Four main points aim at the four piers/realms
+- Four minor points fill the gaps
+- Dramatic lighting from below
+
+--------------------------------------------------------------------------------
+                    OPTION D: LAYERS Y:69-70
+                   (Compass Rose Floor Pattern)
+--------------------------------------------------------------------------------
+
+Y:69 (Main compass pattern):
+
+         -5  -4  -3  -2  -1   0  +1  +2  +3  +4  +5
+    Z    ┌─────────────────────────────────────────┐
+    -5   │  k   ·   ·   ·   g   g   g   ·   ·   k  │  k = Blackstone
+    -4   │  ·   k   ·   g   ·   O   ·   g   k   ·  │  g = Gilded (cardinal)
+    -3   │  ·   ·   k   ·   ·   O   ·   ·   k   ·  │  O = Crying obsidian
+    -2   │  ·   g   ·   k   ·   O   ·   k   ·   g  │  L = Sea lantern
+    -1   │  g   ·   ·   ·   L   O   L   ·   ·   g  │
+     0   │  g   O   O   O   O  [@]  O   O   O   g  │ ← [@] = Central point
+    +1   │  g   ·   ·   ·   L   O   L   ·   ·   g  │
+    +2   │  ·   g   ·   k   ·   O   ·   k   ·   g  │
+    +3   │  ·   ·   k   ·   ·   O   ·   ·   k   ·  │
+    +4   │  ·   k   ·   g   ·   O   ·   g   k   ·  │
+    +5   │  k   ·   ·   ·   g   g   g   ·   ·   k  │
+         └─────────────────────────────────────────┘
+
+--------------------------------------------------------------------------------
+                    OPTION D: LAYERS Y:71-74
+                   (Central Pillar)
+--------------------------------------------------------------------------------
+
+Y:71-73 (Pillar rising):
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+    -2   │  ·   ·   O   ·  │
+    -1   │  ·   O   L   O  │  L = Sea lantern core
+     0   │  O   L   O   L  │  O = Crying obsidian frame
+    +1   │  ·   O   L   O  │
+    +2   │  ·   ·   O   ·  │
+         └─────────────────┘
+
+--------------------------------------------------------------------------------
+                    OPTION D: LAYERS Y:75-78
+                   (Floating Lodestone)
+--------------------------------------------------------------------------------
+
+Y:75-76 (Gap - empty air for "floating" effect)
+
+Y:77 (Lodestone support frame):
+
+         -1   0  +1
+    Z    ┌───────────┐
+    -1   │  C   C   C │  C = Chain (suspending lodestone)
+     0   │  C  [@]  C │  [@] = LODESTONE (floating)
+    +1   │  C   C   C │
+         └───────────┘
+
+Y:78 (Crown above lodestone):
+
+         -1   0  +1
+    Z    ┌───────────┐
+    -1   │  E   g   E │  E = End rod
+     0   │  g   L   g │  L = Sea lantern
+    +1   │  E   g   E │
+         └───────────┘
+
+FLOATING EFFECT:
+The lodestone at Y:77 appears to float because:
+- Y:74 = Top of solid pillar
+- Y:75-76 = Air gap
+- Y:77 = Lodestone suspended by chains from Y:78 frame
+
+COMPASS DIRECTIONS:
+- NORTH POINT (Z:-5): Points to North Tower and North Realm
+- SOUTH POINT (Z:+5): Points to South Tower and South Realm
+- EAST POINT (X:+5): Points to East Pier and East Realm
+- WEST POINT (X:-5): Points to West Pier and West Realm
+
+OPTION D MATERIAL COUNT:
+├── Blackstone ........................ 12 blocks
+├── Polished Blackstone ............... 45 blocks
+├── Crying Obsidian ................... 32 blocks
+├── Gilded Blackstone ................. 24 blocks
+├── Sea Lanterns ...................... 10 blocks
+├── Lodestone ......................... 1 block
+├── Chains ............................ 8 chains
+├── End Rods .......................... 4 rods
+└── OPTION D TOTAL .................... 136 pieces
+
+================================================================================
+                         RECOMMENDATION
+================================================================================
+
+Based on the symbolism of your project:
+
+★★★ RECOMMENDED: OPTION A (The Unity Rings) ★★★
+
+REASONS:
+1. Two distinct rings = Two distinct children
+2. Interlocked = Their eternal bond as siblings
+3. Different materials = Their unique personalities
+4. Meeting at center = Their shared origin (you/your love)
+5. Light at intersection = The brightness they create together
+6. Circular = Never-ending connection
+
+ALTERNATIVE: OPTION D (The Compass Rose) if navigation symbolism
+is more important (pointing to their adventures in each realm).
+
+================================================================================
+                    NAME PLAQUE POSITIONS (ALL OPTIONS)
+================================================================================
+
+Regardless of which monument design you choose, add name plaques:
+
+PLAQUE POSITIONS:
+
+Position 1: Base of monument, facing SPAWN POINT (South side)
+├── 2 item frames side by side
+├── Left frame: Map with Child 1's name
+├── Right frame: Map with Child 2's name
+└── Below text: "Welcome Home" or similar
+
+Position 2: Base of monument, facing TOWERS (North side)
+├── 2 item frames side by side
+├── Contains: Compasses/maps of each realm
+└── Symbolic: "The world awaits you"
+
+HOW TO CREATE NAME MAPS:
+1. Craft maps
+2. Name them in anvil (or use map art)
+3. Place in item frames
+4. Maps display custom names/images
+
+================================================================================
+                         ARMOR STAND "HOLOGRAM"
+================================================================================
+
+For an advanced visual effect, place invisible armor stands with
+glowing items to create a "hologram" around the monument:
+
+ARMOR STAND POSITIONS:
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+    -2   │  A   ·   ·   A  │
+    -1   │  ·   ·   ·   ·  │
+     0   │  ·   ·   ·   ·  │
+    +1   │  ·   ·   ·   ·  │
+    +2   │  A   ·   ·   A  │
+         └─────────────────┘
+
+A = Armor Stand with:
+- Invisibility (via commands)
+- Glowing enchanted items (helmet: enchanted diamond helmet)
+- Positioned at 45° angles
+- Creates ethereal "guardian" effect
+
+COMMANDS (if using):
+```
+/summon armor_stand ~ ~ ~ {Invisible:1b,NoGravity:1b,ShowArms:1b}
+```
+
+================================================================================
+                         LIGHTING CONFIGURATION
+================================================================================
+
+UPLIGHTING (from below):
+├── Sea lanterns embedded in base platform (Y:69)
+├── Creates dramatic shadows on monument
+├── 4 lanterns at corners minimum
+
+INTERNAL LIGHTING:
+├── Sea lanterns within monument structure
+├── Creates "glowing from within" effect
+├── Varies by design option
+
+ACCENT LIGHTING:
+├── End rods at peak/edges
+├── Subtle white glow
+├── Points of interest highlighted
+
+NIGHT EFFECT:
+When sun sets, the monument should:
+1. Glow from multiple internal sources
+2. Cast interesting shadows
+3. Be clearly visible from spawn point
+4. Complement (not compete with) beacon beams
+
+================================================================================
+                    MATERIAL COUNT - ZONE 5 SUMMARY
+================================================================================
+
+OPTION A (Unity Rings):     173 pieces ★ RECOMMENDED
+OPTION B (Book):            224 pieces
+OPTION C (Double Helix):    141 pieces
+OPTION D (Compass Rose):    136 pieces
+
+Add to any option:
+├── Item Frames for plaques: 4-8 frames
+├── Named Maps: 4-8 maps
+├── Written Books (lore): 4+ books
+└── Armor Stands (optional): 4-8 stands
+
+================================================================================
+                    CONSTRUCTION SEQUENCE - ZONE 5
+================================================================================
+
+PHASE 1: Clear the area
+├── Ensure 11×11 area is flat at Y:69
+├── Remove any obstructions
+└── Verify tower positions don't conflict
+
+PHASE 2: Build base platform
+├── Lay out 11×11 polished blackstone base
+├── Install sea lantern uplighting at corners
+├── Create decorative brick border
+└── Mark center point (X:0, Z:0)
+
+PHASE 3: Build pedestal
+├── Stack pedestal layers according to chosen design
+├── Include internal sea lanterns as you build
+└── Verify alignment with spawn point below
+
+PHASE 4: Build monument structure
+├── Follow layer-by-layer guide for chosen option
+├── Place accent materials carefully
+├── Install end rods last (fragile)
+└── Test visibility from spawn point
+
+PHASE 5: Add name plaques
+├── Craft and name maps
+├── Place item frames at designated positions
+├── Insert named maps into frames
+└── Add any written books with lore
+
+PHASE 6: Optional enhancements
+├── Place armor stands for hologram effect
+├── Add any additional lighting
+├── Fine-tune positioning
+└── Take screenshots to commemorate!
+
+================================================================================
+                              FINAL NOTE
+================================================================================
+
+This monument is THE symbolic heart of the Oceanic Spawn Platform.
+
+When your children stand at their spawn point (the lodestone at Y:64)
+and look up, they'll see:
+
+- Behind them: The ocean they emerged from
+- To their left: The North Tower (one child's beacon)
+- To their right: The South Tower (other child's beacon)
+- Above them: This monument - their bond made visible
+- Around them: Four paths leading to adventure
+
+Every element tells them: "You are loved. You belong here. Together."
+
+================================================================================
+                    END OF ZONE 5 BLUEPRINTS - FILE 7 OF 15
+================================================================================

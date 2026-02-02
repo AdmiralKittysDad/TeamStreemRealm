@@ -1,0 +1,498 @@
+================================================================================
+                    THE OCEANIC SPAWN PLATFORM - FILE 11
+                           BEACON PYRAMIDS
+                           The Aethelgard Nexus
+================================================================================
+
+PURPOSE:
+This document details the hidden beacon pyramids inside each tower base.
+The pyramids power the beacons that create the iconic colored beams
+visible from thousands of blocks away.
+
+================================================================================
+                         BEACON OVERVIEW
+================================================================================
+
+TWO BEACONS - TWO CHILDREN:
+
+NORTH TOWER BEACON (Child 1):
+├── Position: X:0, Y:72, Z:-10
+├── Beam Color: CYAN
+├── Primary Effect: Speed
+├── Secondary Effect: Jump Boost
+└── Symbolism: Always moving forward, reaching high
+
+SOUTH TOWER BEACON (Child 2):
+├── Position: X:0, Y:72, Z:+10
+├── Beam Color: MAGENTA
+├── Primary Effect: Strength
+├── Secondary Effect: Regeneration
+└── Symbolism: Inner strength, resilience
+
+================================================================================
+                    PYRAMID REQUIREMENTS
+================================================================================
+
+BEACON MECHANICS:
+Beacons require a pyramid of mineral blocks beneath them to activate.
+Larger pyramids = more powerful effects and longer range.
+
+PYRAMID TIERS:
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Tier │ Layers │ Base Size │ Blocks Needed │ Range  │ Effects Available      │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  1   │   1    │    3×3    │      9        │ 20 blk │ Primary only           │
+│  2   │   2    │    5×5    │    9+25=34    │ 30 blk │ Primary only           │
+│  3   │   3    │    7×7    │  34+49=83     │ 40 blk │ Primary + Secondary    │
+│  4   │   4    │    9×9    │ 83+81=164     │ 50 blk │ Primary + Secondary    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+RECOMMENDATION: 3-TIER PYRAMID (fits inside 7×7 tower base)
+- Requires 83 mineral blocks per beacon
+- Provides 40-block effect range
+- Allows both primary AND secondary effects
+- Fits perfectly within tower footprint
+
+================================================================================
+                    PYRAMID MATERIAL OPTIONS
+================================================================================
+
+Valid pyramid materials (can be mixed):
+├── Iron Blocks (most common, easiest to obtain)
+├── Gold Blocks (moderate difficulty)
+├── Emerald Blocks (trading-based)
+├── Diamond Blocks (expensive but beautiful)
+└── Netherite Blocks (ultimate flex)
+
+RECOMMENDED APPROACH:
+Use IRON BLOCKS for practicality:
+- 83 blocks × 2 towers = 166 iron blocks
+- 166 blocks × 9 ingots = 1,494 iron ingots
+- Obtainable through iron farms or mining
+
+AESTHETIC OPTION:
+Mix materials for visual interest (even though hidden):
+- Layer 1 (bottom): Iron
+- Layer 2 (middle): Gold
+- Layer 3 (top): Diamond
+
+================================================================================
+                    NORTH TOWER PYRAMID
+                 (X:-3 to +3, Z:-13 to -7, Y:69-72)
+================================================================================
+
+The pyramid is HIDDEN inside the tower base structure.
+Players see blackstone walls; the iron pyramid is concealed within.
+
+LAYER Y:69 (Pyramid Base - 7×7):
+
+Tower footprint showing hidden pyramid:
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  k   k   k   k   k   k  k│     k = Polished Blackstone (wall)
+   -12   │  k   I   I   I   I   I  k│     I = Iron Block (pyramid)
+   -11   │  k   I   I   I   I   I  k│
+   -10   │  k   I   I   I   I   I  k│     ← Center at Z:-10
+    -9   │  k   I   I   I   I   I  k│
+    -8   │  k   I   I   I   I   I  k│
+    -7   │  k   k   k   D   k   k  k│     D = Door (entrance)
+         └─────────────────────────┘
+
+IRON COUNT Y:69: 5×5 = 25 blocks (corners hidden by walls)
+
+--------------------------------------------------------------------------------
+
+LAYER Y:70 (Pyramid Middle - 5×5):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  k   k   k   k   k   k  k│
+   -12   │  k   _   I   I   I   _  k│     _ = Air (interior space)
+   -11   │  k   I   I   I   I   I  k│     I = Iron Block
+   -10   │  k   I   I   I   I   I  k│
+    -9   │  k   I   I   I   I   I  k│
+    -8   │  k   _   I   I   I   _  k│
+    -7   │  k   k   k   _   k   k  k│     Interior for stairs
+         └─────────────────────────┘
+
+IRON COUNT Y:70: 5×5 = 25 blocks
+
+--------------------------------------------------------------------------------
+
+LAYER Y:71 (Pyramid Upper - 3×3):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  k   k   k   k   k   k  k│
+   -12   │  k   _   _   I   _   _  k│
+   -11   │  k   _   I   I   I   _  k│     3×3 iron center
+   -10   │  k   I   I   I   I   I  k│
+    -9   │  k   _   I   I   I   _  k│
+    -8   │  k   _   _   I   _   _  k│
+    -7   │  k   k   k   _   k   k  k│
+         └─────────────────────────┘
+
+IRON COUNT Y:71: Wait, I need to recalculate for 3-tier pyramid.
+
+CORRECTED 3-TIER PYRAMID LAYOUT:
+
+For a proper 3-tier beacon pyramid that fits in 7×7:
+- Layer 1 (Y:69): 5×5 = 25 iron blocks
+- Layer 2 (Y:70): 3×3 = 9 iron blocks
+- Layer 3 (Y:71): 1×1 = 1 iron block
+- Beacon sits at Y:72
+
+Wait, that's only 35 blocks for 3 tiers. Let me recalculate.
+
+PROPER BEACON PYRAMID TIERS:
+- 1-tier: Just 3×3 under beacon (9 blocks)
+- 2-tier: 3×3 + 5×5 (34 blocks)
+- 3-tier: 3×3 + 5×5 + 7×7 (83 blocks)
+- 4-tier: 3×3 + 5×5 + 7×7 + 9×9 (164 blocks)
+
+Since our tower is 7×7, we can fit a 3-TIER pyramid (7×7 max base).
+
+================================================================================
+                    CORRECTED 3-TIER PYRAMID
+                    (Fits in 7×7 Tower Base)
+================================================================================
+
+LAYER Y:69 (Tier 1 - Bottom - 7×7):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  I   I   I   I   I   I  I│     ALL iron (hidden by outer walls)
+   -12   │  I   I   I   I   I   I  I│
+   -11   │  I   I   I   I   I   I  I│
+   -10   │  I   I   I   I   I   I  I│     7×7 = 49 iron blocks
+    -9   │  I   I   I   I   I   I  I│
+    -8   │  I   I   I   I   I   I  I│
+    -7   │  I   I   I   I   I   I  I│
+         └─────────────────────────┘
+
+IRON COUNT Y:69: 49 blocks
+
+--------------------------------------------------------------------------------
+
+LAYER Y:70 (Tier 2 - Middle - 5×5):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  k   k   k   k   k   k  k│     k = Tower wall starts
+   -12   │  k   I   I   I   I   I  k│
+   -11   │  k   I   I   I   I   I  k│     5×5 = 25 iron blocks
+   -10   │  k   I   I   I   I   I  k│     (centered)
+    -9   │  k   I   I   I   I   I  k│
+    -8   │  k   I   I   I   I   I  k│
+    -7   │  k   k   k   D   k   k  k│
+         └─────────────────────────┘
+
+IRON COUNT Y:70: 25 blocks
+
+--------------------------------------------------------------------------------
+
+LAYER Y:71 (Tier 3 - Top - 3×3):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  k   k   k   k   k   k  k│
+   -12   │  k   _   _   _   _   _  k│     _ = Air (interior)
+   -11   │  k   _   I   I   I   _  k│
+   -10   │  k   _   I   I   I   _  k│     3×3 = 9 iron blocks
+    -9   │  k   _   I   I   I   _  k│     (centered)
+    -8   │  k   _   _   _   _   _  k│
+    -7   │  k   k   k   _   k   k  k│
+         └─────────────────────────┘
+
+IRON COUNT Y:71: 9 blocks
+
+--------------------------------------------------------------------------------
+
+LAYER Y:72 (Beacon Level):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  k   k   L   k   L   k  k│     L = Sea Lantern
+   -12   │  k   _   _   _   _   _  k│
+   -11   │  L   _   _   _   _   _  L│
+   -10   │  k   _   _  [*]  _   _  k│    [*] = BEACON
+    -9   │  L   _   _   _   _   _  L│
+    -8   │  k   _   _   _   _   _  k│
+    -7   │  k   k   L   _   L   k  k│
+         └─────────────────────────┘
+
+BEACON POSITION: X:0, Y:72, Z:-10
+
+--------------------------------------------------------------------------------
+
+NORTH TOWER PYRAMID TOTAL:
+├── Y:69: 49 iron blocks
+├── Y:70: 25 iron blocks
+├── Y:71: 9 iron blocks
+├── Beacon: 1 beacon
+└── TOTAL: 83 iron blocks + 1 beacon
+
+================================================================================
+                    SOUTH TOWER PYRAMID
+                 (X:-3 to +3, Z:+7 to +13, Y:69-72)
+================================================================================
+
+Identical structure to North Tower, mirrored position.
+
+LAYER Y:69 (Tier 1 - 7×7):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+    +7   │  I   I   I   I   I   I  I│
+    +8   │  I   I   I   I   I   I  I│
+    +9   │  I   I   I   I   I   I  I│
+   +10   │  I   I   I   I   I   I  I│     7×7 = 49 iron blocks
+   +11   │  I   I   I   I   I   I  I│
+   +12   │  I   I   I   I   I   I  I│
+   +13   │  I   I   I   I   I   I  I│
+         └─────────────────────────┘
+
+LAYER Y:70 (Tier 2 - 5×5):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+    +7   │  k   k   k   D   k   k  k│     D = Door
+    +8   │  k   I   I   I   I   I  k│
+    +9   │  k   I   I   I   I   I  k│     5×5 = 25 iron blocks
+   +10   │  k   I   I   I   I   I  k│
+   +11   │  k   I   I   I   I   I  k│
+   +12   │  k   I   I   I   I   I  k│
+   +13   │  k   k   k   k   k   k  k│
+         └─────────────────────────┘
+
+LAYER Y:71 (Tier 3 - 3×3):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+    +7   │  k   k   k   _   k   k  k│
+    +8   │  k   _   _   _   _   _  k│
+    +9   │  k   _   I   I   I   _  k│     3×3 = 9 iron blocks
+   +10   │  k   _   I   I   I   _  k│
+   +11   │  k   _   I   I   I   _  k│
+   +12   │  k   _   _   _   _   _  k│
+   +13   │  k   k   k   k   k   k  k│
+         └─────────────────────────┘
+
+LAYER Y:72 (Beacon Level):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+    +7   │  k   k   L   _   L   k  k│
+    +8   │  k   _   _   _   _   _  k│
+    +9   │  L   _   _   _   _   _  L│
+   +10   │  k   _   _  [*]  _   _  k│    [*] = BEACON
+   +11   │  L   _   _   _   _   _  L│
+   +12   │  k   _   _   _   _   _  k│
+   +13   │  k   k   L   k   L   k  k│
+         └─────────────────────────┘
+
+BEACON POSITION: X:0, Y:72, Z:+10
+
+SOUTH TOWER PYRAMID TOTAL: 83 iron blocks + 1 beacon
+
+================================================================================
+                         BEACON CONFIGURATION
+================================================================================
+
+After placing beacons, right-click to configure:
+
+NORTH BEACON (CYAN) CONFIGURATION:
+┌─────────────────────────────────────────────────────────────────┐
+│ Step 1: Right-click beacon                                      │
+│ Step 2: Insert 1 iron/gold/diamond/emerald/netherite ingot     │
+│ Step 3: Select PRIMARY POWER: Speed (boots icon)               │
+│ Step 4: Select SECONDARY: Jump Boost (or Speed II)             │
+│ Step 5: Click green checkmark to confirm                       │
+│ Step 6: Add CYAN STAINED GLASS above beacon (Y:90)             │
+│         to color the beam cyan                                  │
+└─────────────────────────────────────────────────────────────────┘
+
+SOUTH BEACON (MAGENTA) CONFIGURATION:
+┌─────────────────────────────────────────────────────────────────┐
+│ Step 1: Right-click beacon                                      │
+│ Step 2: Insert 1 iron/gold/diamond/emerald/netherite ingot     │
+│ Step 3: Select PRIMARY POWER: Strength (sword icon)            │
+│ Step 4: Select SECONDARY: Regeneration (heart icon)            │
+│ Step 5: Click green checkmark to confirm                       │
+│ Step 6: Add MAGENTA STAINED GLASS above beacon (Y:90)          │
+│         to color the beam magenta                               │
+└─────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                    STAINED GLASS BEAM COLORING
+================================================================================
+
+The beacon beam passes through blocks above it. Stained glass colors the beam.
+
+BEAM PATH (North Tower):
+Y:72  [BEACON] ─┐
+Y:73    │      │
+Y:74    │      │ Beam rises through interior
+Y:75    │      │
+...     │      │
+Y:89    │      │
+Y:90  [CYAN GLASS] ← Color applied here
+Y:91+   │ CYAN BEAM rises to sky limit
+
+STAINED GLASS PLACEMENT:
+
+North Tower (Y:90):
+         -1   0  +1
+    Z    ┌───────────┐
+   -11   │  _   c   _ │     c = Cyan Stained Glass
+   -10   │  c   c   c │     Beam passes through center
+    -9   │  _   c   _ │     Cross pattern for visual effect
+         └───────────┘
+
+South Tower (Y:90):
+         -1   0  +1
+    Z    ┌───────────┐
+    +9   │  _   m   _ │     m = Magenta Stained Glass
+   +10   │  m   m   m │
+   +11   │  _   m   _ │
+         └───────────┘
+
+================================================================================
+                    MATERIAL SUMMARY - BOTH PYRAMIDS
+================================================================================
+
+IRON BLOCKS:
+├── North Tower Pyramid ............... 83 blocks
+├── South Tower Pyramid ............... 83 blocks
+└── IRON TOTAL ....................... 166 blocks
+
+CONVERSION:
+├── 166 iron blocks × 9 ingots = 1,494 iron ingots
+├── Mining: ~750 iron ore (with Fortune III)
+└── Iron Farm: ~2-3 hours of AFK farming
+
+BEACONS:
+├── North Tower ....................... 1 beacon
+├── South Tower ....................... 1 beacon
+└── BEACON TOTAL ..................... 2 beacons
+
+BEACON CRAFTING (per beacon):
+├── Nether Star ....................... 1 (from Wither)
+├── Obsidian .......................... 3
+├── Glass ............................. 5
+
+STAINED GLASS:
+├── Cyan Stained Glass ................ 5 blocks
+├── Magenta Stained Glass ............. 5 blocks
+└── STAINED GLASS TOTAL .............. 10 blocks
+
+PAYMENT INGOTS (for configuration):
+├── Any mineral ingot ................. 2 (one per beacon)
+
+================================================================================
+                    CONSTRUCTION SEQUENCE
+================================================================================
+
+PHASE 1: Clear tower base area
+├── Mark 7×7 footprint for each tower
+├── Ensure Y:69 level is flat
+└── Remove any water
+
+PHASE 2: Build pyramid base (Y:69)
+├── Place 49 iron blocks in 7×7 pattern
+├── North tower at Z:-13 to -7
+├── South tower at Z:+7 to +13
+└── Verify alignment with platform
+
+PHASE 3: Build pyramid middle (Y:70)
+├── Place 25 iron blocks in 5×5 pattern (centered)
+├── Begin tower walls around pyramid
+├── Leave door opening on platform-facing side
+└── Interior space for future stairs
+
+PHASE 4: Build pyramid top (Y:71)
+├── Place 9 iron blocks in 3×3 pattern (centered)
+├── Continue tower walls
+├── Interior should be accessible via door
+└── Verify pyramid is complete
+
+PHASE 5: Place beacons (Y:72)
+├── Place beacon on top of pyramid center
+├── Beacon should immediately activate (beam appears)
+├── Beam will be WHITE until stained glass added
+└── Do NOT configure effects yet
+
+PHASE 6: Build tower (Y:73-89)
+├── Continue tower construction as per Zone 4 blueprint
+├── Ensure beacon beam has clear vertical path
+├── No solid blocks above beacon until Y:90
+
+PHASE 7: Add stained glass (Y:90)
+├── Place colored stained glass above beacon
+├── North: Cyan glass
+├── South: Magenta glass
+└── Beam should change color immediately
+
+PHASE 8: Configure beacon effects
+├── Right-click each beacon
+├── Insert payment ingot
+├── Select primary and secondary powers
+├── Confirm configuration
+└── Test effect by standing near tower
+
+================================================================================
+                    TROUBLESHOOTING
+================================================================================
+
+BEACON NOT ACTIVATING:
+□ Check pyramid has valid mineral blocks (iron/gold/emerald/diamond/netherite)
+□ Verify pyramid is directly under beacon (centered)
+□ Ensure no blocks between beacon and sky (must see sky)
+□ Confirm pyramid tiers are correct sizes
+
+BEAM NOT COLORED:
+□ Stained glass must be ABOVE beacon
+□ Glass must be in beam path (centered)
+□ Multiple glass blocks = blended color (use same color)
+□ Ensure no other colored glass interfering
+
+EFFECTS NOT WORKING:
+□ Beacon must be configured (not just placed)
+□ Payment ingot must be inserted
+□ Powers must be selected and confirmed
+□ Player must be within range (40 blocks for 3-tier)
+
+BEAM BLOCKED:
+□ Remove any solid blocks above beacon
+□ Glass and water are OK (beam passes through)
+□ Carpets, slabs, and some blocks block beams
+□ Check entire column from Y:72 to Y:320
+
+================================================================================
+                    SYMBOLIC MEANING
+================================================================================
+
+THE TWO BEACONS REPRESENT YOUR TWO CHILDREN:
+
+NORTH BEACON (CYAN):
+├── Color: Cyan - calm like water, clear like sky
+├── Speed: Always moving forward, exploring
+├── Jump Boost: Reaching for new heights
+└── Message: "Run fast, jump high, chase your dreams"
+
+SOUTH BEACON (MAGENTA):
+├── Color: Magenta - warm, creative, unique
+├── Strength: Inner power, courage
+├── Regeneration: Resilience, bouncing back
+└── Message: "You are strong, you will always recover"
+
+TOGETHER:
+├── Two beams reaching toward infinity
+├── Visible from anywhere in the world
+├── Guiding lights that say "home is here"
+└── A promise: "No matter where you go, we light your way back"
+
+================================================================================
+                    END OF BEACON PYRAMIDS - FILE 11 OF 15
+================================================================================

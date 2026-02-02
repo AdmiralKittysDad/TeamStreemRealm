@@ -1,0 +1,662 @@
+================================================================================
+                    THE OCEANIC SPAWN PLATFORM - ZONE 4
+                      TWIN BEACON TOWERS (Y:69-90)
+                           The Aethelgard Nexus
+================================================================================
+
+ZONE SPECIFICATIONS:
+├── Elevation Range: Y:69 to Y:90 (22 layers)
+├── North Tower: X:-3 to +3, Z:-13 to -7 (Child 1 - Cyan)
+├── South Tower: X:-3 to +3, Z:+7 to +13 (Child 2 - Magenta)
+├── Tower Height: 22 blocks each
+├── Base Footprint: 7×7 per tower
+├── Peak Footprint: 3×3 per tower
+└── Beacon Effects: Speed/Jump (North), Strength/Regen (South)
+
+================================================================================
+                              MATERIAL KEY
+================================================================================
+
+STRUCTURAL:
+  K = Blackstone                 k = Polished Blackstone
+  b = Polished Blackstone Bricks B = Polished Blackstone Stairs
+  w = Polished Blackstone Wall   S = Polished Blackstone Slab
+  
+ACCENT:
+  O = Crying Obsidian            g = Gilded Blackstone
+  I = Iron Block (beacon base)   
+  
+GLASS:
+  G = Glass                      T = Tinted Glass
+  c = Cyan Stained Glass         m = Magenta Stained Glass
+  
+LIGHTING:
+  L = Sea Lantern                l = Lantern
+  E = End Rod                    
+  
+SPECIAL:
+  * = Beacon                     _ = Air (interior space)
+  D = Door                       d = Trapdoor
+  > = Stairs (facing shown)      | = Ladder
+
+================================================================================
+                         TOWER ARCHITECTURE OVERVIEW
+================================================================================
+
+VERTICAL SECTIONS:
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Y:90    ★ BEACON PEAK ★           │ Y:90    ★ BEACON PEAK ★                │
+│         │    *    │ 3×3           │         │    *    │ 3×3                │
+│ Y:89    └────┬────┘               │ Y:89    └────┬────┘                    │
+│              │                    │              │                         │
+│ Y:85-88 ┌────┴────┐               │ Y:85-88 ┌────┴────┐                    │
+│         │ LANTERN │ 3×3           │         │ LANTERN │ 3×3                │
+│         │  ROOM   │               │         │  ROOM   │                    │
+│         └────┬────┘               │         └────┬────┘                    │
+│ Y:84        ─┴─    ← OBS DECK #2  │ Y:84        ─┴─    ← OBS DECK #2       │
+│                                   │                                        │
+│ Y:79-83 ┌─────────┐               │ Y:79-83 ┌─────────┐                    │
+│         │  UPPER  │ 5×5           │         │  UPPER  │ 5×5                │
+│         │  SHAFT  │               │         │  SHAFT  │                    │
+│         └────┬────┘               │         └────┬────┘                    │
+│ Y:78        ─┴─                   │ Y:78        ─┴─                        │
+│                                   │                                        │
+│ Y:75-77 ┌─────────┐               │ Y:75-77 ┌─────────┐                    │
+│   ══════│ BRIDGE  │═══════════════│═════════│ BRIDGE  │══════              │
+│         │CONNECTION               │         │CONNECTION                    │
+│         └────┬────┘               │         └────┬────┘                    │
+│ Y:74        ─┴─    ← OBS DECK #1  │ Y:74        ─┴─    ← OBS DECK #1       │
+│                                   │                                        │
+│ Y:69-73 ┌───────────┐             │ Y:69-73 ┌───────────┐                  │
+│         │   BASE    │ 7×7         │         │   BASE    │ 7×7              │
+│         │ (PYRAMID  │             │         │ (PYRAMID  │                  │
+│         │  HIDDEN)  │             │         │  HIDDEN)  │                  │
+│         └───────────┘             │         └───────────┘                  │
+│                                   │                                        │
+│       NORTH TOWER (CYAN)          │       SOUTH TOWER (MAGENTA)            │
+│       Center: X:0, Z:-10          │       Center: X:0, Z:+10               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                    LAYER Y:69 - TOWER BASES (7×7)
+                         (Hidden Beacon Pyramid Layer 1)
+================================================================================
+
+Both towers at Y:69, showing 9×9 area around each tower center.
+
+NORTH TOWER (Center: X:0, Z:-10):
+
+         -4  -3  -2  -1   0  +1  +2  +3  +4
+    Z    ┌─────────────────────────────────┐
+   -14   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+   -13   │  ·   k   k   k   k   k   k   k  │ ← Tower wall (7×7)
+   -12   │  ·   k   I   I   I   I   I   k  │    I = Iron for pyramid
+   -11   │  ·   k   I   I   I   I   I   k  │
+   -10   │  ·   k   I   I   I   I   I   k  │ ← Center at X:0, Z:-10
+    -9   │  ·   k   I   I   I   I   I   k  │
+    -8   │  ·   k   I   I   I   I   I   k  │
+    -7   │  ·   k   k   k   D   k   k   k  │ ← D = Door entrance
+    -6   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+         └─────────────────────────────────┘
+
+SOUTH TOWER (Center: X:0, Z:+10):
+
+         -4  -3  -2  -1   0  +1  +2  +3  +4
+    Z    ┌─────────────────────────────────┐
+    +6   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+    +7   │  ·   k   k   k   D   k   k   k  │ ← D = Door entrance
+    +8   │  ·   k   I   I   I   I   I   k  │
+    +9   │  ·   k   I   I   I   I   I   k  │
+   +10   │  ·   k   I   I   I   I   I   k  │ ← Center at X:0, Z:+10
+   +11   │  ·   k   I   I   I   I   I   k  │
+   +12   │  ·   k   I   I   I   I   I   k  │
+   +13   │  ·   k   k   k   k   k   k   k  │
+   +14   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+         └─────────────────────────────────┘
+
+Y:69 MATERIALS:
+- Polished Blackstone (walls): 24 per tower × 2 = 48 blocks
+- Iron Blocks (pyramid base): 25 per tower × 2 = 50 blocks
+- Doors: 1 per tower × 2 = 2 doors
+
+================================================================================
+                    LAYER Y:70 - PYRAMID LAYER 2 (7×7)
+================================================================================
+
+NORTH TOWER:
+
+         -4  -3  -2  -1   0  +1  +2  +3  +4
+    Z    ┌─────────────────────────────────┐
+   -14   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+   -13   │  ·   k   k   k   k   k   k   k  │
+   -12   │  ·   k   _   I   I   I   _   k  │ ← 5×5 iron center
+   -11   │  ·   k   I   I   I   I   I   k  │
+   -10   │  ·   k   I   I   I   I   I   k  │
+    -9   │  ·   k   I   I   I   I   I   k  │
+    -8   │  ·   k   _   I   I   I   _   k  │
+    -7   │  ·   k   k   k   _   k   k   k  │ ← _ = interior air (stairs)
+    -6   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+         └─────────────────────────────────┘
+
+(South tower mirrors this pattern at Z:+7 to +13)
+
+================================================================================
+                    LAYER Y:71 - PYRAMID LAYER 3 (5×5 + stairs)
+================================================================================
+
+NORTH TOWER:
+
+         -4  -3  -2  -1   0  +1  +2  +3  +4
+    Z    ┌─────────────────────────────────┐
+   -14   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+   -13   │  ·   k   k   k   k   k   k   k  │
+   -12   │  ·   k   _   _   I   _   _   k  │ ← 3×3 iron center
+   -11   │  ·   k   _   I   I   I   _   k  │
+   -10   │  ·   k   I   I   I   I   I   k  │
+    -9   │  ·   k   _   I   I   I   _   k  │
+    -8   │  ·   k   _   _   I   >   _   k  │ ← > = stairs going up
+    -7   │  ·   k   k   k   _   k   k   k  │
+    -6   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+         └─────────────────────────────────┘
+
+================================================================================
+                    LAYER Y:72 - PYRAMID TOP (3×3) + BEACON
+================================================================================
+
+NORTH TOWER (BEACON PLACED HERE):
+
+         -4  -3  -2  -1   0  +1  +2  +3  +4
+    Z    ┌─────────────────────────────────┐
+   -14   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+   -13   │  ·   k   k   L   k   L   k   k  │ ← L = Sea Lantern corners
+   -12   │  ·   k   _   _   _   _   _   k  │
+   -11   │  ·   L   _   _   I   _   _   L  │
+   -10   │  ·   k   _   I  [*]  I   _   k  │ ← [*] = BEACON
+    -9   │  ·   L   _   _   I   _   _   L  │
+    -8   │  ·   k   _   _   _   >   _   k  │
+    -7   │  ·   k   k   L   _   L   k   k  │
+    -6   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+         └─────────────────────────────────┘
+
+SOUTH TOWER (same layout, beacon at X:0, Y:72, Z:+10)
+
+BEACON PYRAMID SUMMARY:
+┌────────────────────────────────────────────────────────────────┐
+│ Layer    Size    Iron Blocks    Notes                          │
+├────────────────────────────────────────────────────────────────┤
+│ Y:69     5×5     25 blocks      Base layer                     │
+│ Y:70     5×5     25 blocks      Same as base                   │
+│ Y:71     3×3     9 blocks       Middle layer                   │
+│ Y:72     3×3     9 blocks       Top layer + BEACON             │
+├────────────────────────────────────────────────────────────────┤
+│ TOTAL per tower: 68 iron blocks + 1 beacon                     │
+│ TOTAL both:     136 iron blocks + 2 beacons                    │
+│                 (= 1,224 iron ingots)                          │
+└────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                    LAYER Y:73 - TOWER BODY START
+================================================================================
+
+Tower walls continue, interior has spiral staircase.
+
+NORTH TOWER:
+
+         -4  -3  -2  -1   0  +1  +2  +3  +4
+    Z    ┌─────────────────────────────────┐
+   -14   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+   -13   │  ·   k   k   G   k   G   k   k  │ ← G = Window
+   -12   │  ·   k   _   _   _   _   _   k  │
+   -11   │  ·   G   _   _   _   _   _   G  │
+   -10   │  ·   k   _   _   _   _   _   k  │ ← Open interior
+    -9   │  ·   G   _   _   _   _   >   G  │ ← Spiral stairs continue
+    -8   │  ·   k   _   _   _   _   _   k  │
+    -7   │  ·   k   k   G   _   G   k   k  │
+    -6   │  ·   ·   ·   ·   ·   ·   ·   ·  │
+         └─────────────────────────────────┘
+
+================================================================================
+                    LAYER Y:74 - OBSERVATION DECK #1 FLOOR
+================================================================================
+
+First observation deck - extends beyond tower footprint.
+
+NORTH TOWER:
+
+         -5  -4  -3  -2  -1   0  +1  +2  +3  +4  +5
+    Z    ┌───────────────────────────────────────────┐
+   -15   │  ·   ·   ·   S   S   S   S   S   ·   ·   │ ← S = Slab extension
+   -14   │  ·   ·   S   k   k   k   k   k   S   ·   │
+   -13   │  ·   S   k   k   L   k   L   k   k   S   │
+   -12   │  S   k   k   _   _   _   _   _   k   k   │
+   -11   │  S   k   L   _   _   _   _   _   L   k   │
+   -10   │  S   k   k   _   _   _   _   _   k   k   │
+    -9   │  S   k   L   _   _   _   _   >   L   k   │
+    -8   │  S   k   k   _   _   _   _   _   k   k   │
+    -7   │  ·   S   k   k   L   _   L   k   k   S   │
+    -6   │  ·   ·   S   k   k   k   k   k   S   ·   │
+    -5   │  ·   ·   ·   S   S   S   S   S   ·   ·   │
+         └───────────────────────────────────────────┘
+
+OBSERVATION DECK #1 FEATURES:
+- Slab extensions create larger viewing area (11×11 with corners cut)
+- Sea lantern floor lights at corners
+- Open to sky (no roof)
+- Railing wall (Y:75) around edges
+- 360° views of ocean and platform below
+
+================================================================================
+                    LAYER Y:75-76 - OBSERVATION DECK #1 RAILING
+                              + BRIDGE CONNECTION
+================================================================================
+
+At Y:75, the bridge connecting both towers begins.
+
+COMBINED VIEW (both towers + bridge):
+
+         -5       0       +5              +5       0       -5
+    Z    ╔════════════════════════════════════════════════════╗
+   -14   ║  ·   w   w   w   w   w   w   ·                    ║
+   -13   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+   -12   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+   -11   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+   -10   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+    -9   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+    -8   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+    -7   ║  ·   w   w   w ═════════ w   w   ·                ║
+    -6   ║              ║ BRIDGE  ║                          ║
+    -5   ║              ║ (3×14)  ║                          ║
+         ║              ║         ║                          ║
+     0   ║              ║ CENTER  ║                          ║ ← Platform center
+         ║              ║         ║                          ║
+    +5   ║              ║         ║                          ║
+    +6   ║              ║         ║                          ║
+    +7   ║  ·   w   w   w ═════════ w   w   ·                ║
+    +8   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+    +9   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+   +10   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+   +11   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+   +12   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+   +13   ║  w   ·   ·   ·   ·   ·   ·   w                    ║
+   +14   ║  ·   w   w   w   w   w   w   ·                    ║
+         ╚════════════════════════════════════════════════════╝
+
+w = Polished Blackstone Wall (railing)
+═ = Bridge floor (polished blackstone)
+
+================================================================================
+                         BRIDGE DETAIL (Y:75-76)
+================================================================================
+
+Bridge spans from North Tower (Z:-7) to South Tower (Z:+7) = 14 blocks.
+
+BRIDGE CROSS-SECTION (looking East):
+
+Y:77  ·   ·   ·   ·   ·   ·   ·   ·   ·   ·   ·   ·   ·   ·   ·   ·
+Y:76  ·   w   ·   ·   ·   ·   ·   ·   ·   ·   ·   ·   ·   ·   w   ·  ← walls
+Y:75  ·   k   k   k   k   k   k   k   k   k   k   k   k   k   k   ·  ← floor
+      Z:-7 -6  -5  -4  -3  -2  -1   0  +1  +2  +3  +4  +5  +6  +7
+
+BRIDGE TOP VIEW at Y:75:
+
+         X: -1   0  +1
+    Z    ┌─────────────┐
+    -7   │  k   k   k  │  ← Connects to North Tower
+    -6   │  w   k   w  │
+    -5   │  w   k   w  │
+    -4   │  w   L   w  │  ← L = Lantern (hanging below)
+    -3   │  w   k   w  │
+    -2   │  w   k   w  │
+    -1   │  w   k   w  │
+     0   │  w   L   w  │  ← Center lantern
+    +1   │  w   k   w  │
+    +2   │  w   k   w  │
+    +3   │  w   k   w  │
+    +4   │  w   L   w  │  ← L = Lantern
+    +5   │  w   k   w  │
+    +6   │  w   k   w  │
+    +7   │  k   k   k  │  ← Connects to South Tower
+         └─────────────┘
+
+BRIDGE MATERIALS:
+- Polished Blackstone (floor): 42 blocks
+- Polished Blackstone Walls: 24 walls
+- Lanterns (hanging): 3 lanterns
+
+================================================================================
+                    LAYERS Y:77-78 - TOWER NARROWING TO 5×5
+================================================================================
+
+Towers taper from 7×7 to 5×5 at this level.
+
+NORTH TOWER at Y:77:
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  ·   k   k   k   k   k  │
+   -12   │  k   k   _   _   _   k  │ ← 5×5 footprint
+   -11   │  k   _   _   _   _   k  │
+   -10   │  k   _   _   _   _   k  │
+    -9   │  k   _   _   _   >   k  │ ← Stairs continue
+    -8   │  k   k   _   _   _   k  │
+    -7   │  ·   k   k   k   k   k  │
+         └─────────────────────────┘
+
+================================================================================
+                    LAYERS Y:79-83 - UPPER SHAFT (5×5)
+================================================================================
+
+Consistent 5×5 tower profile with windows.
+
+NORTH TOWER at Y:79 (representative of Y:79-83):
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  ·   k   G   k   G   k  │ ← G = Glass windows
+   -12   │  k   _   _   _   _   k  │
+   -11   │  G   _   _   _   _   G  │
+   -10   │  k   _   _   _   _   k  │
+    -9   │  G   _   _   _   >   G  │
+    -8   │  k   _   _   _   _   k  │
+    -7   │  ·   k   G   k   G   k  │
+         └─────────────────────────┘
+
+WINDOW PATTERN (side view of one tower face):
+
+Y:83  │ k   G   k │
+Y:82  │ k   G   k │
+Y:81  │ k   G   k │  ← Tall vertical windows
+Y:80  │ k   G   k │
+Y:79  │ k   G   k │
+Y:78  │ k   k   k │  ← Solid transition
+Y:77  │ k   k   k │
+
+================================================================================
+                    LAYER Y:84 - OBSERVATION DECK #2 FLOOR
+================================================================================
+
+Second observation deck at higher elevation.
+
+NORTH TOWER:
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  S   k   k   k   k   S  │ ← S = Slab extension
+   -12   │  k   k   L   _   L   k  │
+   -11   │  k   L   _   _   _   L  │
+   -10   │  k   _   _   _   _   k  │
+    -9   │  k   L   _   _   >   L  │ ← Stairs continue up
+    -8   │  k   k   L   _   L   k  │
+    -7   │  S   k   k   k   k   S  │
+         └─────────────────────────┘
+
+================================================================================
+                    LAYER Y:85 - OBSERVATION DECK #2 RAILING
+================================================================================
+
+         -3  -2  -1   0  +1  +2  +3
+    Z    ┌─────────────────────────┐
+   -13   │  ·   w   w   w   w   w  │ ← w = Wall railing
+   -12   │  w   ·   ·   ·   ·   w  │
+   -11   │  w   ·   ·   ·   ·   w  │
+   -10   │  w   ·   ·   ·   ·   w  │
+    -9   │  w   ·   ·   ·   ·   w  │
+    -8   │  w   ·   ·   ·   ·   w  │
+    -7   │  ·   w   w   w   w   w  │
+         └─────────────────────────┘
+
+================================================================================
+                    LAYERS Y:86-88 - LANTERN ROOM (3×3)
+================================================================================
+
+Final tower narrowing to 3×3 "lantern room" at top.
+
+NORTH TOWER at Y:86:
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+   -12   │  ·   k   k   k  │
+   -11   │  k   G   G   G  │ ← All glass windows
+   -10   │  k   G   L   G  │ ← L = Sea lantern (glowing)
+    -9   │  k   G   G   G  │
+    -8   │  ·   k   k   k  │
+         └─────────────────┘
+
+Y:87 and Y:88 same pattern - creates a glowing glass box at tower top.
+
+================================================================================
+                    LAYER Y:89 - BEACON HOUSING
+================================================================================
+
+Structure narrows to frame the beacon beam.
+
+NORTH TOWER:
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+   -12   │  ·   g   g   g  │ ← g = Gilded blackstone crown
+   -11   │  g   _   _   _  │
+   -10   │  g   _   _   _  │ ← Open for beacon beam
+    -9   │  g   _   _   _  │
+    -8   │  ·   g   g   g  │
+         └─────────────────┘
+
+================================================================================
+                    LAYER Y:90 - BEACON PEAK ★★★
+================================================================================
+
+The crown of each tower with colored glass over beacon beam.
+
+NORTH TOWER (Cyan Beacon):
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+   -12   │  ·   E   E   E  │ ← E = End Rod (decorative)
+   -11   │  E   _   c   _  │ ← c = CYAN STAINED GLASS
+   -10   │  E   c  [*]  c  │ ← [*] = Beacon beam passes through
+    -9   │  E   _   c   _  │
+    -8   │  ·   E   E   E  │
+         └─────────────────┘
+
+SOUTH TOWER (Magenta Beacon):
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+    +8   │  ·   E   E   E  │
+    +9   │  E   _   m   _  │ ← m = MAGENTA STAINED GLASS
+   +10   │  E   m  [*]  m  │ ← [*] = Beacon beam passes through
+   +11   │  E   _   m   _  │
+   +12   │  ·   E   E   E  │
+         └─────────────────┘
+
+================================================================================
+                         BEACON CONFIGURATIONS
+================================================================================
+
+NORTH TOWER (CYAN) - Child 1:
+┌────────────────────────────────────────────────────────────────┐
+│ Beacon Position: X:0, Y:72, Z:-10                              │
+│ Color: Cyan (via cyan stained glass at Y:90)                   │
+│ Primary Effect: SPEED (faster movement)                        │
+│ Secondary Effect: JUMP BOOST (higher jumps)                    │
+│                                                                │
+│ Pyramid Size: Full 4-layer (9×9, 7×7, 5×5, 3×3)               │
+│ - Wait, correction: 3-layer fits in 7×7 base                  │
+│ - Actual: 5×5, 3×3, 1×1 = 25+9+1 = 35 iron blocks per beacon │
+│                                                                │
+│ Effect Range: 50 blocks (with 3-layer pyramid)                │
+│ Symbolism: Speed = Always running toward adventure            │
+│            Jump = Reaching for the stars                       │
+└────────────────────────────────────────────────────────────────┘
+
+SOUTH TOWER (MAGENTA) - Child 2:
+┌────────────────────────────────────────────────────────────────┐
+│ Beacon Position: X:0, Y:72, Z:+10                              │
+│ Color: Magenta (via magenta stained glass at Y:90)            │
+│ Primary Effect: STRENGTH (more damage)                         │
+│ Secondary Effect: REGENERATION (health recovery)               │
+│                                                                │
+│ Pyramid Size: Full 3-layer (5×5, 3×3, 1×1)                    │
+│ - 35 iron blocks per beacon                                    │
+│                                                                │
+│ Effect Range: 50 blocks (with 3-layer pyramid)                │
+│ Symbolism: Strength = Courage to face challenges              │
+│            Regen = Always bouncing back                        │
+└────────────────────────────────────────────────────────────────┘
+
+REVISED BEACON PYRAMID (fits inside 7×7 tower):
+
+Layer 1 (Y:69): 5×5 = 25 iron blocks
+Layer 2 (Y:70): 3×3 = 9 iron blocks  
+Layer 3 (Y:71): 1×1 = 1 iron block (beacon sits on this)
+Beacon at Y:72
+
+TOTAL: 35 iron blocks per tower = 70 iron blocks total = 630 iron ingots
+
+================================================================================
+                      SPIRAL STAIRCASE ROUTING
+================================================================================
+
+Staircase spirals around interior walls, ascending clockwise.
+
+STAIR POSITIONS BY LAYER (North Tower):
+
+Y:69  │ Start at door (Z:-7), stairs at X:+2
+Y:70  │ Stairs at X:+2, Z:-8 (SE corner)
+Y:71  │ Stairs at X:+3, Z:-10 (E wall)
+Y:72  │ Stairs at X:+2, Z:-12 (NE corner)
+Y:73  │ Stairs at X:0, Z:-13 (N wall)
+Y:74  │ Landing (Observation Deck #1)
+Y:75  │ Stairs resume at X:-2, Z:-12 (NW)
+Y:76  │ Stairs at X:-3, Z:-10 (W wall)
+Y:77  │ Stairs at X:-2, Z:-8 (SW corner)
+Y:78  │ Stairs at X:0, Z:-7 (S wall)
+... continues spiraling ...
+Y:84  │ Landing (Observation Deck #2)
+... continues to Y:89 ...
+
+STAIR TYPE: Polished Blackstone Stairs
+STAIR COUNT: ~44 stairs per tower = 88 total
+
+================================================================================
+                         MATERIAL COUNT - ZONE 4
+================================================================================
+
+PER TOWER:
+├── Polished Blackstone ............... 312 blocks
+├── Blackstone ........................ 87 blocks
+├── Polished Blackstone Stairs ........ 44 stairs
+├── Polished Blackstone Slabs ......... 24 slabs
+├── Polished Blackstone Walls ......... 48 walls
+├── Gilded Blackstone ................. 16 blocks
+├── Glass ............................. 72 blocks
+├── Tinted Glass ...................... 12 blocks
+├── Sea Lanterns ...................... 24 blocks
+├── End Rods .......................... 12 rods
+├── Iron Blocks ....................... 35 blocks (pyramid)
+├── Beacon ............................ 1 beacon
+├── Stained Glass (cyan OR magenta) ... 4 blocks
+├── Lanterns .......................... 8 lanterns
+├── Doors ............................. 2 doors (iron)
+└── PER TOWER SUBTOTAL ................ 700 pieces
+
+BRIDGE:
+├── Polished Blackstone ............... 42 blocks
+├── Polished Blackstone Walls ......... 24 walls
+├── Lanterns .......................... 3 lanterns
+├── Chains (optional) ................. 12 chains
+└── BRIDGE SUBTOTAL ................... 81 pieces
+
+ZONE 4 TOTALS:
+├── Both Towers ....................... 1,400 pieces
+├── Bridge ............................ 81 pieces
+└── ZONE 4 GRAND TOTAL ................ 1,481 pieces
+
+================================================================================
+                    CONSTRUCTION SEQUENCE - ZONE 4
+================================================================================
+
+PHASE 1: BEACON PYRAMIDS (Y:69-71)
+├── Build both tower outlines first (7×7 walls)
+├── Fill interiors with iron blocks in pyramid pattern
+├── Leave door openings
+└── Verify pyramid is correct before placing beacons
+
+PHASE 2: BEACON PLACEMENT (Y:72)
+├── Place beacons on top of pyramids
+├── Verify beam activates (should shoot into sky)
+├── Configure effects (do this last after colored glass)
+└── Note: Beams will be white until stained glass added
+
+PHASE 3: TOWER BODIES (Y:73-78)
+├── Continue walls upward
+├── Install windows at regular intervals
+├── Build spiral staircases as you go
+└── Leave observation deck floor areas open
+
+PHASE 4: OBSERVATION DECK #1 (Y:74-76)
+├── Extend floor with slabs
+├── Install sea lantern lighting
+├── Build safety railings
+└── Connect bridge between towers
+
+PHASE 5: UPPER SHAFT (Y:77-83)
+├── Narrow towers to 5×5
+├── Continue spiral stairs
+├── Install tall vertical windows
+└── Maintain sea lantern lighting
+
+PHASE 6: OBSERVATION DECK #2 (Y:84-85)
+├── Build smaller observation platform
+├── Install railings
+├── Add lanterns at corners
+└── Test views from this height
+
+PHASE 7: LANTERN ROOMS (Y:86-88)
+├── Narrow to 3×3
+├── All glass walls
+├── Central sea lantern
+└── Creates glowing crown effect
+
+PHASE 8: BEACON CROWNS (Y:89-90)
+├── Gilded blackstone frame
+├── End rod decoration
+├── COLORED STAINED GLASS over beacon beams
+│   ├── North: Cyan glass
+│   └── South: Magenta glass
+└── Verify colored beams are visible
+
+PHASE 9: FINAL BEACON CONFIGURATION
+├── Right-click each beacon
+├── Select primary power
+├── Select secondary power (if pyramid supports)
+└── Verify effect radius covers spawn platform
+
+================================================================================
+                              VISUAL RESULT
+================================================================================
+
+When complete, viewed from spawn point (X:0, Y:64, Z:0):
+
+                    ╱╲ CYAN BEAM              ╱╲ MAGENTA BEAM
+                   ╱  ╲                      ╱  ╲
+                  ╱    ╲                    ╱    ╲
+                 ╱      ╲                  ╱      ╲
+                │ ▓▓▓▓▓▓ │                │ ▓▓▓▓▓▓ │
+                │ ▓    ▓ │                │ ▓    ▓ │
+                │ ▓    ▓ │════════════════│ ▓    ▓ │  BRIDGE
+                │████████│                │████████│
+                │████████│                │████████│
+                │████████│                │████████│
+    ════════════│████████│════════════════│████████│════════════
+                 NORTH                      SOUTH
+                 TOWER                      TOWER
+                 
+    You stand at the center, between two guiding lights.
+    One cyan, one magenta. One for each child.
+    Two towers, standing together, watching over the world.
+
+================================================================================
+                    END OF ZONE 4 BLUEPRINTS - FILE 6 OF 15
+================================================================================

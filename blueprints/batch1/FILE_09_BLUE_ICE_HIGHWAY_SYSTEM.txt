@@ -1,0 +1,484 @@
+================================================================================
+                    THE OCEANIC SPAWN PLATFORM - FILE 9
+                       BLUE ICE HIGHWAY SYSTEM
+                           The Aethelgard Nexus
+================================================================================
+
+PURPOSE:
+The Blue Ice Highway System connects the Oceanic Spawn Platform to all
+four cardinal realms. Players can travel at incredible speeds using
+boats on blue ice, making the spawn platform the transportation hub
+of the entire Aethelgard Nexus.
+
+================================================================================
+                         SYSTEM OVERVIEW
+================================================================================
+
+                                 NORTH
+                                   ↑
+                                   │
+                          ╔════════╧════════╗
+                          ║   NORTH PIER    ║
+                          ║   to Northern   ║
+                          ║      Realm      ║
+                          ╚════════╤════════╝
+                                   │
+              WEST ←───╔══════════════════════════╗───→ EAST
+                       ║                          ║
+                       ║    OCEANIC SPAWN         ║
+                       ║      PLATFORM            ║
+                       ║         @                ║
+                       ║                          ║
+                       ╚══════════════════════════╝
+                                   │
+                          ╔════════╧════════╗
+                          ║   SOUTH PIER    ║
+                          ║   to Southern   ║
+                          ║      Realm      ║
+                          ╚════════╤════════╝
+                                   │
+                                   ↓
+                                 SOUTH
+
+================================================================================
+                    PIER SPECIFICATIONS (ALL FOUR)
+================================================================================
+
+Each pier is identical in construction, oriented toward its realm:
+
+DIMENSIONS:
+├── Width: 5 blocks
+├── Length: 15 blocks (platform edge to dock)
+├── Extended Length: 31 blocks total (dock to highway connection)
+├── Height: Y:64 (floor) to Y:68 (roof peak)
+└── Ice Path Width: 3 blocks (center)
+
+PIER COMPONENTS:
+1. Platform Connection (Z:-15 or +15, X:-15 or +15)
+2. Covered Runway (15 blocks)
+3. Boat Dock (3 blocks)
+4. Highway Launch Point (continues to realm)
+
+================================================================================
+                    NORTH PIER - DETAILED BLUEPRINT
+                       (To Northern Realm)
+================================================================================
+
+NORTH PIER COORDINATES:
+├── Start: X:-2 to +2, Z:-15
+├── End: X:-2 to +2, Z:-30
+├── Dock: X:-2 to +2, Z:-31 to -33
+└── Highway Connection: Z:-34 onward
+
+--------------------------------------------------------------------------------
+                    LAYER Y:63 (Support Floor)
+--------------------------------------------------------------------------------
+
+         X: -3  -2  -1   0  +1  +2  +3
+    Z    ┌───────────────────────────────┐
+   -15   │  ·   k   k   k   k   k   ·   │ ← Platform connection
+   -16   │  ·   k   k   k   k   k   ·   │
+   -17   │  ·   k   k   k   k   k   ·   │
+   -18   │  ·   k   k   k   k   k   ·   │
+   -19   │  ·   k   k   k   k   k   ·   │
+   -20   │  ·   k   k   k   k   k   ·   │
+   -21   │  ·   k   k   k   k   k   ·   │
+   -22   │  ·   k   k   k   k   k   ·   │
+   -23   │  ·   k   k   k   k   k   ·   │
+   -24   │  ·   k   k   k   k   k   ·   │
+   -25   │  ·   k   k   k   k   k   ·   │
+   -26   │  ·   k   k   k   k   k   ·   │
+   -27   │  ·   k   k   k   k   k   ·   │
+   -28   │  ·   k   k   k   k   k   ·   │
+   -29   │  ·   k   k   k   k   k   ·   │
+   -30   │  ·   k   k   k   k   k   ·   │ ← Dock start
+         └───────────────────────────────┘
+
+k = Polished Blackstone (support floor)
+· = Water (ocean)
+
+--------------------------------------------------------------------------------
+                    LAYER Y:64 (Travel Floor - ICE PATH)
+--------------------------------------------------------------------------------
+
+         X: -3  -2  -1   0  +1  +2  +3
+    Z    ┌───────────────────────────────┐
+   -15   │  ·   k   I   I   I   k   ·   │ ← Entry from platform
+   -16   │  ·   k   I   I   I   k   ·   │    I = Blue Ice (path)
+   -17   │  ·   k   I   I   I   k   ·   │    k = Blackstone (edge)
+   -18   │  ·   k   I   I   I   k   ·   │
+   -19   │  ·   k   I   I   I   k   ·   │
+   -20   │  ·   L   I   I   I   L   ·   │ ← L = Lantern post
+   -21   │  ·   k   I   I   I   k   ·   │
+   -22   │  ·   k   I   I   I   k   ·   │
+   -23   │  ·   k   I   I   I   k   ·   │
+   -24   │  ·   k   I   I   I   k   ·   │
+   -25   │  ·   L   I   I   I   L   ·   │ ← Lantern post
+   -26   │  ·   k   I   I   I   k   ·   │
+   -27   │  ·   k   I   I   I   k   ·   │
+   -28   │  ·   k   I   I   I   k   ·   │
+   -29   │  ·   k   I   I   I   k   ·   │
+   -30   │  ·   C   I   I   I   C   ·   │ ← C = Chest (dock)
+   -31   │  ·   s   W   W   W   s   ·   │ ← W = Water, s = Slab
+   -32   │  ·   s   W   W   W   s   ·   │    (boat launch)
+         └───────────────────────────────┘
+
+BLUE ICE PATH: 3 blocks wide × 15 blocks long = 45 blue ice per pier
+
+--------------------------------------------------------------------------------
+                    LAYER Y:65 (Side Walls)
+--------------------------------------------------------------------------------
+
+         X: -3  -2  -1   0  +1  +2  +3
+    Z    ┌───────────────────────────────┐
+   -15   │  ·   w   ·   ·   ·   w   ·   │ ← w = Polished Blackstone Wall
+   -16   │  ·   w   ·   ·   ·   w   ·   │
+   -17   │  ·   w   ·   ·   ·   w   ·   │
+   -18   │  ·   w   ·   ·   ·   w   ·   │
+   -19   │  ·   w   ·   ·   ·   w   ·   │
+   -20   │  ·   w   ·   ·   ·   w   ·   │
+   -21   │  ·   w   ·   ·   ·   w   ·   │
+   -22   │  ·   w   ·   ·   ·   w   ·   │
+   -23   │  ·   w   ·   ·   ·   w   ·   │
+   -24   │  ·   w   ·   ·   ·   w   ·   │
+   -25   │  ·   w   ·   ·   ·   w   ·   │
+   -26   │  ·   w   ·   ·   ·   w   ·   │
+   -27   │  ·   w   ·   ·   ·   w   ·   │
+   -28   │  ·   w   ·   ·   ·   w   ·   │
+   -29   │  ·   w   ·   ·   ·   w   ·   │
+   -30   │  ·   ·   ·   ·   ·   ·   ·   │ ← Dock (open)
+         └───────────────────────────────┘
+
+--------------------------------------------------------------------------------
+                    LAYER Y:66-67 (Upper Walls)
+--------------------------------------------------------------------------------
+
+Same pattern as Y:65 - walls continue upward to support roof.
+
+--------------------------------------------------------------------------------
+                    LAYER Y:68 (Glass Roof)
+--------------------------------------------------------------------------------
+
+         X: -3  -2  -1   0  +1  +2  +3
+    Z    ┌───────────────────────────────┐
+   -15   │  ·   G   G   G   G   G   ·   │ ← G = Glass
+   -16   │  ·   G   G   G   G   G   ·   │
+   -17   │  ·   G   G   G   G   G   ·   │
+   -18   │  ·   G   G   G   G   G   ·   │
+   -19   │  ·   G   G   G   G   G   ·   │
+   -20   │  ·   G   G   G   G   G   ·   │
+   -21   │  ·   G   G   G   G   G   ·   │
+   -22   │  ·   G   G   G   G   G   ·   │
+   -23   │  ·   G   G   G   G   G   ·   │
+   -24   │  ·   G   G   G   G   G   ·   │
+   -25   │  ·   G   G   G   G   G   ·   │
+   -26   │  ·   G   G   G   G   G   ·   │
+   -27   │  ·   G   G   G   G   G   ·   │
+   -28   │  ·   G   G   G   G   G   ·   │
+   -29   │  ·   G   G   G   G   G   ·   │
+   -30   │  ·   ·   ·   ·   ·   ·   ·   │ ← Dock (open sky)
+         └───────────────────────────────┘
+
+GLASS ROOF: 5 blocks wide × 15 blocks long = 75 glass per pier
+
+================================================================================
+                    PIER CROSS-SECTION (SIDE VIEW)
+================================================================================
+
+Looking at North Pier from the East (X:+10):
+
+Y:68  ┌───────────────────────────────────────────────────────┐
+      │ G   G   G   G   G   G   G   G   G   G   G   G   G   G │  Glass roof
+Y:67  │ w                                                   w │  Walls
+Y:66  │ w                                                   w │
+Y:65  │ w           →→→ BOAT TRAVEL →→→                    w │  Walls
+Y:64  │ k   I   I   I   I   I   I   I   I   I   I   I   I   k │  Ice path
+Y:63  │ k   k   k   k   k   k   k   k   k   k   k   k   k   k │  Support
+      └───────────────────────────────────────────────────────┘
+      Z:-15                                              Z:-30
+          ← Platform                               Dock →
+
+G = Glass
+w = Wall
+k = Polished Blackstone
+I = Blue Ice
+→ = Direction of travel (outbound)
+
+================================================================================
+                         DOCK DETAIL
+================================================================================
+
+Each pier ends with a dock for boat storage and launching.
+
+DOCK TOP VIEW at Y:64:
+
+         X: -2  -1   0  +1  +2
+    Z    ┌─────────────────────┐
+   -30   │  C   I   I   I   C  │  C = Chest, I = Ice (end of path)
+   -31   │  s   W   W   W   s  │  W = Water, s = Slab
+   -32   │  s   W   W   W   s  │  (boat launch area)
+   -33   │  ·   ·   ·   ·   ·  │  Open to highway
+         └─────────────────────┘
+
+DOCK FEATURES:
+├── 2 Chests (at Z:-30, X:-2 and X:+2)
+│   ├── Chest 1: Boats (32× Oak Boat)
+│   └── Chest 2: Supplies (food, torches, compass)
+├── Water Launch Area (3×2)
+│   └── For boarding boats when coming from highway
+├── Slab Steps (for climbing out of water)
+└── Sign: "NORTH REALM →" at dock end
+
+DOCK SIDE VIEW:
+
+Y:65  ·   ·   ·   ·   ·   ·   ·      Open (no walls at dock)
+Y:64  C   I   I   I   C   ·   ·      Chests and ice
+Y:63  k   k   k   W   W   W   ·      Floor + water
+Y:62  ~~~~~~~~~~~~~~~~~~~~~~~~~~~    Ocean water
+      Z:-30 -31 -32 -33 -34 -35
+
+================================================================================
+                    HIGHWAY CONNECTION POINT
+================================================================================
+
+Where the pier meets the realm highway:
+
+TRANSITION ZONE (Z:-33 to Z:-40):
+
+         X: -2  -1   0  +1  +2
+    Z    ┌─────────────────────┐
+   -33   │  ·   ·   ·   ·   ·  │  Pier ends
+   -34   │  I   I   I   I   I  │  Highway begins (wider)
+   -35   │  I   I   I   I   I  │  5-block wide path
+   -36   │  I   I   I   I   I  │
+   -37   │  I   I   I   I   I  │
+   -38   │  I   I   I   I   I  │
+   -39   │  I   I   I   I   I  │
+   -40   │  I   I   I   I   I  │  → Continues to realm
+         └─────────────────────┘
+
+HIGHWAY DESIGN:
+The realm highways are separate projects (one per realm), but they
+connect to the spawn platform at these transition points:
+
+- NORTH HIGHWAY: Starts at Z:-40, continues to Northern Realm
+- SOUTH HIGHWAY: Starts at Z:+40, continues to Southern Realm
+- EAST HIGHWAY: Starts at X:+40, continues to Eastern Realm
+- WEST HIGHWAY: Starts at X:-40, continues to Western Realm
+
+================================================================================
+                         BOAT LAUNCHER SYSTEM
+================================================================================
+
+For OUTBOUND travel (from spawn to realm), players simply:
+1. Place boat on blue ice at platform entrance
+2. Enter boat
+3. Hold W (forward) key
+4. Boat accelerates on ice
+5. Exit pier at high speed toward realm
+
+For INBOUND travel (from realm to spawn), an OPTIONAL launcher
+helps slow down and stop at the dock:
+
+LAUNCHER DESIGN (at dock end):
+
+Water brake system:
+┌─────────────────────────────────────────────────────────────────┐
+│ When boat arrives at high speed:                                │
+│ 1. Hits water section at dock (Z:-31 to -32)                   │
+│ 2. Water friction slows boat dramatically                       │
+│ 3. Boat stops in dock area                                      │
+│ 4. Player exits safely                                          │
+└─────────────────────────────────────────────────────────────────┘
+
+ALTERNATIVE: Soul sand slowdown
+Place soul sand under water at dock to further slow boats.
+
+================================================================================
+                    TRAVEL SPEED CALCULATIONS
+================================================================================
+
+BLUE ICE BOAT SPEED:
+├── Speed: ~70 blocks per second
+├── Pier length (15 blocks): ~0.21 seconds
+├── To reach realm (1000 blocks): ~14 seconds
+└── Round trip (2000 blocks): ~28 seconds
+
+This makes the spawn platform an incredibly efficient travel hub.
+Players can reach any realm in under 30 seconds!
+
+================================================================================
+                    PIER MATERIALS (PER PIER)
+================================================================================
+
+SUPPORT FLOOR (Y:63):
+├── Polished Blackstone ............... 80 blocks
+
+TRAVEL FLOOR (Y:64):
+├── Blue Ice .......................... 45 blocks
+├── Polished Blackstone (edges) ....... 30 blocks
+├── Chests ............................ 2 chests
+├── Slabs (dock steps) ................ 6 slabs
+
+WALLS (Y:65-67):
+├── Polished Blackstone Walls ......... 90 walls
+
+ROOF (Y:68):
+├── Glass ............................. 75 blocks
+
+LIGHTING:
+├── Lantern posts (bases) ............. 4 blocks
+├── Lanterns .......................... 4 lanterns
+
+SIGNAGE:
+├── Oak Signs ......................... 2 signs
+
+PIER TOTAL (per pier): 338 pieces
+
+FOUR PIERS GRAND TOTAL: 1,352 pieces
+
+================================================================================
+                    ALL FOUR PIERS - ORIENTATION GUIDE
+================================================================================
+
+NORTH PIER:
+├── Direction: -Z (toward Z:-∞)
+├── Start: X:-2 to +2, Z:-15
+├── End: X:-2 to +2, Z:-30
+├── Highway: Continues Z:-34 onward
+└── Realm: Northern Realm
+
+SOUTH PIER:
+├── Direction: +Z (toward Z:+∞)
+├── Start: X:-2 to +2, Z:+15
+├── End: X:-2 to +2, Z:+30
+├── Highway: Continues Z:+34 onward
+└── Realm: Southern Realm
+
+EAST PIER:
+├── Direction: +X (toward X:+∞)
+├── Start: Z:-2 to +2, X:+15
+├── End: Z:-2 to +2, X:+30
+├── Highway: Continues X:+34 onward
+└── Realm: Eastern Realm
+
+WEST PIER:
+├── Direction: -X (toward X:-∞)
+├── Start: Z:-2 to +2, X:-15
+├── End: Z:-2 to +2, X:-30
+├── Highway: Continues X:-34 onward
+└── Realm: Western Realm
+
+================================================================================
+                    CONSTRUCTION SEQUENCE
+================================================================================
+
+PHASE 1: Build Support Structure
+├── Extend polished blackstone floor from platform
+├── Create 5-wide, 15-long floor at Y:63-64
+├── Leave space for ice path in center
+└── Ensure structural connection to platform
+
+PHASE 2: Place Blue Ice
+├── Lay 3-wide ice path down center
+├── Ice should be continuous (no gaps!)
+├── Test ice quality (boats should glide smoothly)
+└── Replace any packed ice with blue ice
+
+PHASE 3: Build Walls
+├── Polished blackstone walls on both sides
+├── From Y:65 to Y:67 (3 blocks high)
+├── Leave openings at dock end
+└── Include lantern posts at intervals
+
+PHASE 4: Add Glass Roof
+├── Glass across top at Y:68
+├── Covers entire pier except dock
+├── Prevents players from flying off
+└── Allows light through
+
+PHASE 5: Create Dock
+├── End of pier: chests and slabs
+├── Water section for boat launch
+├── Signs indicating realm direction
+└── Stock chests with boats and supplies
+
+PHASE 6: Connect to Highway
+├── Continue ice path to Z/X:-34/+34
+├── Transition to realm highway construction
+├── (Highway construction is separate project)
+└── Mark connection point clearly
+
+================================================================================
+                         MAINTENANCE NOTES
+================================================================================
+
+BLUE ICE PROPERTIES:
+├── Does NOT melt (unlike regular ice)
+├── Slipperiest ice type in game
+├── Obtained from: Ice Spikes biome, igloos, or crafting
+├── Crafting: 9 Packed Ice → 1 Blue Ice
+├── Packed Ice: 9 Regular Ice → 1 Packed Ice
+└── NEVER place torches near ice (packed ice melts)
+
+RESTOCKING DOCKS:
+├── Check boat chests regularly
+├── Players may take boats and not return them
+├── Keep spare boats in storage
+└── Consider hopper system for auto-restocking (advanced)
+
+REPAIRS:
+├── Glass roof may break (creeper explosions, accidents)
+├── Keep spare glass in dock chest
+├── Walls rarely need repair
+└── Ice doesn't degrade naturally
+
+================================================================================
+                    OPTIONAL ENHANCEMENTS
+================================================================================
+
+1. SPEED BOOST LAUNCHERS
+   - Add soul sand + trapdoor at pier entrance
+   - Player falls into boat, gets pushed forward
+   - Increases initial speed
+
+2. ARRIVAL DETECTOR
+   - Tripwire at dock triggers noteblock
+   - Alerts players at spawn that someone is arriving
+   - Fun for multiplayer
+
+3. REALM GATEWAY AESTHETIC
+   - Decorative arch at pier entrance
+   - Color-coded by realm (banners, terracotta)
+   - Makes each direction visually distinct
+
+4. MINECART ALTERNATIVE
+   - Powered rails alongside ice path
+   - For players without boats
+   - Slower but reliable
+
+5. ELYTRA LAUNCH PADS
+   - At dock ends, add elytra launch points
+   - For players who prefer flying
+   - Requires fireworks in dock chest
+
+================================================================================
+                              SUMMARY
+================================================================================
+
+The Blue Ice Highway System transforms the Oceanic Spawn Platform into
+the ultimate transportation hub:
+
+✓ Four piers connecting to four realms
+✓ ~70 blocks/second travel speed
+✓ Protected covered runways
+✓ Equipped docks with supplies
+✓ Seamless highway connections
+
+From the moment your children step onto a pier, they're seconds away
+from any corner of the Aethelgard Nexus. The world is truly at their
+fingertips.
+
+================================================================================
+                END OF BLUE ICE HIGHWAY SYSTEM - FILE 9 OF 15
+================================================================================

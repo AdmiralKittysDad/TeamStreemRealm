@@ -1,0 +1,463 @@
+================================================================================
+                    THE OCEANIC SPAWN PLATFORM - FILE 14
+                          WATER MANAGEMENT
+                           The Aethelgard Nexus
+================================================================================
+
+PURPOSE:
+Building underwater requires careful water management. This guide covers
+sealing techniques, preventing leaks, creating bubble columns, and
+managing water-based features throughout the structure.
+
+================================================================================
+                         WATER PHYSICS BASICS
+================================================================================
+
+MINECRAFT WATER RULES:
+├── Water flows up to 8 blocks from a source
+├── Water source blocks can be created by kelp
+├── Waterlogged blocks hold water even when "dry"
+├── Sponges absorb water in a 7×7×7 area
+├── Magma and soul sand create bubbles only in source blocks
+└── Glass, slabs, and stairs can be waterlogged
+
+IMPORTANT CONCEPTS:
+
+1. SOURCE BLOCKS vs FLOWING WATER
+   Source: Creates water, doesn't disappear
+   Flowing: Temporary, disappears when source removed
+
+2. WATERLOGGED BLOCKS
+   Some blocks can contain water while appearing solid
+   Examples: Slabs, stairs, fences, signs, trapdoors
+
+3. KELP CONVERSION TRICK
+   Kelp planted in flowing water converts it to source blocks
+   Essential for bubble columns!
+
+================================================================================
+                    TECHNIQUE 1: SPONGE DRAINING
+================================================================================
+
+Sponges are the primary tool for removing water.
+
+HOW SPONGES WORK:
+├── Dry sponge absorbs up to 65 water blocks
+├── Converts to wet sponge (must be dried)
+├── Absorption range: 7×7×7 area
+├── Multiple sponges can be used simultaneously
+└── Dry in furnace or Nether to reuse
+
+SPONGE DRAINING PROCEDURE:
+
+STEP 1: Seal the area
+├── Build complete walls around target area
+├── Ensure NO gaps (water will refill through gaps)
+├── Temporary blocks OK (can remove later)
+└── Ceiling must also be sealed
+
+STEP 2: Place sponges
+├── Start at the BOTTOM of the water
+├── Place sponge, wait for absorption
+├── Water flows down to fill void
+├── Continue placing upward
+└── Work systematically in rows
+
+STEP 3: Collect wet sponges
+├── Mine wet sponges immediately
+├── Don't leave in inventory (heavy!)
+├── Stack for drying
+└── Or dry immediately in Nether
+
+STEP 4: Dry sponges
+Option A - Furnace:
+├── Place wet sponge in furnace
+├── Use any fuel
+├── Bucket in fuel slot catches water
+└── ~10 seconds per sponge
+
+Option B - Nether:
+├── Travel to Nether
+├── Place wet sponges
+├── Instantly become dry sponges
+├── Return and continue
+└── Faster for large quantities
+
+SPONGE REQUIREMENTS FOR THIS BUILD:
+├── Underwater Chamber: 30-50 sponges
+├── Pillar interiors: 20 sponges each = 80 total
+├── Miscellaneous: 20 sponges
+└── TOTAL NEEDED: ~150 sponge uses (30-50 sponges cycled)
+
+OBTAINING SPONGES:
+├── Ocean Monuments: Sponge rooms contain 30 wet sponges
+├── Elder Guardians: May drop sponge (rare)
+└── One monument provides enough for this build
+
+================================================================================
+                    TECHNIQUE 2: GLASS SEALING
+================================================================================
+
+Glass walls must be perfectly sealed to prevent water intrusion.
+
+GLASS SEALING RULES:
+├── No diagonal gaps (water flows diagonally!)
+├── Every block must connect to adjacent blocks
+├── Corners need solid blocks or corner pieces
+├── Test by placing/breaking one block
+
+PROPER CORNER CONSTRUCTION:
+
+WRONG (water leaks through):
+    G W
+    W G
+    (diagonal gap allows water)
+
+RIGHT (sealed):
+    G G
+    G G
+    (solid corner)
+
+Or use prismarine corner posts:
+    G P
+    P G
+    (P blocks water path)
+
+SEALING PROCEDURE:
+
+STEP 1: Build frame first
+├── Place corner posts (prismarine)
+├── Mark edge positions
+├── Ensure frame is square/level
+└── Double-check measurements
+
+STEP 2: Fill with glass
+├── Work row by row
+├── Bottom to top
+├── Verify each block places correctly
+└── No gaps between blocks
+
+STEP 3: Test seal
+├── Place single sponge inside
+├── Water should not refill
+├── If water returns, find gap
+└── Break/replace suspicious blocks
+
+COMMON LEAK POINTS:
+├── Corners (diagonal flow)
+├── Stairs/slabs (if waterlogged)
+├── Signs (waterlogged by default!)
+├── Trapdoors (waterlogged)
+└── Fence connections (complex hitboxes)
+
+================================================================================
+                    TECHNIQUE 3: BUBBLE COLUMNS
+================================================================================
+
+Bubble columns provide rapid vertical transport.
+
+SOUL SAND COLUMNS (Upward):
+├── Pushes entities UP rapidly
+├── Prevents drowning (provides air)
+├── Requires WATER SOURCE blocks
+├── Soul sand placed at BOTTOM
+└── Speed: ~10 blocks/second
+
+MAGMA COLUMNS (Downward):
+├── Pulls entities DOWN
+├── Damages entities (1 ❤ per second)
+├── Requires WATER SOURCE blocks
+├── Magma placed at BOTTOM
+├── Speed: ~10 blocks/second
+└── Can be negated with Frost Walker boots
+
+BUBBLE COLUMN CONSTRUCTION:
+
+STEP 1: Build shaft walls
+├── 1×1 minimum (can be larger)
+├── Glass walls for visibility (optional)
+├── Full height needed (Y:40 to Y:64 for this build)
+└── Seal top and sides completely
+
+STEP 2: Fill with water
+├── CRITICAL: Must be source blocks!
+├── Flowing water will NOT work
+├── Use kelp method (below)
+└── Test bubbles before committing
+
+STEP 3: Convert to source blocks (Kelp Method)
+├── Place kelp at bottom of shaft
+├── Kelp only grows in water source blocks
+├── As kelp grows up, it converts flowing → source
+├── Let kelp grow to top
+├── Break kelp (water remains as sources)
+└── NOW place soul sand or magma
+
+STEP 4: Place bubble block
+├── Soul sand: Upward bubbles
+├── Magma: Downward bubbles
+├── Bubbles should appear immediately
+└── Test by swimming in
+
+STEP 5: Create exit point
+├── At top: Trapdoor or water exit
+├── Player pops out onto dry land
+├── Sign holds water in column
+└── Land safely on platform
+
+BUBBLE COLUMN LAYOUT (Example):
+
+Side view:
+Y:64  [TRAPDOOR] ← Exit (player lands on platform)
+Y:63  [WATER + SIGN] ← Sign holds water
+Y:62  [WATER]
+  :   [WATER]     ← Continuous source blocks
+  :   [WATER]
+Y:41  [WATER]
+Y:40  [SOUL SAND] ← Bottom block creates bubbles
+
+Top view of shaft:
+    [ ][ ]
+    [ S ]    S = Soul sand (or magma)
+    [ ][ ]   Walls are solid
+
+================================================================================
+                    TECHNIQUE 4: WATER SOURCE FILLING
+================================================================================
+
+Large underwater areas need to be filled with source blocks (not flowing).
+
+INFINITE WATER SOURCE:
+Classic method - 2×2 pool:
+    [S][S]
+    [S][S]
+Taking from corners replenishes immediately
+Use for small-scale filling
+
+KELP CONVERSION (Large Scale):
+For filling large areas with source blocks:
+
+STEP 1: Allow water to flow in
+├── Let area fill with flowing water naturally
+├── Or place water at top, let it flow down
+└── Don't worry about source vs flowing yet
+
+STEP 2: Plant kelp everywhere
+├── Kelp only plants on source blocks
+├── Will convert flowing → source as it grows
+├── Plant densely for faster conversion
+└── Wait for growth
+
+STEP 3: Harvest kelp
+├── Break kelp at base
+├── All water now source blocks
+├── Kelp drops as items (compost it)
+└── Area is now proper source water
+
+ICE CONVERSION (Alternative):
+├── Place ice blocks in water
+├── Break ice → creates water source
+├── Works underwater in cold biomes
+└── More resource-intensive than kelp
+
+================================================================================
+                    TECHNIQUE 5: PREVENTING WATER ENTRY
+================================================================================
+
+Keeping water OUT of dry areas.
+
+DOOR AIRLOCKS:
+Double-door system prevents flooding:
+
+    [WATER]--[DOOR 1]--[AIR GAP]--[DOOR 2]--[DRY ROOM]
+
+Procedure:
+1. Open Door 1, enter airlock
+2. Close Door 1
+3. Drain airlock (sponge or wait)
+4. Open Door 2, enter dry room
+5. Close Door 2
+
+SIGN BARRIERS:
+Signs block water while allowing player passage:
+
+    [WATER][SIGN][DRY]
+           ↑
+    Sign prevents water flow
+    Player walks through
+
+Can stack signs for larger openings:
+    [SIGN]
+    [SIGN]
+    [SIGN]
+
+FENCE GATE TRICK:
+Fence gates block water when closed:
+├── Place fence gate at entrance
+├── Close gate = water blocked
+├── Open gate = can walk through
+├── Water still blocked by open gate!
+└── Visual passage without flooding
+
+================================================================================
+                    TECHNIQUE 6: CONDUIT WATER REQUIREMENTS
+================================================================================
+
+The conduit needs specific water conditions.
+
+CONDUIT PLACEMENT RULES:
+├── Must be IN water (submerged)
+├── Water on all 6 faces of conduit
+├── Frame blocks in water
+└── 3×3×3 water volume around conduit minimum
+
+ACTIVATING THE CONDUIT:
+1. Ensure conduit position is underwater
+2. Place prismarine frame (see File 10)
+3. Frame blocks must be in water
+4. Conduit activates when properly framed
+5. Particles indicate activation
+
+IF CHAMBER IS DRAINED:
+├── Conduit won't work in air
+├── Must re-flood chamber around conduit
+├── Can keep rest of chamber dry
+├── Create "water pocket" around conduit
+└── Glass walls hold water in pocket
+
+WATER POCKET DESIGN:
+
+Side view:
+    [GLASS][GLASS][GLASS]
+    [GLASS][WATER][GLASS]
+    [GLASS][WATER][GLASS]
+    [GLASS][CONDT][GLASS]  ← Conduit in water
+    [GLASS][WATER][GLASS]
+    [PRISM][PRISM][PRISM]  ← Frame in water
+
+Keeps conduit underwater while chamber is dry
+Players need Water Breathing to access conduit area
+
+================================================================================
+                    TECHNIQUE 7: KELP AND CORAL MANAGEMENT
+================================================================================
+
+Living underwater plants require management.
+
+KELP GROWTH:
+├── Grows in water source blocks
+├── Can grow very tall (26 blocks max)
+├── Blocks swimming paths if unmanaged
+├── Harvest regularly to control
+└── Useful for: Food (dried kelp), composting, decoration
+
+KELP FARMS:
+Intentional kelp areas can be harvested:
+├── Designate growth zones
+├── Let kelp grow tall
+├── Harvest at base
+├── Drops full column
+└── Regrows from base
+
+CORAL REQUIREMENTS:
+├── Must be in water (dies in air!)
+├── Place while underwater
+├── Any adjacent water source works
+├── Will not spread/grow
+├── Purely decorative
+
+CORAL PLACEMENT:
+├── Dead coral = gray, works in air
+├── Live coral = colorful, needs water
+├── Fan coral = flat, attaches to blocks
+├── Block coral = full blocks
+└── Can be waterlogged for decoration
+
+================================================================================
+                    WATER MANAGEMENT CHECKLIST
+================================================================================
+
+BEFORE CONSTRUCTION:
+□ Obtain 50+ sponges from Ocean Monument
+□ Secure furnace fuel for drying sponges
+□ Have kelp supply (at least 2 stacks)
+□ Gather glass (several stacks)
+□ Prepare prismarine for framing
+
+DURING CONSTRUCTION:
+□ Build walls completely before draining
+□ Test seal before bulk draining
+□ Use kelp trick for bubble columns
+□ Verify source blocks in all columns
+□ Check corners for leaks
+
+SPECIFIC AREAS:
+
+Underwater Chamber:
+□ 17×17 walls completely sealed
+□ All corners have solid blocks
+□ No waterlogged blocks in walls
+□ Sponge drain from bottom up
+□ Conduit area has water pocket (if chamber dry)
+
+Bubble Columns:
+□ All four shafts converted to source (kelp method)
+□ Soul sand at bottom of ascent shafts
+□ Magma at bottom of descent shafts
+□ Exit trapdoors/signs properly placed
+□ Test all four shafts before finishing
+
+Surface Platform:
+□ No water flooding onto platform
+□ Pier areas properly above water
+□ Any glass floors sealed below
+□ Spawn circle completely dry
+□ Rain doesn't pool on platform
+
+================================================================================
+                         TROUBLESHOOTING
+================================================================================
+
+PROBLEM: Water keeps refilling drained area
+SOLUTION: Find the leak!
+├── Check all corners (diagonal flow)
+├── Look for waterlogged blocks
+├── Verify ceiling is sealed
+├── Test by removing blocks one at a time
+└── Water flows from source - find it
+
+PROBLEM: Bubble column not working
+SOLUTION: Check water type
+├── Must be SOURCE blocks (not flowing)
+├── Use kelp to convert if needed
+├── Soul sand/magma must be at BOTTOM
+├── Replace soul sand (may be rotated wrong)
+└── Clear any obstructions in shaft
+
+PROBLEM: Conduit not activating
+SOLUTION: Check frame and water
+├── Frame needs 16+ prismarine minimum
+├── All frame blocks must be IN water
+├── Conduit must be IN water
+├── No blocks directly adjacent to conduit
+└── See File 10 for correct frame pattern
+
+PROBLEM: Glass wall leaking
+SOLUTION: Find gap and seal
+├── Check corners carefully
+├── Look for stairs/slabs (remove or waterlog)
+├── Signs can cause issues (remove if needed)
+├── Replace suspicious blocks
+└── Test with single sponge
+
+PROBLEM: Kelp won't grow
+SOLUTION: Check conditions
+├── Needs water source block (not flowing)
+├── Needs solid block below
+├── Can't grow in bubble columns
+├── Light level doesn't matter
+└── May need to wait (grows slowly)
+
+================================================================================
+                    END OF WATER MANAGEMENT - FILE 14 OF 15
+================================================================================

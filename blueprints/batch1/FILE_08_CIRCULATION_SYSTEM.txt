@@ -1,0 +1,541 @@
+================================================================================
+                    THE OCEANIC SPAWN PLATFORM - FILE 8
+                          CIRCULATION SYSTEM
+                           The Aethelgard Nexus
+================================================================================
+
+PURPOSE:
+This document details ALL methods for moving between zones and areas
+of the Oceanic Spawn Platform. A well-designed circulation system
+ensures players can navigate efficiently and safely.
+
+================================================================================
+                         CIRCULATION OVERVIEW
+================================================================================
+
+VERTICAL MOVEMENT (between zones):
+├── Bubble Columns (Soul Sand) ........ Rapid ascent
+├── Bubble Columns (Magma) ............ Controlled descent
+├── Spiral Staircases ................. Inside towers
+├── Ladders ........................... Backup access everywhere
+└── Water Elevator Shaft .............. Central column option
+
+HORIZONTAL MOVEMENT (within zones):
+├── Walking ........................... Main platform, piers
+├── Swimming .......................... Underwater chamber
+├── Blue Ice Boats .................... Piers to realms
+└── Bridge ............................ Between towers at Y:75
+
+================================================================================
+                    BUBBLE COLUMN SYSTEM - POSITIONS
+================================================================================
+
+Four primary bubble column shafts connect the underwater chamber
+to the surface platform. Each shaft is 1×1 block.
+
+BUBBLE COLUMN LOCATIONS:
+
+         -15      -7        0       +7      +15
+    Z    ╔═══════════════════════════════════════╗
+   -15   ║  ·   ·   ·   ·   ·   ·   ·   ·   ·  ║
+         ║                                      ║
+    -7   ║  ·   ↑↓  ·   ·   ·   ·   ·  ↑↓  ·  ║ ← NW & NE shafts
+         ║                                      ║
+     0   ║  ·   ·   ·   ·   @   ·   ·   ·   ·  ║ ← Spawn center
+         ║                                      ║
+    +7   ║  ·   ↑↓  ·   ·   ·   ·   ·  ↑↓  ·  ║ ← SW & SE shafts
+         ║                                      ║
+   +15   ║  ·   ·   ·   ·   ·   ·   ·   ·   ·  ║
+         ╚═══════════════════════════════════════╝
+
+↑ = Soul Sand (ascent)
+↓ = Magma Block (descent)
+@ = Spawn point
+
+SHAFT POSITIONS (exact coordinates):
+┌────────────────────────────────────────────────────────────────┐
+│ SHAFT    │ SOUL SAND (↑)   │ MAGMA (↓)      │ PURPOSE          │
+├────────────────────────────────────────────────────────────────┤
+│ NW       │ X:-7, Z:-7      │ X:-8, Z:-7     │ Northwest access │
+│ NE       │ X:+7, Z:-7      │ X:+8, Z:-7     │ Northeast access │
+│ SW       │ X:-7, Z:+7      │ X:-8, Z:+7     │ Southwest access │
+│ SE       │ X:+7, Z:+7      │ X:+8, Z:+7     │ Southeast access │
+└────────────────────────────────────────────────────────────────┘
+
+================================================================================
+                    BUBBLE COLUMN CONSTRUCTION
+================================================================================
+
+CROSS-SECTION (NW Shaft - representative of all four):
+
+                    Y:64  ┌───┬───┐  Platform level
+                          │ _ │ _ │  (water exits to air)
+                    Y:63  ├───┼───┤  Water surface
+                          │ W │ W │
+                    Y:62  ├───┼───┤  
+                          │ W │ W │  (open water column)
+                      :   │ : │ : │
+                      :   │ : │ : │
+                    Y:42  ├───┼───┤  
+                          │ W │ W │  (bottom of column)
+                    Y:41  ├───┼───┤  
+                          │ S │ M │  S = Soul Sand, M = Magma
+                    Y:40  └───┴───┘  Ocean floor
+                          X:-7 X:-8
+
+CONSTRUCTION STEPS FOR EACH SHAFT:
+
+1. PREPARE THE SHAFT
+   ├── Clear 2×1 area from Y:40 to Y:64
+   ├── Build glass or solid walls around shaft
+   └── Ensure shaft is completely enclosed
+
+2. PLACE BOTTOM BLOCKS (Y:41)
+   ├── Soul sand on one side (creates upward bubbles)
+   └── Magma block on adjacent side (creates downward bubbles)
+
+3. FILL WITH WATER
+   ├── Place water source at TOP (Y:63)
+   ├── Water must be SOURCE blocks, not flowing
+   └── Use kelp trick: plant kelp, let it grow, then remove
+       (converts flowing water to source blocks)
+
+4. VERIFY BUBBLES
+   ├── Soul sand should show upward bubble particles
+   ├── Magma should show downward bubble particles
+   └── Test by entering - should shoot up or sink down
+
+5. CREATE EXIT AT TOP (Y:64)
+   ├── Trapdoor at Y:64 level (water-logged)
+   ├── Sign on wall to hold water back
+   └── Player emerges onto platform safely
+
+DETAIL VIEW - TOP OF SHAFT:
+
+Top View at Y:64 (platform level):
+         -8  -7
+    Z    ┌───┬───┐
+    -7   │ T │ T │  T = Trapdoor (open, water-logged)
+    -6   │ k │ k │  k = Platform floor (polished blackstone)
+         └───┴───┘
+
+Side View:
+Y:65  ·   ·   ·      Air (safe landing area)
+Y:64  T   k   T      Trapdoor exits, platform
+Y:63  W   │   W      Water column
+Y:62  W   │   W
+  :   :   :   :
+Y:41  S   │   M      Soul Sand / Magma at bottom
+Y:40  P   P   P      Prismarine floor
+
+================================================================================
+                    SPIRAL STAIRCASES - TOWER INTERIORS
+================================================================================
+
+Each beacon tower contains a spiral staircase from base to top.
+
+NORTH TOWER STAIRCASE:
+- Entry: X:0, Y:69, Z:-7 (door in tower base)
+- Exit 1: Y:74 (Observation Deck #1)
+- Exit 2: Y:84 (Observation Deck #2)
+- Peak: Y:89 (Beacon level access)
+
+STAIRCASE ROUTING (viewed from above, showing stair positions by layer):
+
+The staircase spirals CLOCKWISE as you ascend.
+
+Y:69  │ ▓▓▓▓▓▓▓ │    Y:74  │ ▓▓▓▓▓▓▓ │    Y:79  │ ▓▓▓▓▓ │
+      │ ▓IIIII▓ │          │ ▓.....▓ │          │ ▓...▓ │
+      │ ▓IIIII▓ │          │ ▓.....▓ │          │ ▓...▓ │
+      │ ▓IIIII▓ │          │ ▓.....▓ │          │ ▓...▓ │
+      │ ▓IIIII▓ │          │ ▓.....▓ │          │ ▓...▓ │
+      │ ▓IIIII▓ │          │ ▓>>>>>▓ │          │ ▓>>>▓ │
+      │ ▓▓▓D▓▓▓ │          │ ▓▓▓▓▓▓▓ │          │ ▓▓▓▓▓ │
+      
+I = Iron (beacon pyramid, hidden)
+D = Door (entry)
+> = Stair direction
+. = Interior space
+
+STAIR PATTERN (one rotation = 8 steps):
+
+Step 1 (Y:70): South wall (entry side)
+Step 2 (Y:71): SE corner
+Step 3 (Y:72): East wall
+Step 4 (Y:73): NE corner
+Step 5 (Y:74): North wall → OBSERVATION DECK #1
+Step 6 (Y:75): NW corner
+Step 7 (Y:76): West wall
+Step 8 (Y:77): SW corner
+Step 9 (Y:78): South wall (full rotation)
+... continues spiraling ...
+
+STAIRCASE MATERIALS:
+├── Polished Blackstone Stairs ........ 44 per tower
+├── Polished Blackstone (landings) .... 8 per tower
+├── Lanterns (at landings) ............ 4 per tower
+└── Iron Doors ........................ 2 per tower
+
+================================================================================
+                    UNDERWATER CHAMBER ACCESS
+================================================================================
+
+The underwater chamber (Y:42-55) can be accessed via:
+
+1. BUBBLE COLUMNS (primary method)
+   - Descend via magma column
+   - Enter chamber through floor opening
+   - Ascend via soul sand column
+
+2. ANCHOR PILLAR STAIRCASES (backup method)
+   - Each corner pillar has internal staircase
+   - From Y:40 to Y:64
+   - Narrow but functional
+
+ANCHOR PILLAR STAIRCASE DETAIL:
+
+Pillar dimensions: 7×7
+Staircase is inside the pillar, spiraling upward.
+
+Cross-section of NW Anchor Pillar:
+
+         -15 -14 -13 -12 -11 -10  -9
+    Z    ┌─────────────────────────────┐
+   -15   │  P   P   P   P   P   P   P  │
+   -14   │  P   L   _   _   _   L   P  │  L = Sea lantern
+   -13   │  P   _   >   _   _   _   P  │  > = Stairs
+   -12   │  P   _   _   _   _   _   P  │  _ = Interior
+   -11   │  P   _   _   _   _   >   P  │
+   -10   │  P   L   _   _   _   L   P  │
+    -9   │  P   P   P   D   P   P   P  │  D = Door to chamber
+         └─────────────────────────────┘
+
+P = Prismarine (pillar wall)
+
+================================================================================
+                         LADDER BACKUP SYSTEM
+================================================================================
+
+Ladders provide emergency access if other systems fail.
+
+LADDER POSITIONS:
+
+1. INSIDE BUBBLE COLUMN SHAFTS
+   - Ladders on one wall of each shaft
+   - From Y:40 to Y:64
+   - For climbing if water drains
+
+2. INSIDE ANCHOR PILLARS
+   - Backup to internal stairs
+   - From Y:40 to Y:64
+   - On back wall of each pillar
+
+3. OUTSIDE BEACON TOWERS
+   - Back side of each tower (away from spawn)
+   - From Y:64 to Y:84
+   - For quick emergency ascent
+
+4. PIER EDGES
+   - Side of each pier
+   - From water level to pier top
+   - For players who fall in water
+
+LADDER PLACEMENT RULES:
+├── Always place on SOLID blocks (not glass)
+├── Ensure continuous path (no gaps)
+├── Place lantern at top and bottom for visibility
+└── Test climb before finalizing
+
+================================================================================
+                    CENTRAL WATER ELEVATOR (OPTIONAL)
+================================================================================
+
+For a central elevator shaft running through the entire structure:
+
+POSITION: X:0, Z:0 (directly through spawn point)
+This would require modifying the spawn circle design.
+
+ALTERNATIVE POSITION: X:2, Z:0 (offset from center)
+
+ELEVATOR DESIGN:
+
+         Y:90 ┌───┐  Tower level
+              │ . │
+         Y:75 ├───┤  Bridge level
+              │ W │
+              │ W │
+         Y:64 ├───┤  Platform level (exit)
+              │ W │
+              │ W │
+         Y:48 ├───┤  Chamber level (exit)
+              │ W │
+              │ W │
+         Y:40 └───┘  Ocean floor
+              │S/M│  Soul Sand or Magma
+
+OPERATING PRINCIPLE:
+- Single shaft, player chooses direction
+- Soul sand at bottom = always goes UP
+- To descend: player must swim down against current
+- OR: Install pistons to swap soul sand/magma
+
+RECOMMENDATION: Use the four corner shafts instead of central elevator.
+The corner shafts don't disrupt the spawn point design and provide
+redundancy (4 access points instead of 1).
+
+================================================================================
+                    BRIDGE CIRCULATION (Y:75)
+================================================================================
+
+The bridge connecting the two beacon towers at Y:75 allows
+horizontal movement between towers without descending.
+
+BRIDGE SPECIFICATIONS:
+├── Length: 14 blocks (Z:-7 to Z:+7)
+├── Width: 3 blocks (X:-1 to X:+1)
+├── Height: Y:75 (floor) to Y:76 (railings)
+└── Connects: North Tower ↔ South Tower
+
+ACCESS TO BRIDGE:
+1. From North Tower: Exit at Y:75 observation deck, walk south
+2. From South Tower: Exit at Y:75 observation deck, walk north
+3. From Platform: Climb either tower to Y:75
+
+BRIDGE FEATURES:
+├── Safety railings on both sides
+├── 3 lanterns for lighting
+├── Clear glass sections for views (optional)
+└── Central meeting point at X:0, Z:0
+
+VIEW FROM BRIDGE:
+Standing at center of bridge (Y:75), you can see:
+- Below: The entire surface platform and spawn point
+- North: North beacon tower and cyan beam
+- South: South beacon tower and magenta beam
+- East/West: Ocean extending to horizon
+- Up: Both beacon beams crossing the sky
+
+================================================================================
+                    PIER CIRCULATION
+================================================================================
+
+Each pier provides passage from the platform to the realm highways.
+
+PIER ENTRY (from platform):
+├── 5-block wide opening in platform wall
+├── Smooth transition from stone to ice
+└── Clear signage indicating realm direction
+
+PIER TRAVEL:
+├── Blue ice path (3 blocks wide)
+├── Walls prevent falling off sides
+├── Glass roof prevents falling from above
+└── Average travel speed: Very fast (boats on ice)
+
+PIER EXIT (to realm highway):
+├── Dock at end of pier (Z:-30, +30 or X:-30, +30)
+├── 2 chests with supplies (boats, food)
+├── Water section for boat launch
+└── Connection point to realm highway
+
+PIER BOAT STORAGE:
+
+Each dock has:
+├── Chest 1: Oak Boats (×32)
+├── Chest 2: Food supplies (bread, cooked porkchop)
+├── Sign: "To [Realm Name]"
+└── Optional: Map of realm in item frame
+
+================================================================================
+                    ENTRY FROM WATER
+================================================================================
+
+Players arriving by boat or swimming can enter the platform via:
+
+1. PIER DOCKS (recommended)
+   - Swim to any pier end
+   - Climb slab steps out of water
+   - Walk up pier to platform
+
+2. PLATFORM EDGE SLABS
+   - Slabs around platform perimeter at Y:63.5
+   - Allow climbing out of water
+   - Located every 5 blocks around edge
+
+3. BUBBLE COLUMN ENTRY (underwater)
+   - Dive down to any shaft entrance
+   - Enter soul sand column
+   - Ride bubbles up to platform
+
+WATER ENTRY DETAIL:
+
+Side view of platform edge:
+Y:65  │  w  │      Wall (safety barrier)
+Y:64  │  k  │      Platform floor
+Y:63.5│  S  │      Slab (step from water)
+Y:63  │ ~~~ │      Water surface
+      └─────┘
+
+S = Bottom slab (allows climbing out)
+w = Wall (polished blackstone wall)
+k = Floor (polished blackstone)
+
+================================================================================
+                    CIRCULATION SIGNAGE
+================================================================================
+
+Signs help players navigate. Place signs at key decision points:
+
+SIGN LOCATIONS:
+
+1. AT EACH BUBBLE COLUMN (surface level)
+   - "↓ Underwater Chamber"
+   - Indicates descent point
+
+2. AT UNDERWATER CHAMBER (near columns)
+   - "↑ Surface Platform"
+   - Indicates ascent point
+
+3. AT TOWER ENTRANCES
+   - "North Tower - Cyan Beacon"
+   - "South Tower - Magenta Beacon"
+
+4. AT OBSERVATION DECKS
+   - "Observation Deck 1 (Y:75)"
+   - "Bridge to South Tower →"
+
+5. AT PIER ENTRANCES
+   - "North Realm →"
+   - "← South Realm"
+   - etc.
+
+6. AT PIER DOCKS
+   - "[Realm Name] Highway"
+   - "Boats available in chest"
+
+SIGN MATERIAL: Oak signs (readable, classic look)
+
+================================================================================
+                    EMERGENCY EXITS
+================================================================================
+
+In case of emergency (mobs, flooding, etc.), players should know:
+
+1. FASTEST ASCENT: Bubble column (soul sand) - instant
+2. FASTEST DESCENT: Magma column - instant
+3. ESCAPE TO OCEAN: Jump off platform edge (Y:64 → water)
+4. ESCAPE TO TOWER: Enter tower, close iron door
+
+SAFE ZONES:
+├── Surface platform: Fully lit, no mob spawns
+├── Underwater chamber: Lit, conduit protection
+├── Tower interiors: Enclosed, doors closeable
+└── Bridge: Open but lit
+
+================================================================================
+                    CIRCULATION MATERIAL SUMMARY
+================================================================================
+
+BUBBLE COLUMNS (×4 shafts):
+├── Soul Sand ......................... 4 blocks
+├── Magma Blocks ...................... 4 blocks
+├── Glass (shaft walls) ............... 192 blocks
+├── Trapdoors ......................... 8 trapdoors
+├── Signs ............................. 8 signs
+└── SUBTOTAL .......................... 216 pieces
+
+TOWER STAIRCASES (×2 towers):
+├── Polished Blackstone Stairs ........ 88 stairs
+├── Polished Blackstone (landings) .... 16 blocks
+├── Iron Doors ........................ 4 doors
+├── Lanterns .......................... 8 lanterns
+└── SUBTOTAL .......................... 116 pieces
+
+LADDERS (all locations):
+├── Ladders ........................... ~200 ladders
+└── Estimate for full coverage
+
+BRIDGE:
+├── (Already counted in Zone 4)
+└── No additional materials
+
+PLATFORM EDGE SLABS:
+├── Stone Slabs ....................... ~60 slabs
+└── Around perimeter for water entry
+
+SIGNS:
+├── Oak Signs ......................... ~30 signs
+└── For navigation throughout
+
+CIRCULATION TOTAL ..................... ~622 pieces
+
+================================================================================
+                    CONSTRUCTION PRIORITY
+================================================================================
+
+Build circulation elements in this order:
+
+1. BUBBLE COLUMNS (essential for construction)
+   - Build first - you need them to move materials
+   - Start with one shaft, add others as needed
+
+2. PLATFORM EDGE ACCESS
+   - Add slabs around edge
+   - Allows water entry during construction
+
+3. TOWER STAIRCASES
+   - Build as towers go up
+   - Add landings at observation decks
+
+4. LADDERS
+   - Add last as backup system
+   - Place after main circulation complete
+
+5. SIGNAGE
+   - Add after all paths finalized
+   - Verify accuracy before permanent placement
+
+================================================================================
+                              TESTING
+================================================================================
+
+Before declaring construction complete, test ALL circulation paths:
+
+TEST 1: Surface to Underwater
+□ Enter each bubble column (descent)
+□ Verify smooth landing in chamber
+□ Time the descent (~3 seconds expected)
+
+TEST 2: Underwater to Surface
+□ Enter each soul sand column
+□ Verify emergence on platform
+□ Check for any water leakage
+
+TEST 3: Tower Staircases
+□ Climb from base to peak (both towers)
+□ Verify all landings accessible
+□ Time the climb (~30 seconds expected)
+
+TEST 4: Bridge Crossing
+□ Walk from North tower to South tower
+□ Verify no gaps or obstacles
+□ Check railing completeness
+
+TEST 5: Pier Travel
+□ Boat from platform to each dock
+□ Verify ice is continuous
+□ Test return trip
+
+TEST 6: Water Entry
+□ Jump into water from platform
+□ Climb back up via slabs
+□ Repeat at multiple locations
+
+TEST 7: Emergency Ladders
+□ Climb each ladder route
+□ Verify continuous paths
+□ Check visibility (lighting)
+
+================================================================================
+                    END OF CIRCULATION SYSTEM - FILE 8 OF 15
+================================================================================

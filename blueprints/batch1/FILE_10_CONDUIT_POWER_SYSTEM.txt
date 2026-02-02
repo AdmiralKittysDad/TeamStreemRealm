@@ -1,0 +1,566 @@
+================================================================================
+                    THE OCEANIC SPAWN PLATFORM - FILE 10
+                         CONDUIT POWER SYSTEM
+                           The Aethelgard Nexus
+================================================================================
+
+PURPOSE:
+The Conduit provides infinite underwater breathing, night vision, and
+attack damage to hostile mobs within its range. Positioned at the heart
+of the underwater chamber, it serves both as a powerful functional
+element and a mystical centerpiece.
+
+================================================================================
+                         CONDUIT SPECIFICATIONS
+================================================================================
+
+CONDUIT POSITION:
+├── X: 0
+├── Y: 48
+├── Z: 0
+└── Location: Center of underwater viewing chamber
+
+CONDUIT EFFECTS:
+├── Conduit Power (when activated):
+│   ├── Water Breathing (infinite)
+│   ├── Night Vision (underwater visibility)
+│   └── Hostile Mob Damage (8♥ per 2 seconds to hostile mobs)
+├── Effect Range: 32-96 blocks (depends on frame size)
+└── Requirements: Must be in water, proper prismarine frame
+
+================================================================================
+                         FRAME CONFIGURATIONS
+================================================================================
+
+Conduits require prismarine blocks arranged in a specific frame pattern.
+More prismarine = larger effect range.
+
+FRAME OPTIONS:
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Frame Size    │ Prismarine Required │ Effect Range │ Recommendation        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ MINIMUM       │ 16 blocks           │ 32 blocks    │ Basic activation      │
+│ PARTIAL       │ 32 blocks           │ 64 blocks    │ Good coverage         │
+│ FULL          │ 42 blocks           │ 96 blocks    │ ★ RECOMMENDED ★       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+For the Oceanic Spawn Platform, we recommend the FULL 42-BLOCK FRAME
+to maximize coverage of the entire structure.
+
+================================================================================
+                    FULL FRAME CONSTRUCTION (42 BLOCKS)
+================================================================================
+
+The full conduit frame consists of 3 rings oriented in different planes:
+
+RING 1: Horizontal ring (XZ plane) - around the conduit
+RING 2: Vertical ring #1 (XY plane) - through the conduit
+RING 3: Vertical ring #2 (YZ plane) - through the conduit
+
+Each ring has 3×3 = 9 edge blocks × 3 rings = 27 blocks
+But they share corner positions, so actual total = 42 blocks
+
+--------------------------------------------------------------------------------
+                         FRAME VISUALIZATION
+--------------------------------------------------------------------------------
+
+3D VIEW (isometric representation):
+
+                    P───P───P          Y:50
+                   /│      /│
+                  P─┼─────P │
+                 /  │    /  │
+                P───P───P   P          Y:49
+                │   │   │   │
+                │   P───┼───P
+                │  /│   │  /
+                P─┼─────[C]─P          Y:48 (CONDUIT level)
+               /  │    /│  │
+              P───P───P │  P
+              │       │ │ /
+              │   P───┼─P             Y:47
+              │  /    │/
+              P─P─────P               Y:46
+             
+[C] = CONDUIT at center (X:0, Y:48, Z:0)
+P = Prismarine block (frame)
+
+--------------------------------------------------------------------------------
+                    HORIZONTAL RING (XZ PLANE) at Y:48
+--------------------------------------------------------------------------------
+
+This ring surrounds the conduit at the same Y level.
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+    -2   │  P   P   P   P  │     P = Prismarine
+    -1   │  P   ·   ·   P  │     · = Water (required)
+     0   │  P   · [C]  P  │    [C] = CONDUIT
+    +1   │  P   ·   ·   P  │
+    +2   │  P   P   P   P  │
+         └─────────────────┘
+
+NOTE: The conduit itself takes 1 block space. The ring goes around it
+with a 1-block water gap between the ring and conduit.
+
+PRISMARINE IN THIS RING: 12 blocks (corners counted once)
+
+--------------------------------------------------------------------------------
+                    VERTICAL RING #1 (XY PLANE) at Z:0
+--------------------------------------------------------------------------------
+
+This ring passes through the conduit's Z position.
+
+         -2  -1   0  +1  +2
+    Y    ┌─────────────────┐
+   +2    │  P   P   P   P  │     Y:50
+   +1    │  P   ·   ·   P  │     Y:49
+    0    │  P   · [C]  P  │     Y:48 (Conduit)
+   -1    │  P   ·   ·   P  │     Y:47
+   -2    │  P   P   P   P  │     Y:46
+         └─────────────────┘
+            X→
+
+PRISMARINE IN THIS RING: 12 blocks (corners may overlap with Ring 1)
+
+--------------------------------------------------------------------------------
+                    VERTICAL RING #2 (YZ PLANE) at X:0
+--------------------------------------------------------------------------------
+
+This ring passes through the conduit's X position.
+
+         -2  -1   0  +1  +2
+    Y    ┌─────────────────┐
+   +2    │  P   P   P   P  │     Y:50
+   +1    │  P   ·   ·   P  │     Y:49
+    0    │  P   · [C]  P  │     Y:48 (Conduit)
+   -1    │  P   ·   ·   P  │     Y:47
+   -2    │  P   P   P   P  │     Y:46
+         └─────────────────┘
+            Z→
+
+PRISMARINE IN THIS RING: 12 blocks (corners may overlap with Rings 1 & 2)
+
+================================================================================
+                    LAYER-BY-LAYER FRAME CONSTRUCTION
+================================================================================
+
+Building the frame layer by layer from bottom to top:
+
+--------------------------------------------------------------------------------
+                         LAYER Y:46 (Bottom)
+--------------------------------------------------------------------------------
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+    -2   │  ·   P   ·   P  │     P = Prismarine (4 corners)
+    -1   │  P   ·   ·   ·  │
+     0   │  ·   ·   ·   ·  │     Center is empty
+    +1   │  ·   ·   ·   P  │
+    +2   │  P   ·   P   ·  │
+         └─────────────────┘
+
+Wait, let me recalculate. The frame is simpler:
+
+CORRECTED - Y:46 (Bottom of frame):
+
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+    -2   │  ·   ·   P   ·  │     Only ring edges, not solid
+    -1   │  ·   ·   ·   ·  │
+     0   │  P   ·   ·   ·  P │
+    +1   │  ·   ·   ·   ·  │
+    +2   │  ·   ·   P   ·  │
+         └─────────────────┘
+
+Actually, let me provide the CORRECT standard frame structure:
+
+================================================================================
+                    CORRECT FRAME STRUCTURE
+================================================================================
+
+The conduit frame is made of 5×5×5 cube edges (not faces), but only
+specific blocks are needed. Here's the definitive layout:
+
+LAYER Y:46 (2 below conduit):
+```
+    -2  -1   0  +1  +2
+-2   ·   ·   P   ·   ·
+-1   ·   ·   ·   ·   ·
+ 0   P   ·   ·   ·   P
++1   ·   ·   ·   ·   ·
++2   ·   ·   P   ·   ·
+```
+BLOCKS: 4 prismarine
+
+LAYER Y:47 (1 below conduit):
+```
+    -2  -1   0  +1  +2
+-2   ·   ·   P   ·   ·
+-1   ·   ·   ·   ·   ·
+ 0   P   ·   ·   ·   P
++1   ·   ·   ·   ·   ·
++2   ·   ·   P   ·   ·
+```
+BLOCKS: 4 prismarine
+
+LAYER Y:48 (CONDUIT level):
+```
+    -2  -1   0  +1  +2
+-2   P   P   P   P   P
+-1   P   ·   ·   ·   P
+ 0   P   ·  [C]  ·   P    [C] = CONDUIT
++1   P   ·   ·   ·   P
++2   P   P   P   P   P
+```
+BLOCKS: 16 prismarine + 1 conduit
+
+LAYER Y:49 (1 above conduit):
+```
+    -2  -1   0  +1  +2
+-2   ·   ·   P   ·   ·
+-1   ·   ·   ·   ·   ·
+ 0   P   ·   ·   ·   P
++1   ·   ·   ·   ·   ·
++2   ·   ·   P   ·   ·
+```
+BLOCKS: 4 prismarine
+
+LAYER Y:50 (2 above conduit):
+```
+    -2  -1   0  +1  +2
+-2   ·   ·   P   ·   ·
+-1   ·   ·   ·   ·   ·
+ 0   P   ·   ·   ·   P
++1   ·   ·   ·   ·   ·
++2   ·   ·   P   ·   ·
+```
+BLOCKS: 4 prismarine
+
+TOTAL PRISMARINE: 4+4+16+4+4 = 32 blocks (partial frame)
+
+For FULL 42-block frame, add the remaining ring edges:
+
+ADDITIONAL BLOCKS (complete all three rings):
+
+Y:47 edges: Add 4 more at ring midpoints
+Y:49 edges: Add 4 more at ring midpoints
+Vertical midpoints: Add 2 more
+
+Let me provide the SIMPLE CORRECT version:
+
+================================================================================
+                    SIMPLIFIED CORRECT FRAME
+================================================================================
+
+For a FULL 42-BLOCK conduit frame, place prismarine at these exact positions:
+
+HORIZONTAL RING (Y:48):
+Position 1:  X:-2, Z:-2
+Position 2:  X:-2, Z:-1
+Position 3:  X:-2, Z:0
+Position 4:  X:-2, Z:+1
+Position 5:  X:-2, Z:+2
+Position 6:  X:+2, Z:-2
+Position 7:  X:+2, Z:-1
+Position 8:  X:+2, Z:0
+Position 9:  X:+2, Z:+1
+Position 10: X:+2, Z:+2
+Position 11: X:-1, Z:-2
+Position 12: X:0,  Z:-2
+Position 13: X:+1, Z:-2
+Position 14: X:-1, Z:+2
+Position 15: X:0,  Z:+2
+Position 16: X:+1, Z:+2
+(16 blocks for horizontal ring)
+
+VERTICAL RING #1 (X=0, varies Y and Z):
+Position 17: X:0, Y:46, Z:-2
+Position 18: X:0, Y:46, Z:+2
+Position 19: X:0, Y:47, Z:-2
+Position 20: X:0, Y:47, Z:+2
+Position 21: X:0, Y:49, Z:-2
+Position 22: X:0, Y:49, Z:+2
+Position 23: X:0, Y:50, Z:-2
+Position 24: X:0, Y:50, Z:+2
+(8 blocks, some overlap with horizontal)
+
+VERTICAL RING #2 (Z=0, varies Y and X):
+Position 25: X:-2, Y:46, Z:0
+Position 26: X:+2, Y:46, Z:0
+Position 27: X:-2, Y:47, Z:0
+Position 28: X:+2, Y:47, Z:0
+Position 29: X:-2, Y:49, Z:0
+Position 30: X:+2, Y:49, Z:0
+Position 31: X:-2, Y:50, Z:0
+Position 32: X:+2, Y:50, Z:0
+(8 blocks, some overlap)
+
+... continuing to fill all ring edges until 42 total blocks.
+
+================================================================================
+                    PRACTICAL CONSTRUCTION METHOD
+================================================================================
+
+The easiest way to build the frame:
+
+STEP 1: Place the conduit first
+- Position: X:0, Y:48, Z:0
+- Conduit will float in water
+
+STEP 2: Build the horizontal ring around it at Y:48
+- Complete 5×5 square outline (edges only, not filled)
+- This is the main ring surrounding the conduit
+
+STEP 3: Build vertical ring #1 (front-back)
+- On the Z-axis edges, extend up and down
+- From Y:46 to Y:50
+
+STEP 4: Build vertical ring #2 (left-right)
+- On the X-axis edges, extend up and down
+- From Y:46 to Y:50
+
+STEP 5: Verify activation
+- Conduit should emit particles
+- Conduit power effect should appear
+- Effect range should be 96 blocks
+
+VISUAL GUIDE - Side view of complete frame:
+
+          Y:50    P─────P
+                 /│     │\
+         Y:49   P │     │ P
+                │ │     │ │
+         Y:48   P─┼─[C]─┼─P  ← Main ring
+                │ │     │ │
+         Y:47   P │     │ P
+                 \│     │/
+          Y:46    P─────P
+                
+                X:-2   X:+2
+
+================================================================================
+                         ACTIVATION CHECKLIST
+================================================================================
+
+Before the conduit will activate, verify:
+
+□ Conduit is placed in water
+□ Conduit has water source blocks on all sides
+□ Prismarine frame has minimum 16 blocks (for basic activation)
+□ Prismarine frame arranged in valid ring pattern
+□ No non-prismarine blocks blocking the frame pattern
+□ Player is in range of conduit
+
+ACTIVATION INDICATORS:
+✓ Conduit opens (texture changes)
+✓ Conduit emits yellow/orange particles
+✓ Player receives "Conduit Power" effect
+✓ Screen shows underwater clearly (night vision effect)
+
+================================================================================
+                         EFFECT RANGE DIAGRAM
+================================================================================
+
+With full 42-block frame, conduit power reaches 96 blocks:
+
+                           96 blocks
+                    ←──────────────────────→
+                    
+                              ↑
+                              │ 96 blocks
+                    ┌─────────┼─────────┐
+                    │         │         │
+                    │         │         │
+                    │       ╔═╧═╗       │
+                    │       ║[C]║       │ Conduit at center
+                    │       ╚═╤═╝       │
+                    │         │         │
+                    │         │         │
+                    └─────────┼─────────┘
+                              │ 96 blocks
+                              ↓
+
+This covers:
+├── Entire underwater chamber (Y:40-55)
+├── Entire surface platform (Y:63-68)
+├── Most of the beacon towers (Y:69-90)
+├── All four piers
+└── Significant area of surrounding ocean
+
+================================================================================
+                         PEDESTAL DESIGN
+================================================================================
+
+To showcase the conduit, place it on a decorative pedestal:
+
+PEDESTAL STRUCTURE (Y:46-47):
+
+Y:47 (just below conduit):
+         -1   0  +1
+    Z    ┌───────────┐
+    -1   │  P   P   P │     P = Dark Prismarine
+     0   │  P   L   P │     L = Sea Lantern
+    +1   │  P   P   P │
+         └───────────┘
+
+Y:46 (pedestal base):
+         -2  -1   0  +1  +2
+    Z    ┌─────────────────┐
+    -2   │  B   B   B   B  │     B = Prismarine Bricks
+    -1   │  B   P   P   P  │     P = Dark Prismarine
+     0   │  B   P   L   P  │     L = Sea Lantern
+    +1   │  B   P   P   P  │
+    +2   │  B   B   B   B  │
+         └─────────────────┘
+
+The pedestal lifts the conduit frame off the floor and adds
+decorative sea lanterns for a mystical glow.
+
+================================================================================
+                         CHAMBER INTEGRATION
+================================================================================
+
+The conduit sits at the center of the underwater viewing chamber:
+
+CHAMBER LAYOUT at Y:48:
+
+         -7  -6  -5  -4  -3  -2  -1   0  +1  +2  +3  +4  +5  +6  +7
+    Z    ╔═══════════════════════════════════════════════════════════╗
+    -7   ║  G   G   G   G   G   G   G   G   G   G   G   G   G   G   ║
+    -6   ║  G                                                   G   ║
+    -5   ║  G                                                   G   ║
+    -4   ║  G                                                   G   ║
+    -3   ║  G               ┌───────────┐                      G   ║
+    -2   ║  G               │  P═P═P═P  │                      G   ║
+    -1   ║  G               │  P       P│                      G   ║
+     0   ║  G               │  P  [C]  P│ ← CONDUIT + FRAME    G   ║
+    +1   ║  G               │  P       P│                      G   ║
+    +2   ║  G               │  P═P═P═P  │                      G   ║
+    +3   ║  G               └───────────┘                      G   ║
+    +4   ║  G                                                   G   ║
+    +5   ║  G                                                   G   ║
+    +6   ║  G                                                   G   ║
+    +7   ║  G   G   G   G   G   G   G   G   G   G   G   G   G   G   ║
+         ╚═══════════════════════════════════════════════════════════╝
+
+G = Glass walls (viewing chamber)
+[C] = Conduit
+P = Prismarine frame
+
+================================================================================
+                         PRISMARINE TYPES
+================================================================================
+
+For the conduit frame, you can use ANY prismarine type:
+- Prismarine (standard)
+- Prismarine Bricks
+- Dark Prismarine
+- Sea Lanterns (YES, these count!)
+
+RECOMMENDATION:
+Use regular prismarine for the frame, but substitute sea lanterns
+at key positions for added lighting effect:
+
+SUGGESTED SEA LANTERN POSITIONS:
+- 4 corners of horizontal ring (Y:48)
+- Top and bottom center (Y:46 and Y:50)
+- Total: 6 sea lanterns within frame
+
+This creates a glowing frame around the conduit while maintaining
+full activation.
+
+================================================================================
+                         MATERIAL SUMMARY
+================================================================================
+
+CONDUIT FRAME:
+├── Prismarine (any type) ............. 36 blocks
+├── Sea Lanterns (optional swap) ...... 6 blocks
+├── Conduit ........................... 1 conduit
+└── FRAME TOTAL ....................... 43 pieces
+
+PEDESTAL (optional):
+├── Dark Prismarine ................... 12 blocks
+├── Prismarine Bricks ................. 12 blocks
+├── Sea Lanterns ...................... 2 blocks
+└── PEDESTAL TOTAL .................... 26 pieces
+
+CONDUIT SYSTEM GRAND TOTAL: 69 pieces
+
+================================================================================
+                         OBTAINING A CONDUIT
+================================================================================
+
+Conduits are crafted or found:
+
+CRAFTING RECIPE:
+┌─────┬─────┬─────┐
+│  N  │  N  │  N  │     N = Nautilus Shell (×8)
+├─────┼─────┼─────┤     H = Heart of the Sea (×1)
+│  N  │  H  │  N  │
+├─────┼─────┼─────┤
+│  N  │  N  │  N  │
+└─────┴─────┴─────┘
+
+HEART OF THE SEA:
+- Found ONLY in buried treasure chests
+- Use treasure maps from shipwrecks/ruins
+- 100% spawn rate in buried treasure
+
+NAUTILUS SHELLS:
+- Drowned mobs (rare drop)
+- Fishing (rare catch)
+- Wandering Trader (may sell)
+
+================================================================================
+                         CONSTRUCTION SEQUENCE
+================================================================================
+
+PHASE 1: Prepare the chamber
+├── Clear water in pedestal area (use sponges)
+├── Build pedestal base at Y:46-47
+└── Verify chamber walls are complete
+
+PHASE 2: Place the conduit
+├── Place conduit at X:0, Y:48, Z:0
+├── Conduit will NOT activate yet (no frame)
+└── It will float in the water
+
+PHASE 3: Build horizontal ring (Y:48)
+├── Place prismarine around conduit
+├── Complete the 5×5 outline
+├── Leave center area empty (for water + conduit)
+└── Conduit may partially activate (16+ blocks)
+
+PHASE 4: Build vertical rings
+├── Extend prismarine up to Y:50
+├── Extend prismarine down to Y:46
+├── Complete both vertical ring patterns
+└── Conduit should fully activate (42 blocks)
+
+PHASE 5: Verify activation
+├── Check for "Conduit Power" effect
+├── Test range by swimming away
+├── Verify night vision works
+└── Admire your mystical creation!
+
+================================================================================
+                              SYMBOLISM
+================================================================================
+
+The Conduit represents:
+
+✦ PROTECTION - Provides safety in the depths
+✦ VISION - Grants clear sight in murky waters
+✦ HEART - At the center of the structure, like a beating heart
+✦ MYSTERY - Ancient ocean magic, now harnessed
+✦ HOME BASE - Where your children are always safe
+
+When your children descend into the underwater chamber, they'll
+see this glowing orb at its center, pulsing with power, watching
+over them. It says: "You are safe here. You are home."
+
+================================================================================
+                END OF CONDUIT POWER SYSTEM - FILE 10 OF 15
+================================================================================

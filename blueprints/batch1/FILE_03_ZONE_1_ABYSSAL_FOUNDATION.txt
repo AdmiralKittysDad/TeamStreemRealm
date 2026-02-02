@@ -1,0 +1,485 @@
+================================================================================
+                    THE AETHELGARD NEXUS - OCEANIC SPAWN PLATFORM
+                         ZONE 1: THE ABYSSAL FOUNDATION
+                              LAYERS Y:40 to Y:55
+================================================================================
+
+Structure: Underwater Foundation with Central Chamber
+Layers: 16 (Y:40 through Y:55)
+Footprint: 31×31 blocks
+Center: X:0, Z:0
+
+================================================================================
+                              NOTATION KEY
+================================================================================
+
+  P = Prismarine
+  p = Dark Prismarine  
+  B = Prismarine Bricks
+  L = Sea Lantern
+  G = Glass
+  M = Magma Block (bubble column DOWN)
+  S = Soul Sand (bubble column UP)
+  C = Conduit
+  K = Kelp placement zone
+  J = Jack-o'-Lantern
+  W = Water (leave empty - will fill naturally)
+  . = Air/Empty (interior spaces)
+  _ = Not part of structure (ocean floor outside build)
+
+COORDINATE SYSTEM:
+  - Grid shows X (columns, -15 to +15) and Z (rows, +15 to -15)
+  - North = +Z (top of diagram)
+  - East = +X (right of diagram)
+  - Origin (0,0) = center of each layer
+
+================================================================================
+                        LAYER Y:40 - OCEAN FLOOR BASE
+================================================================================
+
+This is the foundation layer that contacts the ocean floor.
+Four 7×7 anchor pillars + central 15×15 foundation pad.
+
+                              NORTH (+Z)
+                                 ↑
+    X: -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7 +8 +9+10+11+12+13+14+15
+Z:+15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  p  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+13  _  _  _  _  _  _  _  _  p  P  L  P  P  L  p  p  p  L  P  P  L  P  p  _  _  _  _  _  _  _  _
+Z:+12  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  p  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+11  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  p  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+10  _  _  _  _  _  _  _  _  p  P  L  P  P  L  p  p  p  L  P  P  L  P  p  _  _  _  _  _  _  _  _
+Z:+9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+8   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+7   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+6   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+5   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+4   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+3   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+2   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+1   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z: 0   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-1   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-2   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-3   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-4   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-5   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-6   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-7   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-8   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-10  _  _  _  _  _  _  _  _  p  P  L  P  P  L  p  p  p  L  P  P  L  P  p  _  _  _  _  _  _  _  _
+Z:-11  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  p  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-12  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  p  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-13  _  _  _  _  _  _  _  _  p  P  L  P  P  L  p  p  p  L  P  P  L  P  p  _  _  _  _  _  _  _  _
+Z:-14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  p  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+
+NOTES FOR Y:40:
+- Solid floor connecting all structures
+- Dark prismarine (p) forms base layer
+- Regular prismarine (P) marks pillar positions
+- Sea lanterns (L) in pillar corners for underwater glow
+- This layer is 23×31 (extends from X:-7 to X:+15 for pillars, Z:-15 to Z:+15)
+
+================================================================================
+                        LAYER Y:41 - FOUNDATION WALLS BEGIN
+================================================================================
+
+Walls begin to rise. Interior starts to hollow out for chamber.
+
+    X: -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7 +8 +9+10+11+12+13+14+15
+Z:+15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+13  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:+12  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:+11  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:+10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z: 0   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-11  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:-12  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:-13  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:-14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+
+================================================================================
+                        LAYER Y:42 - CHAMBER FLOOR
+================================================================================
+
+The underwater viewing chamber floor begins. Glass walls will rise from here.
+
+    X: -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7 +8 +9+10+11+12+13+14+15
+Z:+15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+13  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:+12  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:+11  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:+10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  L  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  L  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z: 0   _  _  _  _  _  _  _  _  p  W  W  W  W  W  L  p  L  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  L  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  L  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  p  p  p  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-11  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:-12  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:-13  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:-14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+
+NOTES FOR Y:42:
+- Central cross pattern of dark prismarine (p) with Sea Lanterns (L)
+- This forms the FLOOR of the viewing chamber
+- Pillars continue rising with prismarine brick (B) interiors
+
+================================================================================
+                    LAYERS Y:43-47 - CHAMBER WALLS (GLASS)
+================================================================================
+
+These 5 layers are identical - glass walls with support pillars.
+Showing Y:45 as representative (middle of chamber).
+
+LAYER Y:43, Y:44, Y:45, Y:46, Y:47 (identical pattern):
+
+    X: -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7 +8 +9+10+11+12+13+14+15
+Z:+15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+13  _  _  _  _  _  _  _  _  p  P  .  .  .  P  p  W  p  P  .  .  .  P  p  _  _  _  _  _  _  _  _
+Z:+12  _  _  _  _  _  _  _  _  p  P  .  J  .  P  p  W  p  P  .  J  .  P  p  _  _  _  _  _  _  _  _
+Z:+11  _  _  _  _  _  _  _  _  p  P  .  .  .  P  p  W  p  P  .  .  .  P  p  _  _  _  _  _  _  _  _
+Z:+10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z: 0   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-11  _  _  _  _  _  _  _  _  p  P  .  .  .  P  p  W  p  P  .  .  .  P  p  _  _  _  _  _  _  _  _
+Z:-12  _  _  _  _  _  _  _  _  p  P  .  J  .  P  p  W  p  P  .  J  .  P  p  _  _  _  _  _  _  _  _
+Z:-13  _  _  _  _  _  _  _  _  p  P  .  .  .  P  p  W  p  P  .  .  .  P  p  _  _  _  _  _  _  _  _
+Z:-14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+
+NOTES FOR Y:43-47:
+- Glass walls (G) form the viewing chamber perimeter
+- Interior (.) is AIR - the dry viewing space
+- Jack-o'-Lanterns (J) in pillar centers for lighting
+- Outer structure filled with water (W)
+
+================================================================================
+                        LAYER Y:48 - CONDUIT LEVEL
+================================================================================
+
+This is the critical layer where the CONDUIT sits at exact center.
+
+    X: -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7 +8 +9+10+11+12+13+14+15
+Z:+15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+13  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:+12  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:+11  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:+10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z: 0   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  C  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _  ← CONDUIT
+Z:-1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-11  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:-12  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:-13  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:-14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+
+*** CONDUIT PLACEMENT ***
+Position: X:0, Y:48, Z:0
+The conduit sits in water INSIDE the glass chamber
+Must be surrounded by prismarine frame (see FILE_10 for details)
+
+================================================================================
+                        LAYER Y:49 - UPPER CHAMBER
+================================================================================
+
+Continue glass walls, approaching chamber ceiling.
+
+    X: -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7 +8 +9+10+11+12+13+14+15
+Z:+15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+13  _  _  _  _  _  _  _  _  p  P  .  .  .  P  p  W  p  P  .  .  .  P  p  _  _  _  _  _  _  _  _
+Z:+12  _  _  _  _  _  _  _  _  p  P  .  L  .  P  p  W  p  P  .  L  .  P  p  _  _  _  _  _  _  _  _
+Z:+11  _  _  _  _  _  _  _  _  p  P  .  .  .  P  p  W  p  P  .  .  .  P  p  _  _  _  _  _  _  _  _
+Z:+10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z: 0   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  .  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-11  _  _  _  _  _  _  _  _  p  P  .  .  .  P  p  W  p  P  .  .  .  P  p  _  _  _  _  _  _  _  _
+Z:-12  _  _  _  _  _  _  _  _  p  P  .  L  .  P  p  W  p  P  .  L  .  P  p  _  _  _  _  _  _  _  _
+Z:-13  _  _  _  _  _  _  _  _  p  P  .  .  .  P  p  W  p  P  .  .  .  P  p  _  _  _  _  _  _  _  _
+Z:-14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+
+================================================================================
+                        LAYER Y:50 - CHAMBER CEILING
+================================================================================
+
+Glass ceiling with viewing skylight toward surface.
+
+    X: -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7 +8 +9+10+11+12+13+14+15
+Z:+15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+13  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:+12  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:+11  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:+10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z: 0   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  G  G  G  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-11  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:-12  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:-13  _  _  _  _  _  _  _  _  p  P  L  B  L  P  p  W  p  P  L  B  L  P  p  _  _  _  _  _  _  _  _
+Z:-14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+
+NOTES FOR Y:50:
+- Glass (G) forms ceiling of viewing chamber
+- Central 3×3 glass section = skylight view to surface
+- Chamber is now sealed
+
+================================================================================
+                    LAYERS Y:51-54 - PILLAR CONTINUATION
+================================================================================
+
+Above the chamber, pillars continue rising toward surface.
+Chamber space filled with water. Shows Y:52 as representative.
+
+LAYER Y:51, Y:52, Y:53, Y:54 (similar pattern):
+
+    X: -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7 +8 +9+10+11+12+13+14+15
+Z:+15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+13  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:+12  _  _  _  _  _  _  _  _  p  P  B  L  B  P  p  W  p  P  B  L  B  P  p  _  _  _  _  _  _  _  _
+Z:+11  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:+10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  S  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _  ← BUBBLE UP
+Z:+2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z: 0   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  M  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _  ← BUBBLE DOWN
+Z:-4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-11  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:-12  _  _  _  _  _  _  _  _  p  P  B  L  B  P  p  W  p  P  B  L  B  P  p  _  _  _  _  _  _  _  _
+Z:-13  _  _  _  _  _  _  _  _  p  P  B  B  B  P  p  W  p  P  B  B  B  P  p  _  _  _  _  _  _  _  _
+Z:-14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+
+NOTES FOR Y:51-54:
+- S at Z:+3 = Soul Sand (bubble column going UP)
+- M at Z:-3 = Magma Block (bubble column going DOWN)
+- These extend from Y:40 to Y:63 for rapid vertical transit
+- Sea lanterns (L) in pillar centers
+
+================================================================================
+                        LAYER Y:55 - PILLAR TOPS
+================================================================================
+
+Top of the anchor pillars. Buttresses begin connecting to center.
+
+    X: -15 -14 -13 -12 -11 -10 -9 -8 -7 -6 -5 -4 -3 -2 -1  0 +1 +2 +3 +4 +5 +6 +7 +8 +9+10+11+12+13+14+15
+Z:+15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+13  _  _  _  _  _  _  _  _  p  P  L  L  L  P  p  W  p  P  L  L  L  P  p  _  _  _  _  _  _  _  _
+Z:+12  _  _  _  _  _  _  _  _  p  P  L  L  L  P  p  W  p  P  L  L  L  P  p  _  _  _  _  _  _  _  _
+Z:+11  _  _  _  _  _  _  _  _  p  P  L  L  L  P  p  W  p  P  L  L  L  P  p  _  _  _  _  _  _  _  _
+Z:+10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:+9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:+8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  S  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:+1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z: 0   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-1   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-2   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-3   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  M  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-4   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-5   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-6   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-7   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-8   _  _  _  _  _  _  _  _  p  W  W  W  W  W  W  W  W  W  W  W  W  W  p  _  _  _  _  _  _  _  _
+Z:-9   _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  W  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+Z:-10  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-11  _  _  _  _  _  _  _  _  p  P  L  L  L  P  p  W  p  P  L  L  L  P  p  _  _  _  _  _  _  _  _
+Z:-12  _  _  _  _  _  _  _  _  p  P  L  L  L  P  p  W  p  P  L  L  L  P  p  _  _  _  _  _  _  _  _
+Z:-13  _  _  _  _  _  _  _  _  p  P  L  L  L  P  p  W  p  P  L  L  L  P  p  _  _  _  _  _  _  _  _
+Z:-14  _  _  _  _  _  _  _  _  p  P  P  P  P  P  p  W  p  P  P  P  P  P  p  _  _  _  _  _  _  _  _
+Z:-15  _  _  _  _  _  _  _  _  p  p  p  p  p  p  p  p  p  p  p  p  p  p  p  _  _  _  _  _  _  _  _
+
+NOTES FOR Y:55:
+- Pillar tops have 3×3 sea lantern arrays for maximum underwater glow
+- This is the transition level to Zone 2 (Submerged Spire)
+- Structure begins narrowing above this level
+
+================================================================================
+                           BUBBLE COLUMN POSITIONS
+================================================================================
+
+For rapid transit between depths and surface:
+
+ASCENDING (Soul Sand):
+  Position 1: X:0, Z:+3 (all layers Y:40 to Y:63)
+  Position 2: X:+3, Z:0 (optional second column)
+  
+DESCENDING (Magma):
+  Position 1: X:0, Z:-3 (all layers Y:40 to Y:63)
+  Position 2: X:-3, Z:0 (optional second column)
+
+Installation Note:
+- Place soul sand/magma at Y:40
+- Ensure water source blocks above (use kelp trick)
+- Column must be continuous to surface
+
+================================================================================
+                           KELP GROWTH ZONES
+================================================================================
+
+Decorative kelp forests around structure perimeter:
+
+Zone 1 (NW): X:-14 to X:-12, Z:+12 to Z:+14
+Zone 2 (NE): X:+12 to X:+14, Z:+12 to Z:+14
+Zone 3 (SW): X:-14 to X:-12, Z:-14 to Z:-12
+Zone 4 (SE): X:+12 to X:+14, Z:-14 to Z:-12
+
+Plant kelp at Y:40, allow to grow naturally to surface.
+Kelp can be planted anywhere in outer water zones for ambiance.
+
+================================================================================
+                            CORAL GARDENS
+================================================================================
+
+Decorative coral placement (optional):
+
+Recommended positions (Y:41-43):
+- X:-8 to X:-6, Z:+8 (NW corner exterior)
+- X:+6 to X:+8, Z:+8 (NE corner exterior)
+- X:-8 to X:-6, Z:-8 (SW corner exterior)
+- X:+6 to X:+8, Z:-8 (SE corner exterior)
+
+Use assorted coral blocks, coral fans, sea pickles for variety.
+Place in natural-looking clusters.
+
+================================================================================
+                              FILE 03 COMPLETE
+================================================================================
