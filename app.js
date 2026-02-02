@@ -8,14 +8,19 @@ class MegaBuildTracker {
     this.zones = [];
     this.structures = [];
     this.sessions = [];
+    this.materials = [];
     this.currentTab = 'zones';
     this.lastProgress = 0;
+    this.isInitialLoad = true; // Track if this is first load (for animations)
+    this.materialFilter = 'all';
+    this.materialSearch = '';
 
     this.init();
   }
 
   async init() {
     this.setupTabNavigation();
+    this.setupMaterialsFilter();
     this.startFunFactRotation();
     await this.loadAllData();
     this.setupAutoRefresh();
@@ -67,7 +72,7 @@ class MegaBuildTracker {
 
   async loadAllData() {
     // Load all data in parallel
-    const [zones, structures, sessions] = await Promise.all([
+    const [zones, structures, sessions, materials] = await Promise.all([
       this.fetchFromAirtable(CONFIG.TABLES.ZONES),
       this.fetchFromAirtable(CONFIG.TABLES.STRUCTURES, {
         filterByFormula: '{Is_Visible_To_Kids}=1'
@@ -76,18 +81,26 @@ class MegaBuildTracker {
         filterByFormula: '{Is_Visible_To_Kids}=1',
         sort: [{ field: 'Session_Date', direction: 'desc' }],
         maxRecords: 20
-      })
+      }),
+      this.fetchFromAirtable(CONFIG.TABLES.MATERIALS)
     ]);
 
     this.zones = zones;
     this.structures = structures;
     this.sessions = sessions;
+    this.materials = materials;
 
     this.updateMainProgress();
     this.renderZones();
     this.renderStructures();
     this.renderSessions();
+    this.renderMaterials();
     this.updateStreak();
+
+    // After first load, disable animations for future refreshes
+    if (this.isInitialLoad) {
+      this.isInitialLoad = false;
+    }
   }
 
   // ============================================
@@ -136,6 +149,14 @@ class MegaBuildTracker {
     const ring = document.getElementById('progressRing');
     const circumference = 2 * Math.PI * 85; // r=85
     const offset = circumference - (progress / 100) * circumference;
+
+    // Only animate on initial load
+    if (this.isInitialLoad) {
+      ring.classList.add('animate');
+    } else {
+      ring.classList.remove('animate');
+    }
+
     ring.style.strokeDashoffset = offset;
   }
 
@@ -202,9 +223,10 @@ class MegaBuildTracker {
     const blocksPlanned = fields.Blocks_Planned_Rollup || 0;
     const layers = fields.Layers_Complete || 0;
     const totalLayers = fields.Total_Layers || 0;
+    const animateClass = this.isInitialLoad ? 'animate' : '';
 
     return `
-      <div class="zone-card" style="--progress: ${progress / 100}">
+      <div class="zone-card ${animateClass}" style="--progress: ${progress / 100}">
         <div class="zone-header">
           <span class="zone-number">Zone ${number}</span>
           <span class="zone-progress-badge">${progress}%</span>
@@ -223,7 +245,7 @@ class MegaBuildTracker {
           ` : ''}
         </div>
         <div class="zone-progress-bar">
-          <div class="zone-progress-fill" style="width: ${progress}%"></div>
+          <div class="zone-progress-fill ${animateClass}" style="width: ${progress}%"></div>
         </div>
       </div>
     `;
@@ -258,9 +280,10 @@ class MegaBuildTracker {
     const progress = Math.round((fields.Progress || 0) * 100);
     const blocksPlaced = fields.Blocks_Placed_Rollup || 0;
     const blocksPlanned = fields.Blocks_Planned || 0;
+    const animateClass = this.isInitialLoad ? 'animate' : '';
 
     return `
-      <div class="structure-card">
+      <div class="structure-card ${animateClass}">
         <div class="structure-icon">${icon}</div>
         <div class="structure-content">
           <div class="structure-header">
@@ -270,7 +293,7 @@ class MegaBuildTracker {
           ${description ? `<div class="structure-description">${this.escapeHtml(description)}</div>` : ''}
           <div class="structure-progress">
             <div class="structure-progress-bar">
-              <div class="structure-progress-fill" style="width: ${progress}%"></div>
+              <div class="structure-progress-fill ${animateClass}" style="width: ${progress}%"></div>
             </div>
             <span class="structure-progress-text">${progress}%</span>
           </div>
@@ -308,9 +331,10 @@ class MegaBuildTracker {
     const duration = fields.Duration_Minutes || 0;
     const notes = fields.Notes_Display || '';
     const photo = fields.Photo?.[0]?.thumbnails?.large?.url;
+    const animateClass = this.isInitialLoad ? 'animate' : '';
 
     return `
-      <div class="session-card">
+      <div class="session-card ${animateClass}">
         <div class="session-header">
           <span class="session-date">${date}</span>
           <span class="session-mood" title="${mood}">${moodEmoji}</span>
@@ -333,6 +357,141 @@ class MegaBuildTracker {
         ` : ''}
       </div>
     `;
+  }
+
+  // ============================================
+  // Materials Database
+  // ============================================
+
+  renderMaterials() {
+    const grid = document.getElementById('materialsGrid');
+    if (!grid) return;
+
+    if (this.materials.length === 0) {
+      grid.innerHTML = `
+        <div class="empty-state" style="grid-column: span 2;">
+          <div class="empty-icon">⛏️</div>
+          <div class="empty-title">No Materials Yet</div>
+          <div class="empty-message">Materials will appear as the build progresses!</div>
+        </div>
+      `;
+      return;
+    }
+
+    const filteredMaterials = this.getFilteredMaterials();
+
+    if (filteredMaterials.length === 0) {
+      grid.innerHTML = `
+        <div class="empty-state" style="grid-column: span 2;">
+          <div class="empty-icon">🔍</div>
+          <div class="empty-title">No Matches</div>
+          <div class="empty-message">Try a different search or filter!</div>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = filteredMaterials
+      .sort((a, b) => (b.fields.Qty_Planned || 0) - (a.fields.Qty_Planned || 0))
+      .map(material => this.createMaterialCard(material))
+      .join('');
+  }
+
+  getFilteredMaterials() {
+    return this.materials.filter(material => {
+      const fields = material.fields;
+      const name = (fields.Material_Name || '').toLowerCase();
+      const category = (fields.Category || '').toLowerCase();
+
+      // Search filter
+      if (this.materialSearch && !name.includes(this.materialSearch.toLowerCase())) {
+        return false;
+      }
+
+      // Category filter
+      if (this.materialFilter !== 'all' && category !== this.materialFilter.toLowerCase()) {
+        return false;
+      }
+
+      return true;
+    });
+  }
+
+  createMaterialCard(material) {
+    const fields = material.fields;
+    const name = fields.Material_Name || 'Unknown Block';
+    const category = fields.Category || 'Other';
+    const qtyPlanned = fields.Qty_Planned || 0;
+    const qtyPlaced = fields.Qty_Placed || 0;
+    const progress = qtyPlanned > 0 ? Math.round((qtyPlaced / qtyPlanned) * 100) : 0;
+
+    // Get block data from config
+    const blockData = CONFIG.BLOCK_DATA[name] || CONFIG.BLOCK_DATA['default'];
+    const imageUrl = blockData.image;
+    const description = blockData.description;
+    const trivia = blockData.trivia;
+    const rarity = blockData.rarity || 'common';
+
+    return `
+      <div class="material-card">
+        <div class="material-header">
+          <img
+            src="${imageUrl}"
+            alt="${this.escapeHtml(name)}"
+            class="material-block-image"
+            onerror="this.classList.add('fallback'); this.innerHTML='${blockData.emoji || '🧱'}';"
+          >
+          <div class="material-title">
+            <div class="material-name">${this.escapeHtml(name)}</div>
+            <span class="material-category">${this.escapeHtml(category)}</span>
+          </div>
+          <div class="material-rarity ${rarity}" title="${rarity}"></div>
+        </div>
+        <div class="material-body">
+          <div class="material-description">${this.escapeHtml(description)}</div>
+          ${trivia ? `
+            <div class="material-trivia">
+              <div class="material-trivia-label">⭐ Fun Fact</div>
+              <div class="material-trivia-text">${this.escapeHtml(trivia)}</div>
+            </div>
+          ` : ''}
+          <div class="material-stats">
+            <div class="material-stat">
+              <div class="material-stat-value">${this.formatNumber(qtyPlanned)}</div>
+              <div class="material-stat-label">Planned</div>
+            </div>
+            <div class="material-stat">
+              <div class="material-stat-value placed">${this.formatNumber(qtyPlaced)}</div>
+              <div class="material-stat-label">Placed</div>
+            </div>
+          </div>
+          <div class="material-progress-bar">
+            <div class="material-progress-fill" style="width: ${progress}%"></div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  setupMaterialsFilter() {
+    const searchInput = document.getElementById('materialsSearch');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        this.materialSearch = e.target.value;
+        this.renderMaterials();
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        this.materialFilter = btn.dataset.filter;
+        this.renderMaterials();
+      });
+    });
   }
 
   // ============================================
